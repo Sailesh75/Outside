@@ -1,0 +1,277 @@
+:root{
+    --primary:#FDF8EC;
+    --gray:#5E607A;
+    --lightGray:#C5C6CE;
+    --lightRed:#F15E50;
+    --black:#00001A;
+    --yellow:#E9AB53;
+    --offWhite:#FFFDFA;
+} 
+
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+@media(max-width:1950px){
+
+body{
+    background-color: var(--primary);
+}
+
+a{
+    text-decoration: none;
+    color: var(--gray);
+    word-spacing:20px;
+}
+a:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.main-grid-container{
+        display: grid;
+        gap: 10px;
+        background-color:var(--primary);
+        grid-template-columns:2fr 1fr;
+        grid-template-rows:0.4fr 2fr 0.8fr ;
+        margin-left:100px;
+        margin-right: 100px;
+}
+
+.gridItem{                                             
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FDF8EC;
+}
+
+.gridItem--navigation{
+    grid-column: 1/span 2;
+    grid-row: 1;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    word-spacing:35px;
+}
+
+.gridItem--main{
+    grid-column: 1/span 2;
+    grid-row:3;
+}
+
+#websiteLogo{
+    height:50px;
+}
+
+.gridItem__sidebarLeft{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.gridItem__sidebarLeft--image{
+    grid-column: 1 /span 2;
+    grid-row: 1;
+    width:100%;
+    height: 100%;
+}
+
+.gridItem__sidebarLeft--div{
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    color:#5E607A;
+}
+
+.readMoreBtn{
+    cursor: pointer;
+    
+    background-color: var(--lightRed);
+    color:var(--offWhite);
+    border: none;
+    padding:15px;
+    font-size: 10px;
+}
+
+.readMoreBtn:hover{
+    background-color: #00001A;
+}
+
+.gridItem__sidebarLeft p{
+    font-size:20px;
+}
+
+.gridItem__sidebarLeft h1{
+    grid-column: 1;
+    grid-row: 2;
+    font-weight:bold;
+    font-size: 56px
+}
+
+.gridItem__sidebarLeft--div{
+    grid-column: 2/span 1;
+    grid-row:2;
+    width:100%
+}
+
+.sidebarLeft__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gridItem--sidebarRight{
+    background-color: #00001A;
+    display: flex;
+    flex-direction: column;
+    color: var(--offWhite);
+}
+
+.gridItem--sidebarRight div{
+    color: var(--white);
+}
+
+.gridItem--sidebarRight h2{
+    color: var(--yellow);
+ 
+}
+
+.gridItem--sidebarRight h5:hover{
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.sidebarRight--flexitem{
+    margin: 20px;
+}
+
+.main_gridItems{
+    display: grid;
+    gap:10px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+.main_gridItems img{
+    height:100%;
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1 /span 1;
+}
+
+.main_gridItems h3{
+    grid-column: 2;
+    grid-row: 1 /span 1;
+    margin: 0;
+    font-size: 18px;
+}
+
+
+
+.main_gridItems h2{
+    font-size:32px;
+    color:var(--lightGray);
+    margin:0;
+}
+
+.main_gridItems p{
+    font-size: 15px;
+}
+
+.main_gridItems:hover{
+    cursor: pointer;
+}
+    
+.main_gridItems:hover h3{
+    color: var(--yellow);
+}
+
+.main_gridItems:hover .before-hover-img{
+    visibility: collapse;
+}
+    
+
+.lineStyle{
+  border-top:0.001px solid --var(gray);
+}
+}
+
+/* ******mobile_view******* */
+
+@media(max-width:450px){ 
+
+.main-grid-container{
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 1fr 1fr 1fr ;
+        height:100vh;
+}
+
+.gridItem{                                             
+    background-color: #FDF8EC;
+
+}
+
+.gridItem--navigation{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.gridItem__sidebarLeft{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;  
+}
+
+.gridItem--main{
+    grid-column: 1;
+    grid-row:3 ;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.gridItem--sidebarRight{
+    grid-column: 1;
+    grid-row: 4;
+    background-color: #00001A;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.navigation{
+    visibility: collapse;
+}
+
+/* ..................main grid item started,........ */
+
+.main_gridItems{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows:1fr;
+    gap: 1rem;
+}
+
+
+.footer__item h2,.footer__item h3{
+    margin-block: 0;
+    font-size: 0.8rem;
+}
+
+.footer__item p{
+    font-size: 15px;
+}
+
+.main_gridItems img{
+    height:127px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.sidebarRight--flexitem{
+    margin: 5px;
+}
+}

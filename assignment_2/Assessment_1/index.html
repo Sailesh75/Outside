@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assessment_1-Selectors</title>
+</head>
+<body>
+    <h1 class="title">CSS selectors</h1>
+    <h3>Pseudo classes - Selecting elements based on some certain state change</h3>
+    <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Support</a>
+      </nav>
+      <br>
+      <br>
+
+      <section>
+        <div class="pseudoClass">While hovering this block you can see the new line below
+           <p class="hiddenPara">This is done using pesudo class</p>
+        </div>
+      </section>
+
+      <br>
+      <br>
+      <h3 >CSS attribute selectors - Selecting elements based on an attribute or attribute value.</h3>
+      <form action="#">
+        <label for="name" title=" input[type=text]">Name:</label>
+        <input placeholder='input[type=text]' class="" type="text" name="name" id="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input placeholder='input[type=email]' type="email" id="email" name="email" required><br><br>
+   
+
+        <label for="location">Location:</label>
+        <input placeholder='  input[type=number]' type="number" id="location" name="location" required><br><br>
+
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">I want to receive the newsletter.</label><br><br>
+        <input type="submit" value="Submit">
+      </form>
+
+      <br>
+      <h3>Structural pseudo-class :nth child()</h3>
+      <p>The flex-direction of the even child of the container below is given row-reverse. So, we get the image and description alternately.</p>
+
+      <div class="container">
+        <img src="../Images/pic1.png">
+        <div>
+            <h2>Far far away, behind the word mountains</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+        </div>
+    </div>
+    <div class="container">
+        <img src="../Images/pic1.png">
+        <div>
+            <h2>Far far away, behind the word mountains</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+        </div>
+    </div>
+    <div class="container">
+      <img src="../Images/pic1.png">
+      <div>
+          <h2>Far far away, behind the word mountains</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia...</p>
+      </div>
+  </div>
+</body>
+</html>

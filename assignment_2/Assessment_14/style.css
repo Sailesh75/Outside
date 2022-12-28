@@ -1,0 +1,151 @@
+/* 
+CSS variables
+
+** var() function is used to insert the value of a CSS variable. 
+
+syntax:
+var(--name,value)
+name - Required.The variable name (must start with two dashes)
+value - Optional. The fallback value (used if the variable is not found)
+
+Note:The variable name must begin with two dashes (--) and it is case sensitive!
+CSS variables can have a global or local scope.
+To create a variable with global scope, declare it inside the :root selector.
+To create a variable with local scope, declare it inside the selector that is going to use it.
+
+*/
+
+:root{
+    --primary:#7DD0ED;
+    --whileHover:#27A6D2;
+    --gray:#E9EDEF;
+    --darkGray:#5F5F5F;
+    --lightGray:#9A9A9A;
+} 
+
+body{
+    background-color: var(--gray);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mainContainer{
+    width:720px;
+    height:600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left:200px;
+    margin-top: 100px;
+}
+
+.cardContainer{    
+    height:320px;
+    width:220px;
+    margin-top:20px;
+    background-color: #ffffff;
+    margin:10px;
+    border-radius: 10px;
+}
+
+.cardContainer:hover .cardTitle {
+    background-color: #27A6D2;
+    
+}
+
+.cardContainer:hover  {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.25s ease-in;
+}
+
+
+.cardContainer--basicCard{
+    grid-column: 1;
+    grid-row: 1; 
+}
+
+.cardContainer--proCard{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+.cardContainer--premiumCard{
+    grid-column:3;
+    grid-row: 1;
+}
+
+.cardTitle{
+    background-color: var(--primary);
+    color: #ffffff;
+    text-align: center;
+    padding-block:15px ;
+}
+
+.cardTitle h3{
+    margin: 0;
+}
+
+.packageCharge{
+    color: var(--darkGray);
+    line-height: 0.5;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.packageCharge h1{
+    font-size:45px;
+}
+
+.featureList{
+    color: var(--lightGray);
+    text-align: center;
+    line-height:10px;
+    font-size: 10px;
+}
+
+.stat-card{
+    grid-column: 1/span 3;
+    grid-row: 2;
+    padding: 10px;
+    margin: 10px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.stats-detail{
+    width:500px ;
+    color: var(--darkGray);
+    font-weight:600 ;
+}
+
+.stats-num{
+    display: flex;
+    justify-content: space-between;
+}
+
+.horizontal-line{
+    height:10px;
+    border-radius: 10px;
+    background-color:var(--gray)
+}
+
+.cardContainer--basicCard:hover ~ .stat-card .horizontal-line{ 
+    width:20%;
+    background-color: var(--primary);
+    transition: background-color 0.5s ease-in;
+    transition: width 0.5s ease-in;
+}
+
+.cardContainer--proCard:hover ~ .stat-card .horizontal-line{ 
+    width:50%;
+    background-color: var(--primary)
+}
+
+.cardContainer--premiumCard:hover ~ .stat-card .horizontal-line{ 
+    width: 75%;
+    background-color: var(--primary)
+}

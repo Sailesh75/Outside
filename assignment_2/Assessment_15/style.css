@@ -1,0 +1,136 @@
+body{
+    background: linear-gradient(242.58deg, #C8802C 4.71%, #FBFD94 132.22%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    color: #7C6957;
+}
+
+.mainContainer{
+    width:500px;
+    height: 400px;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-row: 1fr;
+    box-shadow: 15px 17px 20px 5px rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+}
+
+.outer-div{
+    width:120px;
+    height:120px;
+    border:2px solid ;
+    border-color: #8E7E6D  #ffffff #8E7E6D #8E7E6D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.inner-div{
+    width:110px;
+    height:110px;
+    border:2px solid #8E7E6D;
+    border-radius: 50%;
+    border-color: #8E7E6D #8E7E6D #8E7E6D #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.outer-div:hover{
+    /* transition: background-color 0.5s ease-in;
+    transition: width 0.5s ease-in;
+
+    transform: border rotate(360deg) ease-in;
+    transform: scale(1.2); */
+
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in;
+}
+.outer-div:hover img{
+    transform: rotate(-360deg);
+    transition: transform  0.5s ease-in;
+}
+
+.inner-div img{
+   width: 80px;
+   height: 80px;
+   border-radius: 50%;
+}
+
+.about{
+    grid-column:1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.about h3{
+    margin-bottom: 0px;
+}
+
+.about p{
+    margin-top: 0px;
+}
+
+
+.stats{
+    grid-column: 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row:1fr 1fr 1fr;
+}
+
+.stat{
+    background-color:#F5E8DF ;
+    margin:2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat:hover{
+    background-color:#CBBFB6 ;
+}
+
+.followBtn{
+    background-color: #FFFFFF;
+    color: #7C6957;
+    border:2px solid #7C6957;
+    border-radius: 50px;
+    width:150px;
+    height: 30px;
+    margin-bottom:10px;
+    
+    
+}
+
+.msgBtn{
+    background-color: #FFFFFF;
+    color: #7C6957;
+    border:2px solid #7C6957;
+    border-radius: 50px;
+    width:150px;
+    height: 30px;
+}
+
+.followBtn:hover{
+    background-color: #7C6957;
+    color: #FFFFFF;
+}
+
+.msgBtn:hover{
+    background-color: #7C6957;
+    color: #FFFFFF;
+}
+

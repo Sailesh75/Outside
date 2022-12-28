@@ -1,0 +1,93 @@
+body{
+  margin: 25px;
+  padding: 10px;
+  border:2px solid black;
+  border-radius: 20px;
+  text-align: center;
+  
+}
+
+/* unvisited link */
+a{
+  text-decoration: none;
+  padding: 10px;
+}
+
+h3{
+  text-decoration: underline;
+}
+
+a:link {
+    color: rgb(69, 29, 29);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(53, 0, 128);
+  }
+  
+  a:hover {
+    color: rgb(106, 152, 67);
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
+
+.pseudoClass {
+    display: block;
+    background-color: rgb(18, 18, 5);
+    padding: 20px;
+    color: white;
+  }
+
+  .hiddenPara{
+    visibility: hidden;
+  }
+  
+  .pseudoClass:hover p{
+    visibility: visible;
+  }
+
+.title{
+  color: brown;
+}
+
+
+  input[type=text]{
+    color:red;
+    border:1px solid rgb(245, 157, 24);
+    border-radius: 4px;
+  }
+
+  input[type=email]{
+    color:rgb(132, 0, 255);
+    border:1px solid rgb(25, 131, 218);
+    border-radius: 4px;
+  }
+
+  
+  input[type=number]{
+    color:rgb(75, 173, 124);
+    border:1px solid rgb(216, 43, 84);
+    border-radius: 4px;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:50px;
+    padding:10px;
+}
+
+div{
+    margin:15px;
+}
+
+.container:nth-child(even){
+    flex-direction: row-reverse;
+    margin: 20px;
+}
+
