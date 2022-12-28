@@ -34,8 +34,8 @@ a:hover{
         background-color:var(--primary);
         grid-template-columns:2fr 1fr;
         grid-template-rows:0.4fr 2fr 0.8fr ;
-        margin-left:100px;
-        margin-right: 100px;
+        margin-left: clamp(10px,10vw,100px);
+        margin-right: clamp(10px,10vw,100px);
 }
 
 .gridItem{                                             
@@ -126,7 +126,14 @@ a:hover{
     background-color: #00001A;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     color: var(--offWhite);
+}
+
+.sidebarRight__flexitem--header{
+   align-items: center;
+
 }
 
 .gridItem--sidebarRight div{
@@ -196,8 +203,20 @@ a:hover{
 .lineStyle{
   border-top:0.001px solid --var(gray);
 }
+
+.bar_icon{
+    background-image: url(/assignment_2/images/bar_icon.svg);
+    height:27px;
+    width:35px;
+    display: none;
+    background-position: center;
+    /* visibility: collapse; */
 }
 
+
+
+
+}
 /* ******mobile_view******* */
 
 @media(max-width:450px){ 
@@ -206,6 +225,8 @@ a:hover{
         grid-template-columns: 1fr;
         grid-template-rows:1fr 1fr 1fr 1fr ;
         height:100vh;
+        margin-left: clamp(3px,10vw,10px);
+        margin-right: clamp(3px,10vw,10px);
 }
 
 .gridItem{                                             
@@ -246,6 +267,10 @@ a:hover{
     visibility: collapse;
 }
 
+.bar_icon{
+    display: block;
+}
+
 /* ..................main grid item started,........ */
 
 .main_gridItems{
@@ -274,4 +299,11 @@ a:hover{
 .sidebarRight--flexitem{
     margin: 5px;
 }
+
+
+
+
+
+
+
 }
