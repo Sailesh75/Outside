@@ -54,7 +54,7 @@ a{
     display: block;
     width: 100%;
     border: none;
-    background-color: #33adff;
+    background-color: #4db8ff;
     color: white;
     padding: 5px 15px;
     font-size: 16px;
@@ -67,11 +67,19 @@ a{
     display: block;
     width: 100%;
     border: none;
-    background-color: #33adff;
+    background-color: #4db8ff;
     color: white;
     padding: 5px 15px;
     font-size: 16px;
     cursor: pointer;
     text-align: center;
     border-radius: 10px;
+}
+
+.assignmentCodeLink:hover{
+    background-color: #1aa3ff;
+}
+
+.assignmentDemoLink:hover{
+    background-color: #1aa3ff;
 }
