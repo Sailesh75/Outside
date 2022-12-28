@@ -1,11 +1,6 @@
-
 a{
     text-decoration: none;
     color: black;
-}
-.imageWrapper{
-    display: flex;
-    flex-direction: row;
 }
 
 .assessment_link{
