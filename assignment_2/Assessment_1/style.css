@@ -4,7 +4,6 @@ body{
   border:2px solid black;
   border-radius: 20px;
   text-align: center;
-  
 }
 
 /* unvisited link */
@@ -13,7 +12,7 @@ a{
   padding: 10px;
 }
 
-h3{
+h2{
   text-decoration: underline;
 }
 
@@ -50,10 +49,9 @@ a:link {
     visibility: visible;
   }
 
-.title{
+ .title{
   color: brown;
 }
-
 
   input[type=text]{
     color:red;

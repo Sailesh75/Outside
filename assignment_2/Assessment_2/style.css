@@ -1,3 +1,11 @@
-.titleSpan{
+body{
+    margin: 25px;
+    padding: 10px;
+    border:2px solid black;
+    border-radius: 20px;
+    /* text-align: center; */
+}
+
+ .titleSpan{
     color:red;
 }
