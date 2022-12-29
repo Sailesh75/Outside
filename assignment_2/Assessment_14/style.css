@@ -1,6 +1,5 @@
 /* 
 CSS variables
-
 ** var() function is used to insert the value of a CSS variable. 
 
 syntax:
@@ -12,7 +11,6 @@ Note:The variable name must begin with two dashes (--) and it is case sensitive!
 CSS variables can have a global or local scope.
 To create a variable with global scope, declare it inside the :root selector.
 To create a variable with local scope, declare it inside the selector that is going to use it.
-
 */
 
 :root{
@@ -26,7 +24,10 @@ To create a variable with local scope, declare it inside the selector that is go
 body{
     background-color: var(--gray);
     font-family: 'Open Sans', sans-serif;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
 
 .mainContainer{
     width:720px;
@@ -34,17 +35,17 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin-left:200px;
-    margin-top: 100px;
+    margin-top: 50px;
+    
 }
 
 .cardContainer{    
     height:320px;
     width:220px;
-    margin-top:20px;
     background-color: #ffffff;
-    margin:10px;
     border-radius: 10px;
+    margin-bottom:20px ;
+
 }
 
 .cardContainer:hover .cardTitle {
@@ -54,7 +55,7 @@ body{
 
 .cardContainer:hover  {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: transform 0.25s ease-in;
 }
 
@@ -133,19 +134,54 @@ body{
     background-color:var(--gray)
 }
 
-.cardContainer--basicCard:hover ~ .stat-card .horizontal-line{ 
-    width:20%;
-    background-color: var(--primary);
-    transition: background-color 0.5s ease-in;
+.horizontal-line__hover{
+    width: 0%;
+    height:10px;
     transition: width 0.5s ease-in;
+    border-radius: 10px;
 }
 
-.cardContainer--proCard:hover ~ .stat-card .horizontal-line{ 
-    width:50%;
+.cardContainer--basicCard:hover ~ .stat-card .horizontal-line__hover--user{ 
+    width:20%;
+    background-color: var(--primary);
+}
+
+.cardContainer--basicCard:hover ~ .stat-card .horizontal-line__hover--gb{ 
+    width:35%;
+    background-color: var(--primary);
+}
+
+.cardContainer--basicCard:hover ~ .stat-card .horizontal-line__hover--project{ 
+    width:15%;
+    background-color: var(--primary);
+}
+
+.cardContainer--proCard:hover ~ .stat-card .horizontal-line__hover--user{ 
+    width:35%;
     background-color: var(--primary)
 }
 
-.cardContainer--premiumCard:hover ~ .stat-card .horizontal-line{ 
+.cardContainer--proCard:hover ~ .stat-card .horizontal-line__hover--gb{ 
+    width:45%;
+    background-color: var(--primary)
+}
+
+.cardContainer--proCard:hover ~ .stat-card .horizontal-line__hover--project{ 
+    width:40%;
+    background-color: var(--primary)
+}
+
+.cardContainer--premiumCard:hover ~ .stat-card .horizontal-line__hover--user{ 
+    width: 60%;
+    background-color: var(--primary)
+}
+
+.cardContainer--premiumCard:hover ~ .stat-card .horizontal-line__hover--gb{ 
     width: 75%;
+    background-color: var(--primary)
+}
+
+.cardContainer--premiumCard:hover ~ .stat-card .horizontal-line__hover--project{ 
+    width:55%;
     background-color: var(--primary)
 }

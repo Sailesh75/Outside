@@ -1,0 +1,16 @@
+header h2{
+    text-align: center;
+    color: brown;
+}
+
+.main-container{
+    margin:20px;
+    padding:20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.red-color-span{
+    color: red;
+}

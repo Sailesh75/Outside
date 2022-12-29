@@ -1,38 +1,48 @@
-body{
-  margin: 25px;
-  padding: 10px;
-  border:2px solid black;
-  border-radius: 20px;
-  text-align: center;
+/*==============================================
+GLOBAL STYLES
+==============================================*/
+
+body {
+    margin: 50px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* unvisited link */
-a{
-  text-decoration: none;
-  padding: 10px;
+a {
+    text-decoration: none;
+    padding: 10px;
 }
 
 h2{
   text-decoration: underline;
 }
 
-a:link {
+a:link{
     color: rgb(69, 29, 29);
   }
   
   /* visited link */
-  a:visited {
+  a:visited  {
     color: rgb(53, 0, 128);
   }
   
-  a:hover {
+  a:hover  {
     color: rgb(106, 152, 67);
   }
   
   /* selected link */
-  a:active {
+  a:active  {
     color: blue;
   }
+
+
+
+/*==============================================
+HEADER STYLES
+==============================================*/
 
 .pseudoClass {
     display: block;
@@ -89,3 +99,7 @@ div{
     margin: 20px;
 }
 
+
+/*==============================================
+FOOTER STYLES
+==============================================*/

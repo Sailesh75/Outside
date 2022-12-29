@@ -1,10 +1,13 @@
-body{
-    background-color: #F7F7F7;
-  
-
+h1{
+    margin: 0px;
 }
 
-.service-container{
+.service-section{
+    background-color: #F7F7F7;
+    padding: 30px;
+}
+
+.service-container  {
     display: flex;
     justify-content: center;
     align-items:center;
@@ -12,7 +15,7 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-.service-card{
+.service-card  {
     width:250px;
     height:350px;
     padding: 20px;
@@ -23,23 +26,23 @@ body{
     flex-direction: column;
 }
 
-.service-card--plain{
+.service-card--plain  {
     background-color:#FFFFFF ;
 }
 
-.service-card--blue{
+.service-card--blue  {
     background-color: #E4F2FF;
 }
 
-.service-card--green{
+.service-card--green  {
     background-color: #D1DFBF;
 }
 
-.service-card--red{
+.service-card--red  {
     background-color: #F9DBDB;
 }
 
-.container{
+.container  {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +50,7 @@ body{
     padding:10px;
 }
 
-.container div{
+.container div  {
     margin:15px;
 }
 
@@ -56,41 +59,37 @@ body{
     margin: 20px;
 }
 
-.section__header{
+.section__header  {
     text-align: center;
 }
 
-.service-section{
+.feature-section  {
     margin: 100px;
 }
 
-.feature-section{
-    margin: 100px;
-}
-
-.card__button{
+.card__button  {
     padding:10px;
     color: #ffffff;
     border: #ffffff;
 }
 
-.service-card__button--gray{
+.service-card__button--gray  {
     background-color:#515151 ;
 }
 
-.service-card__button--blue{
+.service-card__button--blue  {
     background-color:#0047FF ;
 }
 
-.service-card__button--black{
+.service-card__button--black  {
     background-color: #40433C;
 }
 
-.service-card__button--red{
+.service-card__button--red  {
     background-color: #e97c7c;
 
 }
 
-.card__button--feature{
+.card__button--feature  {
     background-color: #E70606;
 }

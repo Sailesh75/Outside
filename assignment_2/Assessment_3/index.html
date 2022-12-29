@@ -5,28 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <h2>CSS Box Sizing</h2>
-    <p>The Css box-sizing property allows us to include the padding and the border in an element's total width and height.</p>
-
-    <h3>The standard CSS box model</h3>
-    <p>In the standard box model, if you give a box width and a height attributes, this defines the width and height of the content box. Any padding and border is then added to those dimensions to get the total size taken up by the box.</p>
-    <p>Let's see the example with box below:</p>
-    <div class="standardBoxModel">
-
+    <div class="main-container">
+        <header>
+            <h2>CSS Box Sizing</h2>
+        </header>
+        <section class="standard-box-model">
+            <p>The Css box-sizing property allows us to include the padding and the border in an element's total width and height.</p>
+            <h3>The standard CSS box model:</h3>
+            <p>In the standard box model, if you give a box width and a height attributes, this defines the width and height of the content box. Any padding and border is then added to those dimensions to get the total size taken up by the box.</p>
+            <p>Let's see the example with box below:</p>
+            <div class="standardBoxModel"></div>
+            <p>The actual space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5) and 210px high (150 + 25 + 25 + 5 + 5).</p>
+        </section>
+        <section class="alternative-box-model">
+            <h3>The alternative CSS box model:</h3>
+            <p>In the alternative box model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border (see image below). No need to add up the border and padding to get the real size of the box.</p>
+            <h4>To turn on the alternative model for an element, set box-sizing: border-box on it: </h4>
+            <div class="alternativeBoxModel">
+            </div>
+            <P>Now, the actual space taken up by the box will be 350px in the inline direction and 150px in the block direction.</P>
+        </section>
     </div>
-    <p>The actual space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5) and 210px high (150 + 25 + 25 + 5 + 5).</p>
-    <h3>The alternative CSS box model</h3>
-    <p>In the alternative box model, any width is the width of the visible box on the page. The content area width is that width minus the width for the padding and border (see image below). No need to add up the border and padding to get the real size of the box.</p>
-  
-
-    <h4>To turn on the alternative model for an element, set box-sizing: border-box on it: </h4>
-    <div class="alternativeBoxModel">
-
-    </div>
-    <P>Now, the actual space taken up by the box will be 350px in the inline direction and 150px in the block direction.</P>
-
 </body>
 </html>

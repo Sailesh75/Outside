@@ -5,83 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Assesment 2 -padding</title>
 </head>
 <body>
-    <header>
+    <header class="header_container">
         <h1>CSS padding</h1>
     </header>
-
-    <h3>Padding-inline-start:</h3>
-    <p><span class="titleSpan">Padding-inline-start</span> is the space from its border to its content, at the start in the inline direction.
+    <section class="section-firstpart">
+        <h3>Padding-inline-start:</h3>
+        <p><span class="red-span">Padding-inline-start</span> is the space from its border to its content, at the start in the inline direction.
         <h4>CSS syntax:</h4>
-        <p>padding-inline-start: auto|value|initial|inherit;</p>
-        
+        <p>padding-inline-start: auto|value|initial|inherit;</p>    
         <h3>Padding-inline-end:</h3>
-        <p><span class="titleSpan">Padding-inline-end</span> is the space from its border to its content, at the end in the inline direction.</p>    
+        <p><span class="red-span">Padding-inline-end</span> is the space from its border to its content, at the end in the inline direction.</p>    
+        <h4>CSS syntax:</h4>
+        <p class="syntax">padding-inline-end: auto|value|initial|inherit;</p>
+        <ol>
+            <li>auto: Default. The element's default padding-inline distance.</li>
+            <li>length: Specifies distance in px, pt, cm, etc. Negative values are not allowed. </li>
+            <li>%: Specifies distance in percent relative to size of parent element in the inline direction.</li>
+            <li>initial: Sets this property to its default value.</li>
+            <li>inherit: Inherits this property from its parent element.</li>
+        </ol>
+        <p>Both padding-inline-start and padding-inline-end depend upon writing mode and direction property.</p>
+    
+        <h3>1.Writing mode</h3>
+        <p>The<span class="red-span">writing-mode</span> property specifies whether lines of text are laid out horizontally or vertically.</p>
+        <h4>CSS syntax:</h4>
+        <p class="syntax">writing-mode: horizontal-tb|vertical-rl|vertical-lr;</p>
+        <ol>
+            <li>horizontal-tb: Let the content flow horizontally from left to right, vertically from top to bottom</li>
+            <li>vertical-rl: Let the content flow vertically from top to bottom, horizontally from right to left </li>
+            <li>vertical-lr: Let the content flow vertically from top to bottom, horizontally from left to right</li>
+        </ol>
+        <h3>2.Direction property</h3>
+        <p>The <span class="red-span">direction</span> property specifies the text direction/writing direction within a block-level element.</p>
+        <h4>CSS syntax:</h4>
+        <p class="syntax">direction: ltr|rtl|initial|inherit;</p>
+        <ol>
+            <li>ltr: Text direction goes from left-to-right. This is default</li>
+            <li>rtl: Text direction goes from right-to-left </li>
+            <li>initial: Sets this property to its default value.</li>
+            <li>inherit: Inherits this property from its parent element.  </li>
+        </ol>
+    </section>
+    <section class="section-firstpart">
+        <h3>Padding-inline:</h3>
+        <p><span class="red-span">Padding-inline</span> is a CSS logical shorthand property that combines the padding-inline-start and padding-inline-end properties into a single declaration, creating space around an element’s content in the inline (left and right) direction.</p>
+         <h5>If the padding-inline property has two values: </h5>
+         <ul>
+            <li>padding-inline: 10px 50px;</li>
+            <li>padding at start is 10px</li>
+            <li>padding at end is 50px</li>
+         </ul>
+         <br>
+         <h5>If the padding-inline property has one value:</h5>
+         <ul>
+            <li>padding-inline: 10px;</li>
+            <li>padding at start and end is 10px</li>
+         </ul>
+         <div class="image-container">
+            <img class="padding-image" src="../images/assess_2_1.png">
+            <p>When we say that padding-inline “creates space around an element’s content” we mean space that provides extra breathing room between the element’s content and the element’s edges.</p>
+         </div>
+         <div class="image-container">
+            <img class="padding-image" src="../images/assess_2_2.png">
+            <p>And that spacing is inside any margins and borders. In other words, it’s the innermost spacing that makes up an element’s Box Model.</p>
+         </div>
+         <div class="image-container">
+            <img class="padding-image"  src="../images/assess_2_3.png">
+            <p>The padding-inline property may be specified with one or two values. If one value is given, it is used as the value for both padding-inline-start and padding-inline-end. If two values are given, the first is used for padding-inline-start and the second for padding-inline-end.</p>
+         </div>
 
-        
-        
-    <h4>CSS syntax:</h4>
-    <p>padding-inline-end: auto|value|initial|inherit;</p>
-
-    <ol>
-        <li>auto: Default. The element's default padding-inline distance.</li>
-        <li>length: Specifies distance in px, pt, cm, etc. Negative values are not allowed. </li>
-        <li>%: Specifies distance in percent relative to size of parent element in the inline direction.</li>
-        <li>initial: Sets this property to its default value.</li>
-        <li>inherit: Inherits this property from its parent element.</li>
-    </ol>
-   
-    <p>The CSS padding-inline and padding-block properties are very similar to CSS properties padding-top, padding-bottom, padding-left and padding-right, but the padding-inline and padding-block properties are dependent on inline and block directions.</p></p>
-
-    <h3>1.Writing mode</h3>
-    <p>The<span class="titleSpan">writing-mode</span> property specifies whether lines of text are laid out horizontally or vertically.</p>
-    <h4>CSS syntax:</h4>
-    <p>writing-mode: horizontal-tb|vertical-rl|vertical-lr;</p>
-    <ol>
-        <li>horizontal-tb: Let the content flow horizontally from left to right, vertically from top to bottom</li>
-        <li>vertical-rl: Let the content flow vertically from top to bottom, horizontally from right to left </li>
-        <li>vertical-lr: Let the content flow vertically from top to bottom, horizontally from left to right</li>
-    </ol>
-    <h3>2.Direction property</h3>
-    <p>The <span class="titleSpan">direction</span> property specifies the text direction/writing direction within a block-level element.</p>
-    <h4>CSS syntax:</h4>
-    <p>direction: ltr|rtl|initial|inherit;</p>
-    <ol>
-        <li>ltr: Text direction goes from left-to-right. This is default</li>
-        <li>rtl: Text direction goes from right-to-left </li>
-        <li>initial: Sets this property to its default value.</li>
-        <li>inherit: Inherits this property from its parent element.  </li>
-    </ol>
-
-    <h3>Padding-inline:</h3>
-    <p><span class="titleSpan">Padding-inline</span> is a CSS logical shorthand property that combines the padding-inline-start and padding-inline-end properties into a single declaration, creating space around an element’s content in the inline (left and right) direction.</p>
-     <h5>If the padding-inline property has two values: </h5>
-     <ul>
-        <li>padding-inline: 10px 50px;</li>
-        <li>padding at start is 10px</li>
-        <li>padding at end is 50px</li>
-     </ul>
-     <br>
-     <h5>If the padding-inline property has one value:</h5>
-     <ul>
-        <li>padding-inline: 10px;</li>
-        <li>padding at start and end is 10px</li>
-     </ul>
-
-
-    <img src="../images/assess_2_1.png">
-    <p>When we say that padding-inline “creates space around an element’s content” we mean space that provides extra breathing room between the element’s content and the element’s edges.</p>
-    <img src="../images/assess_2_2.png">
-    <p>And that spacing is inside any margins and borders. In other words, it’s the innermost spacing that makes up an element’s Box Model.</p>
-    <img src="../images/assess_2_3.png">
-    <p>The padding-inline property may be specified with one or two values. If one value is given, it is used as the value for both padding-inline-start and padding-inline-end. If two values are given, the first is used for padding-inline-start and the second for padding-inline-end.</p>
- 
-    <h3>Padding-block:</h3>
-    An element's padding-block is the space from its border to its content in the block direction, and it is a shorthand property for the following properties:
-
-    <p>The CSS padding-inline and padding-block properties are very similar to CSS properties padding-top, padding-bottom, padding-left and padding-right, but the padding-inline and padding-block properties are dependent on inline and block directions.</p></p>
-
+        <h3>Padding-block:</h3>
+        <p>An element's <span class="red-span">padding-block</span> is the space from its border to its content in the block direction, and it is a shorthand property for the following properties:</p>
+        <p>The CSS padding-inline and padding-block properties are very similar to CSS properties padding-top, padding-bottom, padding-left and padding-right,<span class="red-span"> but the padding-inline and padding-block properties are dependent on inline and block directions.</span></p>
+    </section>
 </body>
 </html>
