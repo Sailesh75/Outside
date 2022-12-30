@@ -16,15 +16,14 @@ a {
     padding: 10px;
 }
 
-h2{
+h3{
   text-decoration: underline;
 }
 
 a:link{
     color: rgb(69, 29, 29);
   }
-  
-  /* visited link */
+
   a:visited  {
     color: rgb(53, 0, 128);
   }
@@ -33,7 +32,6 @@ a:link{
     color: rgb(106, 152, 67);
   }
   
-  /* selected link */
   a:active  {
     color: blue;
   }

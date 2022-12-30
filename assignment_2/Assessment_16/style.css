@@ -131,11 +131,6 @@ a:hover{
     color: var(--offWhite);
 }
 
-.sidebarRight__flexitem--header{
-   align-items: center;
-
-}
-
 .gridItem--sidebarRight div{
     color: var(--white);
 }
