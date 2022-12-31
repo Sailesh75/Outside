@@ -1,19 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assesment 10</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="../css/assignment-01.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assessment 10</title>
 </head>
 <body>
-    <h2>CSS functions : max(),min(),clamp()</h2>
-    <h3>max() Function</h3>
-    <p>The max function accepts a list of comma separated values and returns the biggest one. Each value can also be an expression (whatever you can use as an argument for the calc() function can be one of the arguments in this function, too).</p>
-    <p>The max function can be seen as a way to determine a minimum value for a certain thing.</p>
-    <p>A use case for this function is making a text responsive, while giving a minimum value to the dimension.</p>
+    <header>
+        <h2>Research on max(),min() and clamp()</h2>
+    </header>
 
+    <section class="min-intro">
+        <h3>max():</h3>
+        <p>The <span class="red-span">max</span> function accepts a list of comma separated values and returns the biggest one. Each value can also be an expression (whatever you can use as an argument for the calc() function can be one of the arguments in this function, too).The max function can be seen as a way to determine a minimum value for a certain thing.
+            A use case for this function is making a text responsive, while giving a minimum value to the dimension.
+        </p>
+        <p>For example:</p>
+        <img src="../images/max().png" alt="max-function">
+        <p>In this way, the text will be a tenth of the viewport height, unless the viewport height becomes too small. The text will always have a font-size of at least 1rem to ensure legibility.</p> 
+    </section>
 
-    
+    <section class="max-intro">
+        <h3>min():</h3>
+        <p>In the same way as the max function, the <span class="red-span">min</span> function  can take any number of arguments, including other max, min, or clamp functions, and give back the smallest value between them.
+            The min function can be seen as determining a maximum value.
+            For example, let's say that you are creating a form and you want it to be responsive while the screen width changes. You'll want to give it a maximum width to avoid that horizontally stretched look that can happen on the largest screens.
+        </p>
+        <img src="../images/min().png" alt="min-function">
+        <p>Your page will have a width equal to 90% of the viewport width, or 600px wide, whatever is smallest. So if the viewport width is larger than ~670px, the form will not stretch horizontally.</p> 
+    </section>
+
+    <section class="clamp-intro">
+        <h3>clamp():</h3>
+        <p>The clamp() method is used to clamp the value between an upper and lower bound. It takes three parameters which are listed below:</p>
+        <ul>
+            <li>Minimum value</li>
+            <li>Preferred value</li>
+            <li>Maximum value</li>
+        </ul>
+        <img src="../images/clamp().png" alt="clamp-function">
+        <p>The minimum value comes in handy when the preferred value is smaller than the minimum value similarly maximum value comes in handy when the preferred value is more than the maximum value. The preferred value becomes useful when it is between the minimum and maximum value.
+            The clamp() function can be used with the various elements such as font-size, width etc.</p>   
+    </section>
+
+    <section class="comparison">
+        <h2>How it is different from media queries?</h3>
+        <p>These functions are really useful in responsive layouts, and can be an alternative to using media queries.
+            If we learn to use them appropriately we can avoid the jumpy change of layout that can happen when resizing a window if you used media queries, and with less code! </p>
+    </section>
 </body>
 </html>
+

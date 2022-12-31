@@ -4,13 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>Problem with clear</h1>
-    <p>The CSS float property specifies how an element should float.</p>
-    <p>The CSS clear property specifies what elements can float beside the cleared element and on which side.</p>
-
-    
+    <header>
+        <h2>Problem with clear:</h2>
+    </header>
+    <section class="intro">
+        <p>The CSS <span class="red-span">float</span> property specifies how an element should float.</p>
+        <p>The CSS <span class="red-span">clear</span> property specifies what elements can float beside the cleared element and on which side.The clear property can have one of the following values:</p>
+    <ol>
+        <li>none: The element is not pushed below left or right floated elements. This is default</li>
+        <li>left: The element is pushed below left floated elements </li>
+        <li>right: The element is pushed below right floated elements</li>
+        <li>both:The element is pushed below both left and right floated elements</li>
+        <li>inherit: The element inherits the clear value from its parent.</li>
+    </ol>
+    </section>
+    <section class="problem-with-clear">
+        <p>When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear below it on the web page.But the <strong> problem with clear</strong> is that if a floated element is taller than the containing element,it will "overflow" outside of its container.</p>
+        <div class="sample-1">
+            <img class="img1" src="../images/main_pic1.png" alt="pbl with clear" width="170" height="170">
+            This image is floated to the right. It is also taller than the element containing it, 
+            so it overflows outside of its container:
+        </div>
+        <div class="sample-2">
+            <img class="img2" src="../images/main_pic1.png" alt="pbl with clear" width="170" height="170">
+            We can fix this by adding a clearfix class with overflow: auto; to the containing element:
+        </div>
+    </section>
 </body>
 </html>

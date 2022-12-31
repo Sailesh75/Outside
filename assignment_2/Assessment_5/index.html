@@ -4,15 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h2>How can you remove white spacing between elements with display: inline-block ?</h2>
-    <p> Method 1: Assign the font size of the parent of the inline block element to 0px and then assign the proper font-size to 
-        the inline block element</p>
-
-        1.parent lai flex banauni
-        2.parent ko font size 0px rakhni ani child haru ko chai jati ko teti rakhne
-
+    <header class="main-container">
+        <h2>How can you remove white spacing between elements with display: inline-block ?</h2>
+    </header>
+    <section class="section first-method">
+        <div class="sample-div"></div>
+        <div class="sample-div"></div>
+        <p><strong>Method 1: </strong>Assign the font size of the parent of the inline block element to 0px and then assign the proper font-size to 
+            the inline block element</p>
+        <div class="method1">
+            <div class="sample-div"></div>
+            <div class="sample-div"></div>
+        </div>
+        <p>The white space between the two div is removed by assigning the font size of parent div to 0px.</p>
+    </section>
+    <section class="section second-method">
+        <p><strong>Method 2:</strong>Make the display of the parent element to flex. </p>
+        <div class="method2">
+            <div class="sample-div"></div>
+            <div class="sample-div"></div>
+        </div>
+    </section>
 </body>
 </html>

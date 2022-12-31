@@ -1,0 +1,40 @@
+body{
+    margin:50px;
+    padding:15px;
+    border:2px solid black;
+    border-radius: 20px;
+    font-family: 'Opensans', sans-serif;
+}
+
+header h2{
+    color: brown;
+    text-align: center;
+    margin: 0px;
+}
+
+div{
+    padding: 10px;
+}
+
+.red-span{
+    color: red;
+}
+
+.sample-1{
+    border: 2px solid red;
+    margin-bottom: 150px;
+}
+
+.img1{
+    float: right;
+}
+
+.img2 {
+    float: right;
+  }
+
+.sample-2{
+    border: 2px solid red;
+    overflow: auto;
+}  
+

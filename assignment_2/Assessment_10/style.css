@@ -1,0 +1,17 @@
+body{
+    margin:50px;
+    padding:20px;
+    border:2px solid black;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2{
+    color: brown;
+    text-align: center;
+}
+
+.red-span{
+    color: red;
+}
+

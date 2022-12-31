@@ -1,0 +1,26 @@
+body{
+    margin:50px;
+    padding:20px;
+    border:2px solid black;
+    border-radius: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header h2{
+    color: brown;
+}
+
+.sample-div{
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    display: inline-block;
+}
+
+.method1{
+    font-size: 0px; 
+}
+
+.method2{
+    display: flex;
+}
