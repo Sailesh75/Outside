@@ -46,9 +46,27 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:50px;
     padding:10px;
 }
+
+.inner__circle{
+    width: 350px;
+    height: 350px;
+    border:solid #F9DBDB;
+    border-color:#F9DBDB ;
+    border-radius: 50%;;
+}
+
+.inner__circle--image1{
+    background-image: url(../images/assess_13.jpg);
+    border-width: 8px 15px 15px 8px;
+}
+
+.inner__circle--image2{
+    background-image: url(../images/asses_13.jpg);
+    border-width: 15px 8px 8px 15px;
+}
+
 
 .container div  {
     margin:15px;
@@ -93,3 +111,13 @@ h1{
 .card__button--feature  {
     background-color: #E70606;
 }
+
+.section__header--feature{
+    color: #575757;
+}
+
+.section__header--feature h1{
+    color: #E70606;
+    font-size: 40px;
+}
+

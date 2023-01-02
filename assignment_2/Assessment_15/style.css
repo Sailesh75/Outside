@@ -39,15 +39,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.outer-div:hover{
-    /* transition: background-color 0.5s ease-in;
-    transition: width 0.5s ease-in;
-
-    transform: border rotate(360deg) ease-in;
-    transform: scale(1.2); */
+/* .outer-div:hover{
 
     transform: rotate(360deg);
     transition: transform 0.5s ease-in;
@@ -55,13 +49,69 @@ body{
 .outer-div:hover img{
     transform: rotate(-360deg);
     transition: transform  0.5s ease-in;
-}
+} */
 
 .inner-div img{
    width: 80px;
    height: 80px;
    border-radius: 50%;
 }
+
+.outer-div--rotate:hover{
+    animation: rotate 3s ease infinite;
+}
+
+.outer-div--rotate:hover img{
+    animation: anticlock 3s ease infinite;
+}
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+
+    }
+    25%{
+        transform: rotate(90deg);
+
+    }
+    50%{
+        transform: rotate(180deg);
+
+    }
+    75%{
+        transform: rotate(270deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
+
+@keyframes anticlock {
+    0%{
+        transform: rotate(0deg);
+
+    }
+    25%{
+        transform: rotate(-90deg);
+
+    }
+    50%{
+        transform: rotate(-180deg);
+
+    }
+    75%{
+        transform: rotate(-270deg);
+
+    }
+    100%{
+        transform: rotate(-360deg);
+
+    }
+}
+
 
 .about{
     grid-column:1;

@@ -17,7 +17,7 @@ main{
     align-items: center;
 }
 
-.rotate {
+.animation-first {
   width: 10rem;
   height: 10rem;
   transform-origin: center;
@@ -39,18 +39,17 @@ main{
 @keyframes rotate-and-remove-border {
   0% {
     border-radius: 50%;
-    background-color: rgb(165, 228, 179);
+    background-color: rgb(160, 220, 170);
     transform: rotate();
   }
   50% {
     border-radius: 0;
-
-    background-color: rgb(255, 175, 228);
+    background-color: rgb(245, 175, 220);
     transform: rotate(-1turn);
   }
   100% {
     border-radius: 50%;
-    background-color: rgb(165, 228, 179);
+    background-color: rgb(160, 228, 175);
     transform: rotate(-1turn);
   }
 }

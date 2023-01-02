@@ -12,7 +12,7 @@
     font-family: 'Inter', sans-serif;
 }
 
-@media(max-width:1950px){
+@media(max-width:1920px){
 
 body{
     background-color: var(--primary);
@@ -26,6 +26,12 @@ a{
 a:hover{
     color: var(--yellow);
     cursor: pointer;
+}
+
+#hide-nav {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
 .main-grid-container{
@@ -170,8 +176,6 @@ a:hover{
     font-size: 18px;
 }
 
-
-
 .main_gridItems h2{
     font-size:32px;
     color:var(--lightGray);
@@ -194,7 +198,6 @@ a:hover{
     visibility: collapse;
 }
     
-
 .lineStyle{
   border-top:0.001px solid --var(gray);
 }
@@ -207,8 +210,6 @@ a:hover{
     background-position: center;
     /* visibility: collapse; */
 }
-
-
 
 
 }
@@ -228,6 +229,28 @@ a:hover{
     background-color: #FDF8EC;
 
 }
+
+#hide-nav:checked ~ nav {
+    display: block;
+    position: absolute;
+    background: #fdf8ec;
+  }
+
+  #hide-nav:checked ~ ul {
+    display: block;
+    flex-direction: row;
+  }
+  
+  #hide-nav:checked ~ .clickme {
+    background: url("../img/menu-icon-1.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .clickme {
+    display: none;
+    position: absolute;
+  }
 
 .gridItem--navigation{
     grid-column: 1;
@@ -275,7 +298,6 @@ a:hover{
     gap: 1rem;
 }
 
-
 .footer__item h2,.footer__item h3{
     margin-block: 0;
     font-size: 0.8rem;
@@ -290,15 +312,17 @@ a:hover{
     width: 100px;
     object-fit: cover;
 }
-
+sss
 .sidebarRight--flexitem{
     margin: 5px;
 }
+}
 
 
+/* ..................tablet view............. */
 
-
-
-
-
+@media(max-width:750px){
+.gridItem__sidebarLeft--image{
+    width: 100%;
+}
 }
