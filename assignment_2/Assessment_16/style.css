@@ -205,19 +205,19 @@ a:hover{
   border-top:0.001px solid --var(gray);
 }
 
-/* .ham--struct{
-    display: none;
-} */
-
 /* navigation sidebar  */
 
-/* .toggle{
+.ham--struct{
     display: none;
-} */
+} 
 
-/* .cross--struct{
+ .toggle{
     display: none;
-} */
+ }
+
+ .cross--struct{
+    display: none;
+}
 
 .nav__content{
     list-style-type: none;
@@ -253,6 +253,9 @@ a:hover{
 }
 
 .gridItem--navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     grid-column: 1;
     grid-row: 1;
 }
@@ -270,57 +273,61 @@ navigation */
     background-color: var(--bg-color);
 } */
 
+.navigation{
+    display: none;
+}
 
-
-.nav__content{
-        
+/* .nav__content{    
+    display: block;
     list-style-type: none;
     padding-top: 30px;
     line-height: 40px;  
-}
+} */
 
-.img__cross{
+/* .img__cross{
     margin-left: 13rem;
-}
+} */
 
 /* .toggle{
     display: none;
 } */
 
-.toggle:checked~ nav{
+.toggle:checked~ .navigation{
     display: block;
-    width: 256px;
+    background-color: var(--yellow);
+    height: 100vh;
+    width: 70%;
+    /* position: absolute;
+    margin-top: 111rem ; */
+    /* padding-top: 10px;
+    position: absolute;
+    margin-top: 111rem ;
+    bottom: 0px;
+    height: 115rem;
+    background-color: var(--bg-color);
+    width: 256px; */
 }
-/* 
+
+
+.toggle:checked~ .navigation li{
+    display: block;
+    color:#5E607A;
+    line-height: 4rem;
+    text-align: left;
+    margin-left: 25px;
+}
+
+.toggle:checked~ .navigation .cross--struct{
+    display: block;
+    position: relative;
+    left:180px;
+    margin: 15px;
+}
+
+
 .ham--struct{
     display: block;
-} */
-
-
-
-/* #hide-nav:checked ~ nav {
-    display: block;
-    position: absolute;
-    background: #fdf8ec;
-  }
-
-  #hide-nav:checked ~ ul {
-    display: block;
-    flex-direction: row;
-  }
-  
-  #hide-nav:checked ~ .clickme {
-    background: url("../img/menu-icon-1.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  } 
-
-  .clickme {
-    display: none;
-    position: absolute;
-  }
-
-  */
+}
 
 
 .gridItem__sidebarLeft{
