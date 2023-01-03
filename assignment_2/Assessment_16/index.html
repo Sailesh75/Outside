@@ -12,18 +12,28 @@
 </head>
 <body>
     <div class="main-grid-container">
+
+        <!-- navigation section -->
         <div class="gridItem gridItem--navigation">
             <img id='websiteLogo' alt='websiteLogo'src="../images/logo16.png">
-            <input id="hide-nav" type="checkbox">
+             
+            <label for="toggle--menu" class="img__ham">
+                <img class="ham--struct" src="../images/bar_icon.svg" alt="">
+            </label>
+            <input type="checkbox" id="toggle--menu" class="toggle">
+
             <nav class="navigation">
-                <a href="#">Home</a>
-                <a href="#">New</a>
-                <a href="#">Popular</a>
-                <a href="#">Trending</a>
-                <a href="#">Categories</a>
+                <label for="toggle--menu" class="img__cross">
+                    <img class="cross--struct" src="../images/cross_icon.svg" alt="">
+                </label>
+                <ul class="nav__content">
+                    <li><a id="nav_link" href="#">Home</a></li>
+                    <li><a id="nav_link" href="#">New</a></li>
+                    <li><a id="nav_link" href="#">Popular</a></li>
+                    <li><a id="nav_link" href="#">Trending</a></li>
+                    <li><a id="nav_link" href="#">Categories</a></li>
+                </ul>
             </nav>
-            <label for="hide-nav" class="clickme"></label>
-            <!-- <div class="bar_icon"></div> -->
         </div>
         <div class="gridItem gridItem__sidebarLeft">
             <img class="gridItem__sidebarLeft--image" src="../images/web.png">

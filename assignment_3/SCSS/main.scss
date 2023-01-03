@@ -1,0 +1,46 @@
+@import "./Cards/card.scss";
+@import "./Base/base.scss";
+
+$bg-color:#fff;
+
+header{
+    text-align: center;
+}
+
+.card-container{
+    display: grid;
+    gap:0.5rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    padding: 1rem;
+    margin: 1rem;
+
+    & .card-item:hover{
+        cursor: pointer;
+    }
+
+    
+    & .card-item:hover{
+        background-color: #43B97F;
+        
+    }
+}
+
+.card-list-container{
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    border: 1px solid black;
+    width: fit-content;
+}
+
+@media (max-width:450px) {
+    .card-list-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+

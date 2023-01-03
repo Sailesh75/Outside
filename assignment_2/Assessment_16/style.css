@@ -70,6 +70,8 @@ a:hover{
 }
 
 .gridItem__sidebarLeft{
+    grid-column: 1;
+    grid-row: 2;
     display: grid;
     grid-template-columns:1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -92,7 +94,6 @@ a:hover{
 
 .readMoreBtn{
     cursor: pointer;
-    
     background-color: var(--lightRed);
     color:var(--offWhite);
     border: none;
@@ -129,6 +130,8 @@ a:hover{
 }
 
 .gridItem--sidebarRight{
+    grid-row: 2;
+    grid-column: 2;
     background-color: #00001A;
     display: flex;
     flex-direction: column;
@@ -202,20 +205,40 @@ a:hover{
   border-top:0.001px solid --var(gray);
 }
 
-.bar_icon{
-    background-image: url(/assignment_2/images/bar_icon.svg);
-    height:27px;
-    width:35px;
+/* .ham--struct{
     display: none;
-    background-position: center;
-    /* visibility: collapse; */
+} */
+
+/* navigation sidebar  */
+
+/* .toggle{
+    display: none;
+} */
+
+/* .cross--struct{
+    display: none;
+} */
+
+.nav__content{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
+.nav__content li {
+    display: inline-block;
+    font-size: 16px;
+    padding-right: 28px;
+    text-decoration: none;
+}
 
 }
 /* ******mobile_view******* */
 
 @media(max-width:450px){ 
+
+/* grid-structure */
 
 .main-grid-container{
         grid-template-columns: 1fr;
@@ -227,10 +250,55 @@ a:hover{
 
 .gridItem{                                             
     background-color: #FDF8EC;
-
 }
 
-#hide-nav:checked ~ nav {
+.gridItem--navigation{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+/* 
+navigation */
+
+/* .navigation{
+    display: block;
+    padding-top: 10px;
+    position: absolute;
+    margin-top: 111rem ;
+    bottom: 0px;
+    height: 115rem;
+    background-color: var(--bg-color);
+} */
+
+
+
+.nav__content{
+        
+    list-style-type: none;
+    padding-top: 30px;
+    line-height: 40px;  
+}
+
+.img__cross{
+    margin-left: 13rem;
+}
+
+/* .toggle{
+    display: none;
+} */
+
+.toggle:checked~ nav{
+    display: block;
+    width: 256px;
+}
+/* 
+.ham--struct{
+    display: block;
+} */
+
+
+
+/* #hide-nav:checked ~ nav {
     display: block;
     position: absolute;
     background: #fdf8ec;
@@ -245,17 +313,15 @@ a:hover{
     background: url("../img/menu-icon-1.svg");
     background-repeat: no-repeat;
     background-size: contain;
-  }
+  } 
 
   .clickme {
     display: none;
     position: absolute;
   }
 
-.gridItem--navigation{
-    grid-column: 1;
-    grid-row: 1;
-}
+  */
+
 
 .gridItem__sidebarLeft{
     grid-column: 1;
@@ -281,13 +347,10 @@ a:hover{
 }
 
 
-.navigation{
-    visibility: collapse;
-}
 
-.bar_icon{
+/* .bar_icon{
     display: block;
-}
+} */
 
 /* ..................main grid item started,........ */
 
@@ -321,8 +384,14 @@ sss
 
 /* ..................tablet view............. */
 
-@media(max-width:750px){
+@media(min-width:600px){
 .gridItem__sidebarLeft--image{
-    width: 100%;
+   object-fit: contain;
 }
 }
+
+@media(max-width:800px){
+    .gridItem__sidebarLeft--image{
+       object-fit: contain;
+    }
+    }
