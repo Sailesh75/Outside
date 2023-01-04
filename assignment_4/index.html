@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./SCSS/main.css">
+    <title>Bootstrap 5</title>
+</head>
+<body>
+    <div class="main-container">    
+        <!-- 1st section navigation -->
+
+        <div class="navigation-section">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./images/outside-logo 1.png" width="140px" height="36px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 list-item">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Portal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><img src="./images/Search.svg"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><img src="./images/Burger.svg"></a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+
+     <!-- 2nd section -- carousel -->
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/Hero BAnner (1).png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h2>We are committed to a greener future</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h2>Second slide label</h2>
+                <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block d-flex aligns-items-center">
+                <h2>Third slide label</h2>
+                <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            </button>
+        </div>
+
+        <!-- 3rd section -- cardItems -->
+
+        <div class="card-items">
+
+            <h2>Our values</h2>
+
+            <div class="card-item-flex">
+                <div class="card" style="width:22rem;">
+                    <img src="./images/card-item.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-text">Sea Freight Shipping</h3>
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    </div>
+                </div>    
+                <div class="card" style="width:22rem;">
+                    <img src="./images/card-item.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-text">Sea Freight Shipping</h3>
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    </div>
+                </div>    
+                <div class="card" style="width:22rem;">
+                    <img src="./images/card-item.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-text">Sea Freight Shipping</h3>
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    </div>
+                </div>
+                <div class="card" style="width:22rem;">
+                    <img src="./images/card-item.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-text">Sea Freight Shipping</h3>
+                      <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+                    </div>
+                </div>        
+            </div>
+
+            <!-- 4th section -- accordian  -->
+
+            <section class="accordian-section">
+                <h1>FAQS</h1>
+                <div class="accordian-section-flex">
+
+                    <div class="accordian-section-flex-section1">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                              </div>
+                            </div>
+                            
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                </button>
+                              </h2>
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                              </div>
+                            </div>
+
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                </button>
+                              </h2>
+                              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                              </div>
+                            </div>
+
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                              </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                            </div>
+                          </div>
+
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordian-section-flex-section2">
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+                              </div>
+                            </div>
+
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                </button>
+                              </h2>
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                              </div>
+                            </div>
+
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                </button>
+                              </h2>
+                              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                              </div>
+                            </div>
+
+
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingFour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                              </button>
+                            </h2>
+                            <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                            </div>
+                          </div>
+
+                          <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                                </div>
+                          </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+                        <!-- 5th section -- contact section  -->
+
+           <section class="contact-section">
+                <div class="contact-section-container">
+                    
+                </div>
+
+           </section>  
+           
+           <!-- last section -- footer section  -->
+
+           <section class="footer-section">
+            <div class="footer-section-container">
+
+                <div class="footer-left">
+                    <img src="./images/outside-logo 1.png" alt="companyLogo" width="420px" height="110px">
+                    <ul>
+                        <li>Portal</li>
+                        <li>Latest</li>
+                        <li>FAQs</li>
+                        <li>Legal</li>
+                        <li>Terms & Conditions</li>
+                        <li>Privacy</li>
+                    </ul>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-right__item footer-right__item--card1">
+                        <img src="./images/footerpic_1.png" alt="footerImage1" width="300px" height="400px">
+                        <h2>The Crozier Portal </h2>
+                        <button>Sign up</button>
+                    </div>
+                    <div class="footer-right__item footer-right__item--card2">
+                        <img src="./images/footerpic_2.png" alt="footerImage2" width="300px" height="400px">
+                        <h2>Work with us</h2>
+                        <button>See positions </button>
+                    </div>
+     
+
+
+                </div>
+                <div class="footer-bottom">
+                    <p>2022 Pagevamp Nepal Pvt.Ltd</p>
+                    <div class="socialMedia-icons">
+
+                    </div>
+
+                </div>
+                
+
+            </div>
+
+           </section>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
+</html>
