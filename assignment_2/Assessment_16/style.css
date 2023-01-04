@@ -263,49 +263,19 @@ a:hover{
 /* 
 navigation */
 
-/* .navigation{
-    display: block;
-    padding-top: 10px;
-    position: absolute;
-    margin-top: 111rem ;
-    bottom: 0px;
-    height: 115rem;
-    background-color: var(--bg-color);
-} */
-
 .navigation{
     display: none;
+    height: 105rem;
+    width: 70%;
+    position: absolute;
+    top: -8px;
+    right: -18px;
 }
-
-/* .nav__content{    
-    display: block;
-    list-style-type: none;
-    padding-top: 30px;
-    line-height: 40px;  
-} */
-
-/* .img__cross{
-    margin-left: 13rem;
-} */
-
-/* .toggle{
-    display: none;
-} */
 
 .toggle:checked~ .navigation{
     display: block;
-    background-color: var(--yellow);
-    height: 100vh;
-    width: 70%;
-    /* position: absolute;
-    margin-top: 111rem ; */
-    /* padding-top: 10px;
-    position: absolute;
-    margin-top: 111rem ;
-    bottom: 0px;
-    height: 115rem;
-    background-color: var(--bg-color);
-    width: 256px; */
+    background-color: var(--primary);
+ 
 }
 
 
@@ -317,12 +287,18 @@ navigation */
     margin-left: 25px;
 }
 
+.toggle:checked~ .navigation li:hover{
+    color:var(--yellow);
+}
+
 .toggle:checked~ .navigation .cross--struct{
     display: block;
     position: relative;
-    left:180px;
-    margin: 15px;
+    left:190px;
+    margin:20px;
 }
+
+/* .toggle:checked~ */
 
 
 .ham--struct{
@@ -352,12 +328,6 @@ navigation */
     display: flex;
     flex-direction: column;
 }
-
-
-
-/* .bar_icon{
-    display: block;
-} */
 
 /* ..................main grid item started,........ */
 

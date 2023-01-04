@@ -10,7 +10,7 @@ header{
 .card-container{
     display: grid;
     gap:0.5rem;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3,400px);
     grid-template-rows: repeat(2,1fr);
     padding: 1rem;
     margin: 1rem;
@@ -31,6 +31,16 @@ header{
     grid-template-columns: repeat(3,350px);
     border: 1px solid black;
     width: fit-content;
+}
+
+
+@media(max-width:450px){
+    .card-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
 }
 
 @media (max-width:450px) {
