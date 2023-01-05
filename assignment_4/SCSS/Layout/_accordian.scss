@@ -1,0 +1,25 @@
+
+// .........accordian.......
+
+.accordian-section-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+// .accordion-button {
+//     &.collapsed {
+//       &::after {
+//         background: url("../../images/minus.svg");
+//         background-size: cover;
+//       }
+//     }
+//     &:not(.collapsed) {
+//       &::after {
+//         background: url("../../images/plus.svg");
+//         background-size: contain;
+//         background-repeat: no-repeat;
+//       }
+//     }
+//   }
+ 

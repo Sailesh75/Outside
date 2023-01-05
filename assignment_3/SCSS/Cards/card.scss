@@ -1,27 +1,4 @@
-
-@mixin card-property{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex-direction: column; 
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px; 
-    padding:10px;  
-    width: 380px;
-    height: 363px;
-}
-
-@mixin card-list-property{
-    display: flex;
-    justify-content:center;
-    align-items: flex-start;
-    flex-direction: column;
-    row-gap:12px;
-    background-color: #fff;
-    padding: 10px;
-}
-
+@import '../Mixins/mixin.scss';
 
 .card-item{
     @include card-property;
@@ -71,7 +48,6 @@
 
 .card-list-item{
     @include card-list-property;
-
 
     &__button{
         background-color:#43B97F ;

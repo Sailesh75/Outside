@@ -1,0 +1,58 @@
+// carousel item styling
+
+.carousel-item{
+    min-height: 710.79px;
+    h2{
+        @include typography(auto, 700, 1.5, 'Inter');
+    }
+    p{
+        @include typography(auto, 200, 1.5, 'Inter');
+    }
+
+    img{
+        filter: brightness(40%);
+    }
+}
+
+.carousel-caption{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption{
+    h2{
+        font-size: 35px;
+    }
+    p{
+        margin-top: 25px;
+        font-size:20px;
+    }
+}
+
+.card-item-flex{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    margin:20px;
+
+    .card{
+        margin:5px;
+        background-color: #D7D2CA;
+        border: none;
+
+
+    h3{
+        font-size: 15px;
+    }
+    p{
+        font-size: 10px;
+    }
+    }
+
+}
+
+.carousel-indicators [data-bs-target]{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}

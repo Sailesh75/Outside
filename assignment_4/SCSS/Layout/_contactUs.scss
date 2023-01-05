@@ -1,0 +1,40 @@
+// contact section 
+
+.contact-section-container{
+    margin-inline:50px;
+    margin-block:30px ;
+    position: relative;
+    color: #fff;
+
+    img {
+        max-width: 100%;
+        height: auto;
+      }
+
+    .contact-section__content{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+
+
+        &--first{
+            font-size:50px;
+            @include typography(60px,lighter,1,gtFont);
+
+            &-italics{
+            @include typography(60px,600,1,italicFont);
+            }
+        } 
+        
+        &--second{
+            text-align: center;
+        }
+
+        &--third{
+            position: absolute;
+            top: 130%;
+            left: 35%;
+        }
+    }  
+}

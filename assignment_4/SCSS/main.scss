@@ -1,155 +1,34 @@
-$body-bg: #D7D2CA;
+//variables
+
+@import './base/global-vars';
+
+//mixin
+
+@import './mixin/mixin';
+
+//fonts
+
+@import './global/fonts';
+
+//bootstrap
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-.main-container{
-    background-color: #D7D2CA;
-    // height: 100vh;
-}
-.container-fluid{
-    margin-inline:30px;
-}
+//layouts
 
-.nav-item{
-    padding:10px
-}
-
-.carousel-item{
-    min-height: 710.79px;
-
-    img{
-        filter: brightness(40%);
-    }
-}
-
-.carousel-caption{
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.carousel-caption{
-    h2{
-        font-size: 35px;
-    }
-    p{
-        margin-top: 25px;
-        font-size:20px;
-    }
-}
-
-.card-items{
-    h2{
-        margin: 30px;
-    }
-}
-
-.card-item-flex{
-    display: flex;
-    align-items:center;
-    justify-content: space-around;
-    margin:20px;
-
-    .card{
-        margin:5px;
-        background-color: #D7D2CA;
-        border: none;
+@import "../SCSS/Layout/navigation";
+@import "../SCSS/Layout/hero";
+@import "../SCSS/Layout/accordian";
+@import "../SCSS/Layout/contactUs";
+@import "../SCSS/Layout/footer";
 
 
-    h3{
-        font-size: 15px;
-    }
-    p{
-        font-size: 10px;
-    }
-    }
 
-}
 
-.carousel-indicators [data-bs-target]{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
 
-}
-  
-// <!-- practise section -- accordian  --> 
 
-// .accordion{
-//     display: grid;
-//     grid-template-columns: repeat(2,1fr);
-//     grid-row: 100px;
-// }
 
-.accordian-section-flex{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.contact-section-container{
-    background-image: url(../images/Image.png);
-    object-fit: cover;
-    margin-block:50px;
-    margin-inline:60px;
-    width:auto;
-    height: 500px;
-}
-
-.footer-section{
-    background-color:#393939 ;
-    padding:50px;
-}
-
-.footer-section-container{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    // grid-template-rows:600px 200px;
-
-    .footer-left{
-        grid-column: 1;
-        grid-row: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content:space-around;
-        
-        img{
-            object-fit:contain;
-        }
-
-        ul{
-            list-style: none;
-            color: #EAE7DE;
-            padding-left: 0px;
-
-            li{
-                padding-top: 10px;
-            }
-        }
-    }
-
-    .footer-right{
-        grid-column: 2;
-        grid-row: 1;
-        display: flex;
-        justify-content: space-around;
-
-        .footer-right-item{
-            h2,button{
-                margin: 0px;
-            }
-        }
-
-    }
-
-    .footer-bottom{
-        grid-column: 1/span 2;
-        grid-row: 2;
-        display: flex;
-        justify-content: space-between;
-
-    }
-
-}
 
 
 

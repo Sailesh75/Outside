@@ -1,15 +1,14 @@
+@import "./Base/global-vars";
 @import "./Cards/card.scss";
-@import "./Base/base.scss";
 
-$bg-color:#fff;
+// ....Layouts....
+@import "./Layout/homepage.scss";
 
-header{
-    text-align: center;
-}
+//.....variables....
 
 .card-container{
     display: grid;
-    gap:0.5rem;
+    gap:1.5rem;
     grid-template-columns: repeat(3,400px);
     grid-template-rows: repeat(2,1fr);
     padding: 1rem;
