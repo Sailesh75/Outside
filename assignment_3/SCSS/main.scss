@@ -1,54 +1,24 @@
+// ....Variables....
+
 @import "./Base/global-vars";
+
+// ....Mixin....
+
+@import "./Mixins/mixin";
+
+// ....Cards....
+
 @import "./Cards/card.scss";
 
 // ....Layouts....
-@import "./Layout/homepage.scss";
-
-//.....variables....
-
-.card-container{
-    display: grid;
-    gap:1.5rem;
-    grid-template-columns: repeat(3,400px);
-    grid-template-rows: repeat(2,1fr);
-    padding: 1rem;
-    margin: 1rem;
-
-    & .card-item:hover{
-        cursor: pointer;
-    }
-
-    
-    & .card-item:hover{
-        background-color: #43B97F;
-        
-    }
-}
-
-.card-list-container{
-    display: grid;
-    grid-template-columns: repeat(3,350px);
-    border: 1px solid black;
-    width: fit-content;
-}
+@import "./Layout/homePage";
+@import "./Layout/topDestination";
+@import "./Layout/styleGuide";
+@import "./Layout/cardList";
 
 
-@media(max-width:450px){
-    .card-container{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
 
-}
 
-@media (max-width:450px) {
-    .card-list-container{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-}
 
 
 

@@ -1,5 +1,3 @@
-@import '../Mixins/mixin.scss';
-
 .card-item{
     @include card-property;
     &__image-container{            
