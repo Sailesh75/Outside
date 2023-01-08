@@ -1,20 +1,25 @@
 // ....Variables....
 
-@import "./Base/global-vars";
+@import "./base/global-vars";
+
 
 // ....Mixin....
+@import "./mixins/mixin";
 
-@import "./Mixins/mixin";
+// ....Typography....
+
+@import "./base/typography";
+
 
 // ....Cards....
 
-@import "./Cards/card.scss";
+@import "./cards/card.scss";
 
 // ....Layouts....
-@import "./Layout/homePage";
-@import "./Layout/topDestination";
-@import "./Layout/styleGuide";
-@import "./Layout/cardList";
+@import "./layout/homePage";
+@import "./layout/topDestination";
+@import "./layout/styleGuide";
+@import "./layout/cardList";
 
 
 

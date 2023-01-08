@@ -5,10 +5,7 @@
     flex-direction: column; 
     background-color: $bg-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px; 
-    padding:10px;  
-    width: 380px;
-    height: 363px;
+    border-radius: 10px;
 }
 
 
@@ -29,3 +26,33 @@
     font-family: $font-family;
     @content;
 } 
+
+
+@mixin breakpoint-up($device){
+    @if $device == "phone" {
+        @media only screen and (min-width:375px) {
+             @content
+        }
+    };
+    @if $device == "tab" {
+        @media only screen and (max-width:576px) {
+             @content
+        }
+    };
+    @if $device == "pc" {
+        @media only screen and (max-width:1200px) {
+             @content
+        }
+    };
+}
+
+@mixin style-guide-div{
+    width: 150px;
+    height: 80px;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+@mixin style-guide-header-elements{
+    @include typography(40px,400,100%,Poppins);
+}

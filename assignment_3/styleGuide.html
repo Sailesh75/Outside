@@ -4,52 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="SCSS/main.css">
     <title>StyleGuide</title>
 </head>
 <body>
     <div class="main-container">
         <header>
-            <h1>Styleguide</h1>
+            <h1>STYLEGUIDE</h1>
         </header>
         <section class="typography-section">
             <h3>Typography</h3>
              <div class="typography-section-grid">
-                <div class="h1-section">
-
+                <div class="typography-section-grid__items  h1--section">
+                    <div class="h1-header">
+                        <h2 class="header">H1</h2>
+                        <p>Font size: 27.6px</p>
+                        <p>Line height: 120%</p>
+                    </div>
+                    <div class="h1-content">
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat.</p>
+                    </div>
                 </div>
-                <div class="h1-content">
-
+                <div class="typography-section-grid__items h2--section">
+                    <div class="h2-header">
+                        <div class="h1-header">
+                            <p class="header">H2</p>
+                            <p>Font size: 19.2px</p>
+                            <p>Line height: 180%</p>
+                        </div>
+                    </div>
+                    <div class="h2-content">
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat.</p>
+                    </div>
                 </div>
-                <div class="h2-section">
-
+                <div class="typography-section-grid__items body1-section">
+                    <div class="body1-header">
+                        <div class="h1-header">
+                            <p class="header">Body-1</p>
+                            <p>Font size: 16px</p>
+                            <p>Line height: 180%</p>
+                        </div>
+                    </div>
+                    <div class="body1-content">
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat.</p>
+                    </div>
                 </div>
-                <div class="h2-content">
-
+                <div class="typography-section-grid__items body2-section">
+                    <div class="body2-header">
+                        <p class="header">Body-2</p>
+                        <p>Font size: 14px</p>
+                        <p>Line height: 180%</p>
+                    </div>
+                    <div class="body2-content">
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat.</p>
+                    </div>
                 </div>
-                <div class="body1-section">
-
-                </div>
-                <div class="body1-content">
-
-                </div>
-                <div class="body2-section">
-
-                </div>
-                <div class="body2-content">
-
-                </div>
-
-             </div>
         </section>
+        <hr class="horizontal-line">
         <section class="color-section">
-
+            <h3>Color</h3>
+            <div class="color-section-flex">
+                <div class="color-section-flex__container">
+                   <div class="style-guide__colors style-guide__colors--white"></div>
+                   <p>white</p>
+                   <p>#FFFFF</p>
+                </div>
+                <div class="color-section-flex__container">
+                    <div class="style-guide__colors style-guide__colors--black"></div>
+                    <p>white</p>
+                    <p>#FFFFF</p>
+                 </div>
+                 <div class="color-section-flex__container">
+                    <div class="style-guide__colors style-guide__colors--army-green"></div>
+                    <p>white</p>
+                    <p>#FFFFF</p>
+                 </div>
+                 <div class="color-section-flex__container">
+                    <div class="style-guide__colors style-guide__colors--light-green"></div>
+                    <p>white</p>
+                    <p>#FFFFF</p>
+                 </div>
+            </div>
         </section>
+        <hr class="horizontal-line">
         <section class="icons">
-
+            <h3>Icons</h3>
+            <div class="icons-container">
+                <img class="icons-container__image" src="./images/photo.png" alt="photo">
+                <img class="icons-container__image" src="./images/priceTag.png" alt="photo">
+                <img class="icons-container__image" src="./images/location.png" alt="photo">
+                <img class="icons-container__image" src="./images/transit.png" alt="photo">
+            </div>
+         
         </section>
-        
+        <hr class="horizontal-line">
         <section class="effects">
+            <h3>Effects</h3>
+            <div class="effects-section-flex__container">
+                <div class="style-guide__colors style-guide__colors--white-shadow"></div>
+                <p>Shadow</p>
+                <p>#box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.25);</p>
+             </div>
 
         </section>
     </div>
