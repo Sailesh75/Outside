@@ -1,25 +1,36 @@
 
 // .........accordian.......
 
-.accordian-section-flex{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
+.accordian-section{
+    padding: 50px;
+    h1{
+        @include typography(64px,500,60.8px,italicFont);
+    }
+    .accordian-section-flex{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 
-// .accordion-button {
+//     .accordion-button {
 //     &.collapsed {
 //       &::after {
-//         background: url("../../images/minus.svg");
+//         background: url("../../images/plus.svg");
 //         background-size: cover;
+//         width:20px;
+
 //       }
 //     }
 //     &:not(.collapsed) {
 //       &::after {
-//         background: url("../../images/plus.svg");
+//         background: url("../../images/minus.svg");
 //         background-size: contain;
 //         background-repeat: no-repeat;
 //       }
 //     }
 //   }
- 
+}
+}
+
+
+
+

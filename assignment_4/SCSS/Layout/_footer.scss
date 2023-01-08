@@ -8,7 +8,6 @@
 .footer-section-container{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    // grid-template-rows:600px 200px;
 
     .footer-left{
         grid-column: 1;
@@ -45,6 +44,15 @@
             }
             h2{
                 color: #fff;
+                @include typography (24px,600,28.8px,Inter);
+            }
+            .footer-image{
+                width: 311px;
+                height: 415px;
+            }
+            span{
+                width: 10px;
+                height: 10px;
             }
         }
     }
@@ -55,5 +63,15 @@
         display: flex;
         justify-content: space-between;
         color: #fff;
+        margin-inline-end:30px;
+
+        p{
+            opacity: 40%;
+        }
+        img{
+            width: 20px;
+            height: 20px;
+            opacity: 40%;
+        }
     }
 }

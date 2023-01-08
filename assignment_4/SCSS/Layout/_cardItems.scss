@@ -1,0 +1,13 @@
+.card-section{
+    padding: 50px;;
+
+    .card-items{
+        h2{
+            @include typography(64px,500,60.8px,italicFont);
+        }
+    }
+
+}
+
+
+

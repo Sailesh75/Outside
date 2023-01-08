@@ -11009,7 +11009,16 @@ textarea.form-control-lg {
   border-radius: 50%;
 }
 
-.accordian-section-flex {
+.accordian-section {
+  padding: 50px;
+}
+.accordian-section h1, .accordian-section .h1 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 60.8px;
+  font-family: italicFont;
+}
+.accordian-section .accordian-section-flex {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -11093,6 +11102,18 @@ textarea.form-control-lg {
 }
 .footer-section-container .footer-right .footer-right__item h2, .footer-section-container .footer-right .footer-right__item .h2 {
   color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28.8px;
+  font-family: Inter;
+}
+.footer-section-container .footer-right .footer-right__item .footer-image {
+  width: 311px;
+  height: 415px;
+}
+.footer-section-container .footer-right .footer-right__item span {
+  width: 10px;
+  height: 10px;
 }
 .footer-section-container .footer-bottom {
   grid-column: 1/span 2;
@@ -11100,4 +11121,24 @@ textarea.form-control-lg {
   display: flex;
   justify-content: space-between;
   color: #fff;
+  -webkit-margin-end: 30px;
+          margin-inline-end: 30px;
+}
+.footer-section-container .footer-bottom p {
+  opacity: 40%;
+}
+.footer-section-container .footer-bottom img {
+  width: 20px;
+  height: 20px;
+  opacity: 40%;
+}
+
+.card-section {
+  padding: 50px;
+}
+.card-section .card-items h2, .card-section .card-items .h2 {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 60.8px;
+  font-family: italicFont;
 }/*# sourceMappingURL=main.css.map */
