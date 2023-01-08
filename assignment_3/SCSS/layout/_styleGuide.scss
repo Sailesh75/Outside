@@ -1,10 +1,10 @@
-.main-container{
+.main-container-styleguide{
     margin-inline: 80px;
 }
 
 // header
 
-header h1{
+.styleguide-header h2{
    @include typography(100px,600,100%,Poppins);
    font-style: normal;
 }
@@ -19,21 +19,31 @@ header h1{
         .typography-section-grid__items{
             display: flex;
             column-gap:100px; 
+            justify-content: flex-start;
         }
+
+        .h1-content{
+            @include typography(27.65px,700,33.18px,Poppins);
+        }
+
+        .h2-content{
+            @include typography(19.2px,700,33.56px,Poppins);
+
+        }
+        .body1-content{
+            @include typography(16px,400,28.8px,Poppins);
+
+        }
+        .body2-content{
+            @include typography(14px,400,25.2px,Poppins);
+
+        }
+
     }
 
     .header{
         @include typography(20px,400,20px,Poppins);
     }
-
-    p{
-        @include typography(20px,400,20px,Poppins); 
-    }
-
-
-    
-
-
 }
 
 .horizontal-line{
@@ -80,6 +90,9 @@ header h1{
         }           
 
     }
+    p{
+        @include typography(16px,400,28.8px,Poppins); 
+    }
 
 }
 
@@ -125,6 +138,9 @@ header h1{
         background-color: #fff;
         box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.25);
 
+    }
+    p{
+        @include typography(16px,400,28.8px,Poppins);
     }
 
 }

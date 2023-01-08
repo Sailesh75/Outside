@@ -1,7 +1,28 @@
 
-// .card-list-container{
-//     display: grid;
-//     grid-template-columns: repeat(3,350px);
-//     border: 1px solid black;
-//     width: fit-content;
-// }
+.card-list-container{
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    border: 1px solid black;
+    width: fit-content;
+}
+
+@media (max-width:450px){
+
+    .card-list-container{
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+    
+}
+
+.card-list-item{
+    @include card-list-property;
+
+    &__button{
+        background-color:#43B97F ;
+        padding: 10px;
+        border-style: none;
+        border-radius: 15px;
+        color: #fff;
+    }
+}
