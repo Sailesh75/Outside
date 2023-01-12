@@ -19,7 +19,6 @@
 
 a{
     text-decoration: none;
-    color: black;
 }
 
 .gridItem{
@@ -83,13 +82,4 @@ a{
 
 .assignmentDemoLink:hover{
     background-color: #1aa3ff;
-}
-
-.imageWrapper{
-    display: flex;
-    flex-direction: row;
-}
-
-.assessment_link{
-    display: inline-block;
 }

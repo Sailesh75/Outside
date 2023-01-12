@@ -38,7 +38,7 @@
         
                 & .card-image{
                     width: 100%;
-                    // height: 350px;
+                    height: 350px;
                     object-fit: cover;
                     border-radius:10px;
                 } 
@@ -75,7 +75,6 @@
                     height: 18px;
                     margin-right:10px;
                     margin-top: 5px;
-                    // @include typography(14px,400,25.2px,Poppins);
                }
             }
         }
