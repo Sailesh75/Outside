@@ -1,0 +1,12 @@
+<section class="blog-list bg-mint py-10 py- py-md-20 py-lg-30">
+    <div class="container">
+        <div class="eyebrow mb-6 mb-md-10 mb-lg-20">
+            @@eyebrow
+        </div>
+        <div class="row">
+            @@for (var i=0; i < articleList.list.length; i++) {
+                @@include('article.html',`+(JSON.stringify(articleList.list[i]))+`)
+            }
+        </div>
+    </div>
+</section>

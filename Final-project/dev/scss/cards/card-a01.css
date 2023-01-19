@@ -1,0 +1,13 @@
+.service-card-secondrow {
+  position: relative;
+}
+.service-card-secondrow--modifier .left-div {
+  width: 620px;
+  height: 160px;
+  background-color: #EAEFED;
+}
+.service-card-secondrow--modifier .right-div {
+  width: 620px;
+  height: 160px;
+  background-color: #F5CEBE;
+}/*# sourceMappingURL=card-a01.css.map */

@@ -1,0 +1,26 @@
+// service-card-aboutPage
+
+.service-card{
+
+    &-secondrow{
+        position: relative;
+
+       &--modifier{
+
+        //  background-color: red;
+
+        .left-div{
+            height: 100%;
+            padding: 40px;
+            background-color: #EAEFED;
+
+        }
+        .right-div{
+            // height: 160px;
+            padding: 40px;
+            background-color:#F5CEBE;
+
+        }
+       }
+    }
+}

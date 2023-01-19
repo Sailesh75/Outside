@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       @@include('includes/head.html',{'pageTitle':'FinalProject'})
+       @@include('includes/navbar.html')
+    </head>
+    <body>
+        <div class="theme-app d-flex flex-column">
+            <div class="theme-wrap position-relative">
+                <main class="theme-main">    
+                    @@include('includes/modules/leadspace/leadspace.html')
+                    @@include('includes/modules/section/module1.html',{
+                        'title-first':'About Us',
+                        'text':'Integer at neque ac metus fringilla dapibus et eu eros. Vivamus vitae finibus dolor. Suspendisse finibus ante in sapien fermentum, quis condimentum turpis consequat.',
+                        'title-second':'How about us?',
+                        'video-url':'images/video.mp4',
+                        'padding':'10',
+                        'aspect-ratio':'279x276',
+                        'button-link':'aboutPage.html',
+                        'bg-color':'bg-moon',
+                        'video-thumbnail':'images/video-thumbnail.png',
+                        'videoClass':'module1__video'
+                    })
+                    @@include('includes/modules/section/module2.html',{
+                        'img-url':'images/aboutUs_2.png',
+                        'alt-text':'aboutUs-pic',
+                        'title':'Things to remember',
+                        'text-h4':'To People That Want To Start BLOGS But Are Affraid To Get Started',
+                        'text-p':'<p class="Body"><span>Nov 11,2021</span><br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut porta diam. Nullam sed dolor in libero auctor gravida. Morbi eget nibh vel ligula consequat ultrices. Donec maximus dui sapien, ut ullamcorper nisi dignissim quis.</p>',
+                        'button-link':'blog-single.html',
+                        'bg-color':'bg-mint',
+                        'ratio':'318x267',
+                        'imageClass':'module2__img',
+                        'button-text':'More article'
+                    })
+                    @@include('includes/modules/slider/carousel.html',{
+                        'eyebrow':'Our Team',
+                        'title':'Sally Albana - Site Engineer',
+                        'description':"“It is not so much for its beauty that the forest makes a claim upon men’s hearts, as for that subtle something, that quality of air that emanation from old trees, that so wonderfully changes and renews a weary spirit.”"
+                    })
+                    @@include('includes/modules/section/module3.html',{
+                        'title-first':'Blogs',
+                        'text':'Proin pretium risus suscipit viverra mattis. Aliquam non nunc ligula',
+                        "body-L-text": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+                        "body-text":"If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.",
+                        'title-second':'',
+                        'img-url':'images/blog.png',
+                        'alt-text':'blog-img',
+                        'padding':'pb-10',
+                        'aspect-ratio':'327x334',
+                        'button-link':'blog-listing.html',
+                        'imageClass':'module3__img2' 
+                        
+                    })
+                    @@include('includes/modules/section/module2.html',{
+                        'img-url':'images/moreinfo.jpg',
+                        'alt-text':'more-info pic',
+                        'title':'More Info',
+                        'text-h4':'Proin pretium risus suscipit viverra mattis. Aliquam non nunc ligula.',
+                        "text-p":"<p><span>Nov 11,2021</span><br>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>",
+                        'button-link':'blog-single.html',
+                        'bg-color':'bg-mint',
+                        'ratio':'318x267',
+                        'imageClass':'module2__img',
+                        'button-text':'Learn More'
+
+                    })
+                    @@include('includes/modules/section/main.html')
+                    @@include('includes/modules/section/section.html',{
+                        'title':'Proin pretium risus suscipit viverra mattis. Aliquam non nunc ligula.',
+                        'text':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut porta diam.',
+                        'bg-color':'bg-blush'
+                    })
+                </main>
+            </div>
+              @@include('includes/footer.html')
+              @@include('includes/scripts.html')
+        </div>
+    </body>
+</html>
+  

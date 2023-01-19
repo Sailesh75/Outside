@@ -1,0 +1,26 @@
+<article class="module2 @@bg-color">
+    <div class="container">
+        <div class="row py-10 py-md-30">
+            <div class="col-12 col-md-6">
+                <figure class="pb-2 ratio ratio-@@ratio @@imageClass offset-image">
+                    <img class="object-fit-cover" src="@@img-url" alt="@@alt-text">
+                </figure>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="pt-10 py-md-14">
+                    <h6 class="eyebrow">@@title</h6>
+                    <h4 class="h4">@@text-h4</h4>
+                    @@text-p
+                    <a href="@@button-link">
+                        @@include('./buttons.html',{
+                            'button-title':'@@button-text',
+                            'icon-class':'icon-arrow-left',
+                            'color':'mint',
+                            'text-color':'black'
+                        })
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

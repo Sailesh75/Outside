@@ -1,0 +1,26 @@
+.service-card{
+    &__img{
+        &::before{
+            @include media-breakpoint-up(md){
+                --bs-aspect-ratio: 53.0973451%;
+            }
+            @include media-breakpoint-up(xl){
+                --bs-aspect-ratio: 38.7096774%;
+            }
+        } 
+
+    } 
+
+    &--block{
+
+        flex: 0 0 100%;
+
+        @include media-breakpoint-up(md) {
+            margin-top: -167px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-top: -179px;
+        }  
+    }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       @@include('includes/head.html',{'pageTitle':'FinalProject'})
+       @@include('includes/navbar.html')
+    </head>
+    <div class="theme-app d-flex flex-column">
+        <div class="theme-wrap position-relative">
+            <main class="theme-main"> 
+                @@include('includes/modules/leadspace/leadspace-a02.html', {
+                    'title' : 'Vivamus vitae finibus dolor. Suspendisse finibus ante in sapien fermentum.',
+                    'text': 'Morbi pellentesque justo non magna iaculis efficitur in quis magna. Vivamus consectetur placerat iaculis. Aenean in orci et libero auctor elementum non in diam. Suspendisse vel urna luctus, tristique purus a, commodo metus. Nam commodo turpis eget magna placerat, quis molestie mauris volutpat',
+                    'bgColor': 'bg-mint',
+                    'imageurl': 'images/blog-listing.png',
+                    'date': 'November 11, 2021',
+                })
+                @@include('includes/modules/cards/blogs-card.html', {
+                    'title': 'More Blog Notes',
+                    'categoryTitle': 'Category: ',
+                    'icon': 'images/search.svg',
+                    'articleList': {
+                        "list": [
+                        {
+                            'blogCards-url':'images/blog-card1.png',
+                            'date':'June 11, 2021',
+                            'blogTitle': 'Interesting Facts I Bet You Never Knew About BLOGS'
+                        },
+                        {
+                            'blogCards-url':'images/blog-card2.png',
+                            'date':'June 11, 2021',
+                            'blogTitle': 'verything You Wanted to Know About BLOGS and Were Too EEmbarrassed to Ask'
+                        },
+                        {
+                            'blogCards-url':'images/blog-card3.png',
+                            'date':'June 11, 2021',
+                            'blogTitle': 'What Can You Do To Save Your BLOGS From Destruction By Social Media?'
+                        },
+                        {
+                            'blogCards-url':'images/blog-card4.png',
+                            'date':'June 11, 2021',
+                            'blogTitle': 'White Paper: Call to NASA for Low-Cost Innovation, New Talent Pipeline in Missions'
+                        },
+                        {
+                            'blogCards-url':'images/blog-card5.png',
+                            'date':'June 11, 2021',
+                            'blogTitle': 'Becoming Friends with a Mars Rover'
+                        },
+                        {
+                            'blogCards-url':'images/blog-card6.png',
+                            'date':'June 11, 2021',
+                            'blogTitle': 'Some Assembly Required: Documentation in Mars Rover Design'
+                        }                       
+                        ]
+                    },
+                    'categoryList': { 
+                        "list": [
+                        {
+                            'categoryName':'news'
+                        },
+                        {
+                            'categoryName':'travel'
+                        },
+                        {
+                            'categoryName':'BLogs'
+                        },
+                        {
+                            'categoryName':'facts'
+                        },
+                        {
+                            'categoryName':'Global'
+                        }
+                        ]
+                    }
+                })
+                @@include('includes/modules/cards/pagination.html')
+                @@include('includes/modules/section/section.html',{
+                    'title':'Proin pretium risus suscipit viverra mattis. Aliquam non nunc ligula.',
+                    'text':'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut porta diam.',
+                    'bg-color':'bg-mint'
+                })
+            </main>
+        </div>
+          @@include('includes/footer.html')
+          @@include('includes/scripts.html')
+    </div>
+</body>
+</html>
+

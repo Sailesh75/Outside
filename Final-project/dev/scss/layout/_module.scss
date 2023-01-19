@@ -1,0 +1,46 @@
+@import "common-imports";
+
+.module1{
+    &__video{
+        &::before{
+            @include media-breakpoint-up(md){
+                --bs-aspect-ratio: 68.3168317%; 
+            }
+            @include media-breakpoint-up(xl){
+                --bs-aspect-ratio: 59.7402597%;
+            }
+        }
+    }
+}   
+
+.module2{
+    .offset-image{
+        filter: drop-shadow(8px 8px 0px #F5CEBE);
+    }
+
+    &__img{
+        &::before{
+            @include media-breakpoint-up(md){
+                --bs-aspect-ratio: 73.0088496%;
+            }
+            @include media-breakpoint-up(xl){
+                --bs-aspect-ratio: 75%;
+            }
+        } 
+
+    } 
+}
+
+.module3{
+    &__img2{
+        &::before{
+            @include media-breakpoint-up(md){
+                --bs-aspect-ratio: 108.40708%;
+            }
+            @include media-breakpoint-up(xl){
+                --bs-aspect-ratio: 85.8823529%;
+            }
+        }
+
+    }
+} 

@@ -1,0 +1,30 @@
+<!-- About us first section's module -->
+
+<article class="module1 @@image-ratio--modifier">
+    <div class="container">
+        <div class="row py-10 py-md-30">
+            <div class="col-md-6 col-12 pb-10">
+                <h6 class="eyebrow">@@title-first</h6>
+                <h3>@@text</h3>
+                <a href="@@button-link">
+                    @@include('./buttons.html',{
+                        'button-title':'Learn more',
+                        'icon-class':'icon-arrow-left',
+                        'color':'sky',
+                        'text-color':'white',
+                        'border':'border border-0' 
+                    })
+                </a>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-md-5 col-12">
+                <div class="@@bg-color p-8">
+                    <h6 class="eyebrow">@@title-second</h6>
+                    <video width="400" height="350" controls poster="@@video-thumbnail" class="pb-@@padding ratio ratio-@@aspect-ratio @@videoClass">
+                        <source src="images/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

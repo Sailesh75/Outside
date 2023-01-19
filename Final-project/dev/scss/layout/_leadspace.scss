@@ -1,0 +1,32 @@
+@import "../common-imports";
+
+.leadspace-a02{
+    .leadspace-title{
+        border-top:8px solid $black;
+
+        @include media-breakpoint-up(md) {
+            margin-top: -140px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-top: -180px;
+        }  
+    }
+}
+
+.leadspace-a03{
+    &__title{
+
+        @include media-breakpoint-up(md) {
+            margin-top: -140px;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin-top: -180px;
+        }  
+    }
+
+    ul li{
+        list-style-type: disc;
+    }
+}

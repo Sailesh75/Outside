@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       @@include('includes/head.html',{'pageTitle':'FinalProject'})
+       @@include('includes/navbar.html')
+    </head>
+    <body>
+        <div class="theme-app d-flex flex-column">
+            <div class="theme-wrap position-relative">
+                <main class="theme-main">    
+                @@include('includes/modules/leadspace/leadspace-a03.html',{
+                    'imgurl':'images/blog-single-card.png',
+                    'text':'Interesting Facts I Bet You Never Knew About BLOGS',
+                    'ratio':'840x473'
+                })
+                @@include('includes/modules/cards/related-blog.html', {
+                    'eyebrow': 'Related blogs',                                   
+                    'articleList': {
+                        "list": [
+                        {
+                            'blogCards-url':'images/blog-card1.png',
+                            'date':'June 11, 2021',
+                            'blogTitle': 'Interesting Facts I Bet You Never Knew About BLOGS'
+                        },
+                        {
+                            'blogCards-url':'images/blog-card2.png',
+                            'date':'June 11, 2021',
+                            'blogTitle': 'verything You Wanted to Know About BLOGS and Were Too EEmbarrassed to Ask'
+                        },
+                        {
+                            'blogCards-url':'images/blog-card3.png',
+                            'date':'June 11, 2021',
+                            'blogTitle': 'What Can You Do To Save Your BLOGS From Destruction By Social Media?'
+                        }                        
+                        ]
+                    }  
+                })
+                </main>
+            </div>
+              @@include('includes/footer.html')
+              @@include('includes/scripts.html')
+        </div>
+    </body>  
+</html>
+ 

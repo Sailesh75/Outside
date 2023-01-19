@@ -1,0 +1,10 @@
+@import '../common-imports';
+
+.blogs-card{
+    .dropdown-menu.show{
+        @include media-breakpoint-down(md){
+            transform: none !important;
+            position: relative !important;
+        }
+    } 
+}

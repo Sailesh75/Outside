@@ -1,0 +1,26 @@
+.#{$global} {
+    &-footer {
+        padding: rem(30px 0);
+    }
+}
+
+.footer{
+    a{
+        text-decoration: underline;
+        @include interpolate(font-size,32rem,144rem,1.6rem,1.8rem);
+        line-height: 2.7rem;
+        letter-spacing: -0.02em;
+        font-weight: 400;
+        font-family: 'Inter', sans-serif;
+    }
+    input{
+        &::placeholder{
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+            font-weight: 500;
+            font-style: italic;
+            font-family: 'Inter', sans-serif;
+            color: $white;
+        }
+    }
+}

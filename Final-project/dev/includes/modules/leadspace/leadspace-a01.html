@@ -1,0 +1,44 @@
+<section class="leadspace-a01 bg-mint">
+    <div class="container py-8 py-md-20">     
+        <div class="row">
+            <div class="@@firstImage-col">
+                <figure class="ratio ratio-@@firstImage-ratio h-100">
+                    <img class="object-fit-cover" src="@@imageurl-1" alt="hero-section-img1">
+                </figure>
+            </div>
+
+            <div class="@@secondImage-col d-none d-md-block">
+                <figure class="ratio ratio-@@secondImage-ratio  h-100">
+                    <img class="object-fit-cover" src="@@imageurl-2" alt="hero-section-img2">
+                </figure>
+            </div>
+        </div>
+        <div class="row mt-10">
+            <div class="col-4 d-none d-xl-block">
+                <figure class="ratio ratio-1x1">
+                    <img class="object-fit-cover" src="@@imageurl-3" alt="hero-section-img1">
+                </figure>
+            </div>
+            
+            <div class="col-md-12 col-xl-8">
+                <div class="p-8 p-md-10 p-xl-20 bg-sky text-white border-top border-8 border-black">
+                    <div class="d-flex flex-column">
+                        <h2 class="h2">@@hero-title</h2>
+                        <p class="Body-Xl">@@hero-text</p>
+                        <div class="d-none d-md-block text-white">
+                        <a href="#">  
+                            @@include('../section/buttons.html',{
+                                'button-title':'Learn more',
+                                'icon-class':'icon-arrow-left',
+                                'color':'sky',
+                                'text-color':'white',
+                                'border':'border border-2 border-white'
+                            })
+                        </a>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>                     

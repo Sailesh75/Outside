@@ -1,0 +1,41 @@
+<section class="blogs-card py-10 py-md-20 py-xl-30">
+    <div class="container">
+        <div class="eyebrow mb-10 mb-md-20">
+            @@title
+        </div>
+        <div class="d-md-flex mb-8 mb-md-18"> 
+            <span class="d-block d-md-inline-block body-sm mb-5 mb-md-0">@@categoryTitle</span> 
+            <ul class="eyebrow d-flex flex-wrap align-items-center ls-1 mb-0 ps-0">        
+                @@for (var i=0; i < categoryList.list.length; i++) {
+                    @@include('../cards/cards-item.html',`+(JSON.stringify(categoryList.list[i]))+`)
+                }
+            </ul>
+        </div>
+        <div class="row justify-content-between mb-10 mb-md-20">
+            <div class="col-md-7 col-xl-5">
+                <form action="#" class="blog-search">
+                    <div class="form-element position-relative">
+                        <input type="search" class="rounded-pill w-100 border-2 py-2 py-md-5 pe-11 ps-2">
+                        <!-- <img src="../../../images/search.svg" alt="search-icon"> -->
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-5 ">
+                <div class="dropdown d-flex justify-content-center flex-column flex-md-row justify-content-md-end mt-10 mt-md-0 position-md-none">
+                    <button class="eyebrow d-flex justify-content-end align-items-center btn dropdown-toggle text-uppercase p-0" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">latest</button>
+                    <ul class="dropdown-menu dropdown-menu-end bg-mint border border-peach py-0 px-4 mb-10" aria-labelledby="dropdownMenuButton1">
+                        <li class="eyebrow border-bottom border-black ps-0 mb-3"><a class="dropdown-item" href="#">Alphabetical order</a></li>
+                        <li class="eyebrow border-bottom border-black ps-0 mb-3"><a class="dropdown-item" href="#">Featured</a></li>
+                        <li class="eyebrow border-bottom border-black ps-0 mb-3"><a class="dropdown-item" href="#">Latest</a></li>
+                        <li class="eyebrow ps-0 mb-0"><a class="dropdown-item" href="#">oldest</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @@for (var i=0; i < articleList.list.length; i++) {
+                @@include('../cards/article.html',`+(JSON.stringify(articleList.list[i]))+`)
+            }
+        </div>
+    </div>
+</section>

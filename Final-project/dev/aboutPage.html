@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       @@include('includes/head.html',{'pageTitle':'FinalProject'})
+       @@include('includes/navbar.html')
+    </head>
+    <div class="theme-app d-flex flex-column">
+        <div class="theme-wrap position-relative">
+            <main class="theme-main">    
+                @@include('includes/modules/leadspace/leadspace-a01.html',{
+                    'imageurl-1':'images/aboutPage-1.png',
+                    'imageurl-2':'images/aboutPage-2.png',
+                    'imageurl-3':'images/aboutPage-3.png',
+                    'hero-title':'Integer at neque ac metus fringilla dapibus et eu eros.',
+                    'hero-text':'Aliquam egestas sapien turpis, eu iaculis velit pulvinar vel. Cras at diam quis turpis tincidunt condimentum eget nec quam.',
+                    'firstImage-col':'col-12 col-md-7',
+                    'secondImage-col':'col-5',
+                    'firstImage-ratio':'754x397',
+                    'secondImage-ratio':'486x397',
+                    'border-color':'black'
+                })
+
+                @@include('includes/modules/section/service.html',{
+                    'title':'About our services',
+                    'text':'Aliquam egestas sapien turpis, eu iaculis velit pulvinar vel. Cras at diam quis turpis.',                  
+                })
+                @@include('includes/modules/cards/service-card.html',{
+                    'title':'Service Point One',
+                    'text':"Ut posuere ullamcorper euismod. Donec a justo pulvinar diam dictum lobortis vulputate non nisi. Vestibulum pellentesque eget lorem ultrices lobortis. Sed tempor vehicula ipsum, non pharetra velit dapibus id. Suspendisse sit amet commodo lectus, in sodales mi. Nunc blandit molestie metus, et finibus augue cursus at. Curabitur fringilla ullamcorper sem nec dictum. Maecenas urna risus, cursus vel tincidunt ac, egestas vitae ante.",
+                    'div-title':'Case study', 
+                    'div-text':'Integer at neque ac metus fringilla dapibus et eu eros.',  
+                    'img-url':'images/service-point1.png',
+                    'ratio':'327x230',
+                    'imgclass':'service-card__img',
+                    'margin-bottom':'mb-10 mb-md-20',
+                    'hr-bottom':'mb-10 mb-md-20',
+                    'button-color':'bg-peach',
+                    'hr':'<hr>',
+                    'arrow':'images/Arrow.svg'
+                })
+
+                @@include('includes/modules/cards/service-card.html',{
+                    'title':'Service Point Two',
+                    'text':"Ut posuere ullamcorper euismod. Donec a justo pulvinar diam dictum lobortis vulputate non nisi. Vestibulum pellentesque eget lorem ultrices lobortis. Sed tempor vehicula ipsum, non pharetra velit dapibus id. Suspendisse sit amet commodo lectus, in sodales mi. Nunc blandit molestie metus, et finibus augue cursus at. Curabitur fringilla ullamcorper sem nec dictum. Maecenas urna risus, cursus vel tincidunt ac, egestas vitae ante.",
+                    'div-title':'Case study', 
+                    'div-text':'Integer at neque ac metus fringilla dapibus et eu eros.',  
+                    'img-url':'images/service-point2.png',
+                    'ratio':'327x230',
+                    'imgclass':'service-card__img',
+                    'margin-bottom':'mb-10 mb-md-20 mb-xl-40',
+                    'button-color':'bg-sky',
+                    'hr':'',
+                    'arrow':'images/Arrow-white.svg'
+                })
+            </main>
+        </div>
+          @@include('includes/footer.html')
+          @@include('includes/scripts.html')
+    </div>
+</body>
+</html>

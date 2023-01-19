@@ -1,0 +1,32 @@
+.#{$global} {
+    &-app {
+        min-height: 100vh;
+    }
+    &-wrap {
+        flex: 1 0 auto;
+    }
+    &-main {
+        background-color: $white;
+    }
+}
+
+
+.main{
+    .outer-div{
+       width:260px;
+       height:260px;
+       border-radius:50%;
+       background-color: teal;
+       position: relative;
+       
+       .inner-div{
+            width:236px;
+            height:236px;
+            border-radius: 50%;  
+            position: absolute;
+            right: 0px;
+            bottom: 10px;    
+       }
+       
+    }
+}
