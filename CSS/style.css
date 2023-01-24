@@ -25,12 +25,23 @@ body{
     margin: 10px;
     padding: 10px;
     color: #3370ff;
+    font-size: 45px;
 }
 
-.header{
+.header1{
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.header2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 2;
+    grid-column: 1;
 }
 
 .header-title{
@@ -49,7 +60,16 @@ a{
     text-decoration: none;
 }
 
-.cards{
+.cards1{
+    grid-row: 1;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+
+.cards2{
+    grid-row: 2;
+    grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
 }
@@ -58,6 +78,7 @@ a{
     background-color: #e6ffff;
     padding: 10px;
     margin: 20px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -98,3 +119,10 @@ a{
     background-color: #1aa3ff;
 }
 
+.assignmentNumber{
+    padding-right: 200px;
+}
+
+.assignmentTitle{
+    font-size:20px;
+}

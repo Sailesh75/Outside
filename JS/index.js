@@ -17,17 +17,23 @@ domFunction('a','profileLink','Profile','navbar','profile.html');
 
 
 //inside main-container
-domFunction('div','header','','.mainContainer');
-domFunction('div','cards','','.mainContainer');
-
+domFunction('div','header1','','.mainContainer');
+domFunction('div','cards1','','.mainContainer');
+domFunction('div','header2','','.mainContainer');
+domFunction('div','cards2','','.mainContainer');
 
 //inside header
-domFunction('h3','header-title','Frontend','.header');
+domFunction('h3','header-title','Frontend','.header1');
+domFunction('h3','header-title','Javascript','.header2');
 
 //inside cards
 for(i=1;i<7;i++){
-    domFunction(`div`,`gridItem gridItem${i}`,``,`.cards`)
+    domFunction(`div`,`gridItem gridItem${i}`,``,`.cards1`)
 }
+for(i=1;i<4;i++){
+    domFunction(`div`,`gridItem gridItem${i}`,``,`.cards2`)
+}
+
 
 domFunction('h1','assignmentNumber','01','.gridItem1');
 domFunction('h3','assignmentTitle','Figma','.gridItem1');
