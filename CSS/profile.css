@@ -1,0 +1,21 @@
+.container{
+    border:2px solid #fff;
+    margin: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.image-div{
+    /* height: 300px; */
+    margin-block: 40px;
+}
+
+.icon-div{
+    display: flex;
+}
+

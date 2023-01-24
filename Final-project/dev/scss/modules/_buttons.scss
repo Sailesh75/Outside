@@ -5,10 +5,16 @@
     font-size: 18px;
     line-height: 28px;
     padding: 8px 16px;
-    background-color: white;
 }
-    button:hover{
-        background-color: $black;
+    .outline:hover{
+        border:2px solid $teal !important; 
+        color: $teal !important;
+    }
+
+    .fill:hover{
+        background-color: white !important;
+        border:2px solid $teal !important; 
+        color: $teal !important;
     }
 
 

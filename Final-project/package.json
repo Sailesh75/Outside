@@ -68,7 +68,8 @@
     "bootstrap": "^5.2.3",
     "bootstrap-select": "^1.13.18",
     "gsap": "^3.11.3",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "swiper": "^8.4.6"
   },
   "homepage": "http://pagevamp.github.io/Bootstrap-5/"
 }
