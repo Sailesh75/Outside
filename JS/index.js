@@ -1,5 +1,3 @@
-
-
 const domFunction=(element,className,text,targetId,source)=>{
     var element=document.createElement(element);              //error if we put let
     element.className=className;
@@ -8,15 +6,28 @@ const domFunction=(element,className,text,targetId,source)=>{
     element.href=source;
 }
 
-domFunction('h1','title','OUTSIDE INTERNSHIP ASSIGNMENTS','body');                //inside body
-domFunction('a','profileLink','Profile','body','profile.html');
-domFunction('div','mainContainer','','body');                                    //inside container   
-domFunction('div','gridItem gridItem1','','.mainContainer');
-domFunction('div','gridItem gridItem2','','.mainContainer');
-domFunction('div','gridItem gridItem3','','.mainContainer'); 
-domFunction('div','gridItem gridItem4','','.mainContainer');
-domFunction('div','gridItem gridItem5','','.mainContainer');
-domFunction('div','gridItem gridItem6','','.mainContainer');
+//inside body
+domFunction('navbar','nav','','body');
+domFunction('div','mainContainer','','body');                                   
+
+
+//inside navbar
+domFunction('h1','title','OUTSIDE INTERNSHIP ASSIGNMENTS','navbar');              
+domFunction('a','profileLink','Profile','navbar','profile.html');    
+
+
+//inside main-container
+domFunction('div','header','','.mainContainer');
+domFunction('div','cards','','.mainContainer');
+
+
+//inside header
+domFunction('h3','header-title','Frontend','.header');
+
+//inside cards
+for(i=1;i<7;i++){
+    domFunction(`div`,`gridItem gridItem${i}`,``,`.cards`)
+}
 
 domFunction('h1','assignmentNumber','01','.gridItem1');
 domFunction('h3','assignmentTitle','Figma','.gridItem1');
@@ -43,7 +54,5 @@ domFunction('h1','assignmentNumber','06','.gridItem6');
 domFunction('h3','assignmentTitle','Final project','.gridItem6');
 domFunction('a','assignmentCodeLink','Code','.gridItem6','https://github.com/Sailesh75/Outside-Internship/tree/master/Final-project');
 domFunction('a','assignmentCodeLink','Demo','.gridItem6','https://sailesh75.github.io/Outside-Internship/Final-project/dist/');
-
-
 
 
