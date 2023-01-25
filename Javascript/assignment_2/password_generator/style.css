@@ -1,0 +1,44 @@
+body {
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Poppins;
+}
+
+.container {
+  background-color: #7de4c2;
+  padding: 40px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+}
+
+.label {
+  padding-block: 20px;
+  padding-inline-end: 10px;
+  font-size: 15px;
+}
+
+.generate-password {
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: aliceblue;
+}
+
+.generate-password:hover {
+  background-color: aqua;
+}
+
+.output-text {
+  display: inline;
+  margin: 5px;
+}
+
+.output {
+  font-size: 20px;
+}
