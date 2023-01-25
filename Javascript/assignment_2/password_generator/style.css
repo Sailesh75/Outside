@@ -8,16 +8,16 @@ body {
 }
 
 .container {
+  width:25vw;
+  height: 55vh;
   background-color: #7de4c2;
   padding: 40px;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
 }
 
 .label {
-  padding-block: 20px;
-  padding-inline-end: 10px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .generate-password {
@@ -28,10 +28,11 @@ body {
   border-radius: 10px;
   cursor: pointer;
   background-color: aliceblue;
+  font-size: 15px;
 }
 
 .generate-password:hover {
-  background-color: aqua;
+  background-color: #7de4c2;
 }
 
 .output-text {
@@ -41,4 +42,8 @@ body {
 
 .output {
   font-size: 20px;
+}
+
+.error{
+  color: red;
 }

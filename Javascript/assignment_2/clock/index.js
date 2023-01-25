@@ -9,40 +9,38 @@ const domFunction = (element, className, text, targetId, type, value) => {
   element.value = value;
 };
 
-domFunction("button", "button button--stopwatch", "StopWatch", ".container");
-domFunction("button", "button button--clock", "Clock", ".container");
-domFunction("br", "", "", ".container");
-domFunction("p", "timer", "", ".container");
-domFunction("span", "digit seconds", "00", ".timer");
-domFunction("span", "digit", ":", ".timer");
-domFunction("span", "digit tens", "00", ".timer");
-domFunction("span", "digit", ":", ".timer");
-domFunction("span", "digit thousands", "00", ".timer");
-domFunction("span", "session", "", ".timer");
-domFunction("button", "stopwatch stopwatch--start", "start", ".container");
-domFunction("button", "stopwatch stopwatch--stop", "stop", ".container");
-domFunction("button", "stopwatch stopwatch--reset", "reset", ".container");
+domFunction('div','functions','','.container');
+domFunction("button", "button button--stopwatch", "StopWatch", ".functions");
+domFunction("button", "button button--clock", "Clock", ".functions");
 
-document.querySelector(".stopwatch--start").disabled = true;
-document.querySelector(".stopwatch--stop").disabled = true;
-document.querySelector(".stopwatch--reset").disabled = true;
+domFunction('div','watch','','.container');
+domFunction("span", "digit seconds", "00", ".watch");
+domFunction("span", "digit", ":", ".watch");
+domFunction("span", "digit tens", "00", ".watch");
+domFunction("span", "digit", ":", ".watch");
+domFunction("span", "digit thousands", "00", ".watch");
+domFunction("span", "session", "", ".watch");
 
-document.querySelector(".button--stopwatch").addEventListener("click", () => {
-  document.querySelector(".stopwatch--start").disabled = false;
-  document.querySelector(".stopwatch--stop").disabled = false;
-  document.querySelector(".stopwatch--reset").disabled = false;
-  document.querySelector(".button--clock").disabled = true;
-  stopwatch();
-});
+domFunction('div','button-container','','.container');
+domFunction("button", "stopwatch stopwatch--start", "start", ".button-container");
+domFunction("button", "stopwatch stopwatch--stop", "stop", ".button-container");
+domFunction("button", "stopwatch stopwatch--reset", "reset", ".button-container");
+
+
 
 document.querySelector(".button--clock").addEventListener("click", () => {
+  clock();
   document.querySelector(".stopwatch--start").disabled = true;
   document.querySelector(".stopwatch--stop").disabled = true;
   document.querySelector(".stopwatch--reset").disabled = true;
-  document.querySelector(".stopwatch--reset").disabled = true;
-  document.querySelector(".button--stopwatch").disabled = true;
-  clock();
+  document.querySelector(".button--stopwatch").addEventListener("click",()=>{
+    location.reload();
+  })
 });
+
+//stopwatch
+
+stopwatch();
 
 function stopwatch() {
   var seconds = 00;
@@ -59,14 +57,17 @@ function stopwatch() {
   buttonStart.onclick = function () {
     clearInterval(Interval);
     Interval = setInterval(startTimer, 10);
+    document.querySelector(".button--clock").disabled = true;
   };
 
   buttonStop.onclick = function () {
     clearInterval(Interval);
+    document.querySelector(".button--clock").disabled = false;
   };
 
   buttonReset.onclick = function () {
     clearInterval(Interval);
+    document.querySelector(".button--clock").disabled = false;
     thousands = "00";
     tens = "00";
     seconds = "00";
@@ -77,10 +78,6 @@ function stopwatch() {
 
   function startTimer() {
     thousands++;
-
-    // if(thousands <= 9){
-    //   appendThousands.innerText = "0" + thousands;
-    // }
 
     if (thousands > 9) {
       appendThousands.innerText = thousands;
@@ -139,6 +136,5 @@ function clock() {
   appendTens.innerText = m;
   appendSeconds.innerText = h;
   appendSession.innerText = session;
-
   setTimeout(clock, 1000);
 }

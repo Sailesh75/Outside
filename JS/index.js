@@ -13,7 +13,7 @@ domFunction('div','mainContainer','','body');
 
 
 //inside navbar
-domFunction('h1','title','OUTSIDE INTERNSHIP ASSIGNMENTS','navbar');              
+domFunction('h3','title','OUTSIDE INTERNSHIP ASSIGNMENTS','navbar');              
 domFunction('a','profileLink','Profile','navbar','profile.html');    
 
 
@@ -73,5 +73,4 @@ domFunction('a','assignmentCodeLink','Demo','.assignment1-link','https://sailesh
 domFunction('h1','assignmentNumber','02','.gridItem8');
 domFunction('h3','assignmentTitle','Assignment2','.gridItem8');
 domFunction('div','links assignment2-link','','.gridItem8');
-domFunction('a','assignmentCodeLink','Code','.assignment2-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Final-project','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment2-link','Javascript/index.html','_blank');
+domFunction('a','assignmentCodeLink','Links','.assignment2-link','Javascript/index.html','_blank');

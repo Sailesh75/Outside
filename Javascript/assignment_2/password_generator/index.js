@@ -31,9 +31,10 @@ domFunction('label','label','Special Character:','.form',);
 domFunction('input','symbols','','.form','checkbox');
 domFunction('br','','','.form');
 
-domFunction('button','generate-password','Generate-password','.form','');
+domFunction('button','generate-password','Generate Password','.container','');
 domFunction('h3','output-text','Your Password:','.container');
 domFunction('span','output','','.container');
+domFunction('p','error','','.container');
 
 
 let uppercase='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -50,25 +51,38 @@ const characterAmount=document.querySelector('.charLength');
 document.querySelector(".generate-password").addEventListener("click", e => {
     e.preventDefault();
     characters='';
+    let count=0;
     var num=Number(characterAmount.value);
 
     
     if(characterUppercase.checked){
         characters+=uppercase;
+        count++;
     }
     if(characterLowercase.checked){
         characters+=lowercase;
+        count++;
     }
     if(characterNumbers.checked){
         characters+=numbers;
+        count++;
     }
     if(characterSymbols.checked){
         characters+=specialChar;
+        count++;
     }
 
-    const password=generatePassword(num, characters);
-    console.log(password);
-    document.querySelector('.output').innerText=password;
+    if(count==0){
+        document.querySelector('.error').innerText='Select atleast one criteria!!'
+    }
+    else if(num<count){
+        document.querySelector('.error').innerText='Desired length is small than the selected criteria!!'
+    }
+    else{
+        const password=generatePassword(num, characters);
+        console.log(password);
+        document.querySelector('.output').innerText=password;
+    }
     });
 
   const generatePassword = (length, characters) => {
