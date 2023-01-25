@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    color: #33adff;
+}
+
+.mainContainer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;   
+}
+
+a{
+    text-decoration: none;
+}
+
+.gridItem{
+    background-color: #e6ffff;
+    height: 250px;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.gridItem:hover{
+    box-shadow: 0 10px 18px 0 rgba(0,0,0,0.2);
+}
+
+.assignmentNumber{
+    padding-left:15px;
+ 
+}
+
+.assignmentTitle{
+    text-align: center;
+
+}
+
+.assignmentCodeLink{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #4db8ff;
+    color: white;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.assignmentDemoLink{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #4db8ff;
+    color: white;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.assignmentCodeLink:hover{
+    background-color: #1aa3ff;
+}
+
+.assignmentDemoLink:hover{
+    background-color: #1aa3ff;
+}
