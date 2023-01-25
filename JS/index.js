@@ -71,7 +71,7 @@ domFunction('a','assignmentCodeLink','Code','.assignment1-link','https://github.
 domFunction('a','assignmentCodeLink','Demo','.assignment1-link','https://sailesh75.github.io/Outside-Internship/','_blank');
 
 domFunction('h1','assignmentNumber','02','.gridItem8');
-domFunction('h3','assignmentTitle','Assignment1','.gridItem8');
+domFunction('h3','assignmentTitle','Assignment2','.gridItem8');
 domFunction('div','links assignment2-link','','.gridItem8');
 domFunction('a','assignmentCodeLink','Code','.assignment2-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Final-project','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment2-link','Javascript/assignment_2/index.html','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment2-link','Javascript/index.html','_blank');
