@@ -1,0 +1,45 @@
+body{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Poppins;
+}
+
+.container {
+    background-color: #7de4c2;
+    padding: 40px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+  }
+
+
+.button{
+    width: 150px;
+    padding:20px;
+    margin: 10px;
+    font-size: 25px;
+    background-color: blue;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.stopwatch{
+    padding:20px;
+    margin: 10px;
+    font-size: 25px;
+    background-color: azure;
+    cursor: pointer;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.digit{
+    font-size:50px;
+}
+
+.timer{
+    position: relative;
+    left: 80px;
+}
