@@ -65,12 +65,18 @@ domFunction('a','assignmentCodeLink','Demo','.final_project-link','https://saile
 
 
 domFunction('h1','assignmentNumber','01','.gridItem7');
-domFunction('h3','assignmentTitle','Assignment1','.gridItem7');
+domFunction('h3','assignmentTitle','AssignmentCard/Profile','.gridItem7');
 domFunction('div','links assignment1-link','','.gridItem7');
 domFunction('a','assignmentCodeLink','Code','.assignment1-link','https://github.com/Sailesh75/Outside-Internship/tree/master/JS','_blank');
 domFunction('a','assignmentCodeLink','Demo','.assignment1-link','https://sailesh75.github.io/Outside-Internship/','_blank');
 
 domFunction('h1','assignmentNumber','02','.gridItem8');
-domFunction('h3','assignmentTitle','Assignment2','.gridItem8');
+domFunction('h3','assignmentTitle','Clock/password generator','.gridItem8');
 domFunction('div','links assignment2-link','','.gridItem8');
 domFunction('a','assignmentCodeLink','Links','.assignment2-link','Javascript/index.html','_blank');
+
+domFunction('h1','assignmentNumber','03','.gridItem9');
+domFunction('h3','assignmentTitle','Image slider','.gridItem9');
+domFunction('div','links assignment3-link','','.gridItem9');
+domFunction('a','assignmentCodeLink','Code','.assignment3-link','https://github.com/Sailesh75/Outside-Internship/tree/master/JS','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment3-link','https://sailesh75.github.io/Outside-Internship/','_blank');
