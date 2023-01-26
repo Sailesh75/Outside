@@ -78,5 +78,5 @@ domFunction('a','assignmentCodeLink','Links','.assignment2-link','Javascript/ind
 domFunction('h1','assignmentNumber','03','.gridItem9');
 domFunction('h3','assignmentTitle','Image slider','.gridItem9');
 domFunction('div','links assignment3-link','','.gridItem9');
-domFunction('a','assignmentCodeLink','Code','.assignment3-link','https://github.com/Sailesh75/Outside-Internship/tree/master/JS','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment3-link','https://sailesh75.github.io/Outside-Internship/','_blank');
+domFunction('a','assignmentCodeLink','Code','.assignment3-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Javascript/assignment_3','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment3-link','Javascript/assignment_3/index.html','_blank');
