@@ -92,10 +92,10 @@ domFunction('h1','assignmentNumber','04','.gridItem11');
 domFunction('h3','assignmentTitle','Box collision','.gridItem11');
 domFunction('div','links assignment5-link','','.gridItem11');
 domFunction('a','assignmentCodeLink','Code','.assignment5-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Javascript/assignment_4_BoxCollision','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment5-link','Javascript/assignment_4/index.html','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment5-link','Javascript/assignment_4_BoxCollision/index.html','_blank');
 
 domFunction('h1','assignmentNumber','5','.gridItem12');
 domFunction('h3','assignmentTitle','Ant Smasher','.gridItem12');
 domFunction('div','links assignment6-link','','.gridItem12');
 domFunction('a','assignmentCodeLink','Code','.assignment6-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Javascript/assignment_5_AntSmasher','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment6-link','Javascript/assignment_5/index.html','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment6-link','Javascript/assignment_5_AntSmasher/index.html','_blank');
