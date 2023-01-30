@@ -1,6 +1,6 @@
 //DOM manipulation
-const domFunction = (element, className, id, text, targetId, dataIndex) => {
-  var element = document.createElement(element);
+const domFunction = (elementName, className, id, text, targetId, dataIndex) => {
+  let element = document.createElement(elementName);
   element.className = className;
   element.id=id;
   element.appendChild(document.createTextNode(text));
@@ -17,13 +17,13 @@ domFunction('span','indicator','','','.carousel-indicators','1');
 domFunction('span','indicator','','','.carousel-indicators','2');
 domFunction('button','carousel-control','next','Next','.carousel-controls');
 
-var images = document.querySelectorAll('.carousel-image-wrapper img');
-var indicators = document.querySelectorAll('.indicator');
-var prev = document.getElementById('prev');
-var next = document.getElementById('next');
-var currentIndex = 0;
-var translateX = 0;
-var slideInterval = setInterval(nextSlide,3000);
+let images = document.querySelectorAll('.carousel-image-wrapper img');
+let indicators = document.querySelectorAll('.indicator');
+let prev = document.getElementById('prev');
+let next = document.getElementById('next');
+let currentIndex = 0;
+let translateX = 0;
+let slideInterval = setInterval(nextSlide,3000);
 
 prev.addEventListener('click', function() {
   clearInterval(slideInterval);
@@ -36,10 +36,10 @@ next.addEventListener('click', function() {
 });
 
 
-for (var i = 0; i < indicators.length; i++) {
+for (let i = 0; i < indicators.length; i++) {
     indicators[i].addEventListener('click', function() {
       clearInterval(slideInterval);
-      var currentIndex = parseInt(this.getAttribute('data-index'));
+      let currentIndex = parseInt(this.getAttribute('data-index'));
       goToSlide(currentIndex);
     });
   }

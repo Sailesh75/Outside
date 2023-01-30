@@ -1,7 +1,7 @@
 //DOM manipulation
 
-const domFunction = (element, className, text, targetId, type, value) => {
-  var element = document.createElement(element);
+const domFunction = (elementName, className, text, targetId, type, value) => {
+  let element = document.createElement(elementName);
   element.className = className;
   element.appendChild(document.createTextNode(text));
   document.querySelector(targetId).appendChild(element);
@@ -43,16 +43,16 @@ document.querySelector(".button--clock").addEventListener("click", () => {
 stopwatch();
 
 function stopwatch() {
-  var seconds = 00;
-  var tens = 00;
-  var thousands = 00;
-  var appendThousands = document.querySelector(".thousands");
-  var appendTens = document.querySelector(".tens");
-  var appendSeconds = document.querySelector(".seconds");
-  var buttonStart = document.querySelector(".stopwatch--start");
-  var buttonStop = document.querySelector(".stopwatch--stop");
-  var buttonReset = document.querySelector(".stopwatch--reset");
-  var Interval;
+  let seconds = 00;
+  let tens = 00;
+  let thousands = 00;
+  let appendThousands = document.querySelector(".thousands");
+  let appendTens = document.querySelector(".tens");
+  let appendSeconds = document.querySelector(".seconds");
+  let buttonStart = document.querySelector(".stopwatch--start");
+  let buttonStop = document.querySelector(".stopwatch--stop");
+  let buttonReset = document.querySelector(".stopwatch--reset");
+  let Interval;
 
   buttonStart.onclick = function () {
     clearInterval(Interval);
@@ -108,16 +108,16 @@ function stopwatch() {
 //digital clock
 
 function clock() {
-  var appendThousands = document.querySelector(".thousands");
-  var appendTens = document.querySelector(".tens");
-  var appendSeconds = document.querySelector(".seconds");
-  var appendSession = document.querySelector(".session");
+  let appendThousands = document.querySelector(".thousands");
+  let appendTens = document.querySelector(".tens");
+  let appendSeconds = document.querySelector(".seconds");
+  let appendSession = document.querySelector(".session");
 
-  var date = new Date();
-  var h = date.getHours(); // 0 - 23         //second
-  var m = date.getMinutes(); // 0 - 59       //tens
-  var s = date.getSeconds(); // 0 - 59       //thousands
-  var session = "AM";
+  let date = new Date();
+  let h = date.getHours(); // 0 - 23         //second
+  let m = date.getMinutes(); // 0 - 59       //tens
+  let s = date.getSeconds(); // 0 - 59       //thousands
+  let session = "AM";
 
   if (h == 0) {
     h = 12;

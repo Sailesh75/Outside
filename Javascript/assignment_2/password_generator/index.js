@@ -1,5 +1,5 @@
-const domFunction=(element,className,text,targetId,type,min,max)=>{
-    var element=document.createElement(element);              
+const domFunction=(elementName,className,text,targetId,type,min,max)=>{
+    let element=document.createElement(elementName);              
     element.className=className;
     element.appendChild(document.createTextNode(text));
     document.querySelector(targetId).appendChild(element);  
