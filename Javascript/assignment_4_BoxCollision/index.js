@@ -3,7 +3,7 @@ const CONTAINER_HEIGHT=400;
 const NUMBER_OF_BOXES=10;
 const BOX_HEIGHT = 50;
 const BOX_WIDTH = 50;
-let speed = 5;
+let speed = 1;
 let boxes = [];
 let directions = [];
 
@@ -20,6 +20,7 @@ mainBox.style.position='absolute';
 mainBox.style.left = 250 + "px";
 mainBox.style.top = 100 + "px";                                           
 mainBox.style.backgroundColor = "beige";
+mainBox.style.border = "1px solid black";
 
 
 //creating boxes
@@ -128,7 +129,8 @@ const checkBoxCollision = () => {
               box1Left + BOX_WIDTH >= box2Left &&
               box1Top <= box2Top + BOX_HEIGHT &&
               BOX_HEIGHT + box1Top >= box2Top) {
-              //The boxes are overlapping (changing direction)
+              debugger
+              //The boxes are colliding (changing direction)
               directions[i].x = -directions[i].x;
               directions[i].y = -directions[i].y;
               directions[j].x = -directions[j].x;
@@ -139,4 +141,4 @@ const checkBoxCollision = () => {
 }
 
 createBox(NUMBER_OF_BOXES);
-setInterval(moveBox,50);
+setInterval(moveBox,5);

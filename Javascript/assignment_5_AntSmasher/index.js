@@ -13,12 +13,17 @@ for(let i = 0; i < NUMBER_OF_BOXES; i++) {
     directions.push({x: 1, y: 1});
 }
 
-
 canvas.width = CONTAINER_WIDTH;
 canvas.height = CONTAINER_HEIGHT;
 
 const antImage = new Image();
 antImage.src = 'assests/ant.svg';
+
+const antPic = new Image();
+antPic.src = 'assests/ant-file.png'
+
+const ant_on_smash = new Audio();
+ant_on_smash.src = 'assests/ant_on_smash.mp3'
 
 
 const getPositionX = () => {
@@ -41,12 +46,13 @@ const createBox = (n) => {
       y: positionY,
       width: BOX_WIDTH,
       height: BOX_HEIGHT,
-      color: 'blue'
+      color: 'blue',
+      speed: 1
     };
     boxes.push(box);
     ctx.fillStyle = box.color;
     ctx.fillRect(positionX, positionY, BOX_WIDTH, BOX_HEIGHT);
-    ctx.drawImage(antImage, positionX, positionY, BOX_WIDTH, BOX_HEIGHT);canvas.style.cursor = "pointer";
+    // ctx.drawImage(antImage, positionX, positionY, BOX_WIDTH, BOX_HEIGHT);
     boxCounter++;
   }
   checkOverlap();
@@ -77,8 +83,8 @@ for (let i = 0; i < boxes.length; i++) {
 
 
 const moveBox = () => {
-  ctx.clearRect(0, 0, CONTAINER_WIDTH, CONTAINER_HEIGHT);
   checkBoxCollision();
+  ctx.clearRect(0, 0, CONTAINER_WIDTH, CONTAINER_HEIGHT);
   for (let i = 0; i < NUMBER_OF_BOXES; i++) {
     let box = boxes[i];
     let direction = directions[i];
@@ -88,14 +94,26 @@ const moveBox = () => {
     if (box.y + BOX_HEIGHT >= CONTAINER_HEIGHT || box.y <= 0) {
       direction.y = -direction.y;
     }
-    box.x = box.x + direction.x;
-    box.y = box.y + direction.y;
+    direction.x = direction.x;
+    direction.y = direction.y;
+    box.x = box.x + (box.speed * direction.x);
+    box.y = box.y + (box.speed * direction.y);
     ctx.fillStyle = box.color;
     ctx.fillRect(box.x, box.y, box.width, box.height);
-    ctx.drawImage(antImage, box.x, box.y, BOX_WIDTH, BOX_HEIGHT);
+    if(direction.x==-1 || direction.y==1 ){
+      ctx.drawImage(antPic, 1155 ,0, 375, 345, box.x, box.y, BOX_WIDTH, BOX_HEIGHT);
+    }
+    if(direction.x==1 || direction.y==-1 ){
+      ctx.drawImage(antPic, 1155 ,0 , 375, 345, box.x, box.y, BOX_WIDTH, BOX_HEIGHT);
+    }
+    if(direction.x==1 || direction.y==1 ){
+      ctx.drawImage(antPic, 385 ,0, 375, 345, box.x, box.y, BOX_WIDTH, BOX_HEIGHT);
+    }
+    if(direction.x==-1 || direction.y==-1 ){
+      ctx.drawImage(antPic, 0 ,345 , 375, 345, box.x, box.y, BOX_WIDTH, BOX_HEIGHT);
+    }
   }
-  };
-
+};
 
 
 const checkBoxCollision = () => {
@@ -107,10 +125,12 @@ for (let i = 0; i < boxes.length; i++) {
           box1.x + box1.width > box2.x &&
           box1.y < box2.y + box2.height &&
           box1.y + box1.height > box2.y) {
-        
-        // If they are, change the direction of box1
-        box1.dx *= -1;
-        box1.dy *= -1;      
+        debugger
+        //The boxes are colliding (changing direction)
+        directions[i].x = -directions[i].x;
+        directions[i].y = -directions[i].y;
+        directions[j].x = -directions[j].x;
+        directions[j].y = -directions[j].y;
       }
     }
   }
@@ -120,18 +140,13 @@ for (let i = 0; i < boxes.length; i++) {
 canvas.addEventListener('click', (e) => {
   let x = e.clientX - canvas.offsetLeft;
   let y = e.clientY - canvas.offsetTop;
-
+ 
   for (let i = 0; i < boxes.length; i++) {
     let box = boxes[i];
     if (x >= box.x && x <= box.x + box.width && y >= box.y && y <= box.y + box.height) {
       boxes.splice(i, 1);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      boxes.forEach(box => {
-        ctx.fillStyle = box.color;
-        ctx.fillRect(box.x, box.y, box.width, box.height);
-        ctx.drawImage(antImage, box.x, box.y, BOX_WIDTH, BOX_HEIGHT);
-      });
-      break;
+      ant_on_smash.play();
     }
   }
 });
