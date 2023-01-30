@@ -13,7 +13,7 @@ body{
 
 .nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     padding-block: 20px;
@@ -81,6 +81,7 @@ body{
 }
 
 .mainContainer{
+    width: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
     margin-bottom: 80px;
