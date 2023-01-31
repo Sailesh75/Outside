@@ -31,7 +31,7 @@ domFunction('h3','header-title','Javascript','.header2');
 for(i=1;i<7;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards1`)
 }
-for(i=7;i<13;i++){
+for(i=7;i<14;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards2`)
 }
 
@@ -99,3 +99,9 @@ domFunction('h3','assignmentTitle','Ant Smasher','.gridItem12');
 domFunction('div','links assignment6-link','','.gridItem12');
 domFunction('a','assignmentCodeLink','Code','.assignment6-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Javascript/assignment_5_AntSmasher','_blank');
 domFunction('a','assignmentCodeLink','Demo','.assignment6-link','Javascript/assignment_5_AntSmasher/index.html','_blank');
+
+domFunction('h1','assignmentNumber','5.1','.gridItem13');
+domFunction('h3','assignmentTitle','Car Lane Game','.gridItem13');
+domFunction('div','links assignment7-link','','.gridItem13');
+domFunction('a','assignmentCodeLink','Code','.assignment7-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Javascript/assignment_6_car_lane_game','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment7-link','Javascript/assignment_6_car_lane_game/index.html','_blank');
