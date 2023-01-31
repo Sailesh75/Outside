@@ -1,8 +1,8 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = 500;
-canvas.height = 600;
+canvas.width = 300;
+canvas.height = 700;
 
 let playerX = canvas.width / 2;
 let playerY = canvas.height - 50;
@@ -10,6 +10,7 @@ let playerWidth = 50;
 let playerHeight = 100;
 let score = 0;
 let obstacles = [];
+let intervalId;
 
 
 const createPlayer = () => {
@@ -29,8 +30,9 @@ const checkCollision = () =>{
           playerX - playerWidth / 2 < obstacle.x + obstacle.width &&
           playerY < obstacle.y + obstacle.height
         ) {
-          alert("Game Over! Score: " + score);
-          document.location.reload();
+            clearInterval(intervalId);
+            alert("Game Over! Score: " + score);
+            document.location.reload();
         }
       });
       score++;
@@ -100,10 +102,11 @@ document.onkeydown = function(e) {
     }
 };
     
-setInterval(() => {
+
+intervalId = setInterval(() => {
     renderGame();
     updateGame();
-}, 50);
+  }, 50);
 
 
 
