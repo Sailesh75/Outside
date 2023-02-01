@@ -3,8 +3,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #00b359;
 }
 
-#canvas{
-    border: 1px solid black;
+#start-button{
+    padding: 20px;
+    font-size: 25px;
+    position: absolute;
 }
