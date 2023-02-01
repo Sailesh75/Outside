@@ -1,13 +1,20 @@
+const CANVAS_HEIGHT = window.innerHeight;
+const NUMBER_OF_LANES = 3;
+const CANVAS_WIDTH = CANVAS_HEIGHT*NUMBER_OF_LANES / 7.5;
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = 300;
-canvas.height = 750;
+canvas.height = CANVAS_HEIGHT;
+canvas.width = CANVAS_WIDTH;
 
-let playerX = canvas.width / 2;
-let playerY = canvas.height - 100;
-let playerWidth = 80;
+const LANE_GAP = 10;
 let playerHeight = 100;
+let playerWidth = CANVAS_WIDTH/NUMBER_OF_LANES-LANE_GAP*2;
+// let playerX = (canvas.width / NUMBER_OF_LANES) * Math.ceil(NUMBER_OF_LANES/2) + (LANE_GAP);
+let playerX = canvas.width / 2;
+console.log(playerX);
+let playerY = canvas.height - playerHeight;
 let score = 0;
 let obstacles = [];
 let intervalId;
@@ -109,13 +116,13 @@ const renderGame = () => {
 document.onkeydown = function(e) {
     switch (e.key) {
     case "ArrowLeft":
-    playerX -= canvas.width / 3;
-    playerX = Math.max(playerX, playerWidth / 2);
-    break;
+      playerX -= canvas.width / 3;
+      playerX = Math.max(playerX, playerWidth / 2);
+      break;
     case "ArrowRight":
-    playerX += canvas.width / 3;
-    playerX = Math.min(playerX, canvas.width - playerWidth / 2);
-    break;
+      playerX += canvas.width / 3;
+      playerX = Math.min(playerX, canvas.width - playerWidth / 2);
+      break;
     }
 };
 
