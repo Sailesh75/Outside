@@ -11,7 +11,7 @@ let playerHeight = 100;
 let score = 0;
 let obstacles = [];
 let intervalId;
-let speed = 10;
+let speed = 15;
 let carlane;
 let lastlane;
 
@@ -118,15 +118,21 @@ document.onkeydown = function(e) {
     break;
     }
 };
-    
-const startButton = document.getElementById("start-button");
-startButton.addEventListener("click", ()=> {
-  startButton.style.display='none';
+
+const initializeGame = () =>{
+  const restartButton = document.getElementById("restart-button");
+  restartButton.style.display = 'none'; 
+  const startButton = document.getElementById("start-button");
+  startButton.addEventListener("click", ()=> {
+  startButton.style.display = 'none';
   intervalId = setInterval(() => {
     renderGame();
     generateObstacles();
   }, 50);
 });
+}
+
+initializeGame();
 
 
 
