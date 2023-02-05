@@ -4,10 +4,21 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #00b359;
+    height: 100vh;
 }
 
 #start-button{
     padding: 20px;
     font-size: 25px;
     position: absolute;
+}
+
+#restart-button{
+    padding: 20px;
+    font-size: 25px;
+}
+
+#game-score{
+    font-size: 30px;
+    text-align: center;
 }

@@ -13,7 +13,6 @@ let playerHeight = 100;
 let playerWidth = CANVAS_WIDTH/NUMBER_OF_LANES-LANE_GAP*2;
 // let playerX = (canvas.width / NUMBER_OF_LANES) * Math.ceil(NUMBER_OF_LANES/2) + (LANE_GAP);
 let playerX = canvas.width / 2;
-console.log(playerX);
 let playerY = canvas.height - playerHeight;
 let score = 0;
 let obstacles = [];
@@ -21,6 +20,17 @@ let intervalId;
 let speed = 15;
 let carlane;
 let lastlane;
+
+const state = {
+    current : 0,
+    getReady : 0,
+    game : 1,
+    over : 2
+ }
+
+const startButton = document.getElementById("start-button");
+const restartButton = document.getElementById("restart-button");
+const gameScore = document.getElementById("game-score");
 
 const playerCar = new Image();
 playerCar.src = 'assests/player.png';
@@ -50,8 +60,10 @@ const checkCollision = () =>{
         ) {
             carCollision.play();
             clearInterval(intervalId);
-            alert("Game Over! Score: " + score);
-            document.location.reload();
+            setTimeout(()=>{
+              state.current = state.over;
+              gameLoop();
+            },1000);
         }
       });
       score++;
@@ -126,26 +138,62 @@ document.onkeydown = function(e) {
     }
 };
 
-const initializeGame = () =>{
-  const restartButton = document.getElementById("restart-button");
-  restartButton.style.display = 'none'; 
-  const startButton = document.getElementById("start-button");
-  startButton.addEventListener("click", ()=> {
-  startButton.style.display = 'none';
-  intervalId = setInterval(() => {
-    renderGame();
-    generateObstacles();
-  }, 50);
-});
+const startGame = () =>{
+  obstacles = [];
+  score = 0;
+    restartButton.style.display = 'none';
+    startButton.style.display = 'none';
+    intervalId = setInterval(() => {
+      renderGame();
+      generateObstacles();
+    }, 50);
 }
 
-initializeGame();
+const getReady = () =>{
+    restartButton.style.display = 'none';
+    startButton.addEventListener("click", ()=>
+    {
+      startButton.style.display = 'none';
+      state.current += 1;
+      gameLoop();
+    });
+}
 
+const gameOver = () =>{
+  canvas.style.display = 'none';
+  startButton.style.display = 'none';
+  restartButton.style.display = 'block';
+  let result = document.createElement('p');
+  result.appendChild(document.createTextNode(`Your Score : ${score}`));
+  gameScore.appendChild(result);
+  gameScore.style.display = 'block';
+  restartButton.addEventListener("click", ()=>
+  {
+    restartButton.style.display = 'none';
+    gameScore.style.display = 'none';
+    canvas.style.display = 'block';
+    console.log(state.current);
+    state.current -= 1;
+    console.log(state.current);
+    gameLoop();
+  });
+}
 
+const gameLoop = () =>{
+  switch(state.current){
+    case state.getReady:
+      getReady();
+      break;
+    case state.game:
+      startGame();
+      break;
+    case state.over:
+      gameOver();
+      break;  
+  }
+}
 
-
-
-
+gameLoop();
 
 
 
