@@ -21,7 +21,6 @@ export default class Player{
     {
         for (let i = 0; i < 9 ; i++){
             playerCards[i] = this.deck.getNextCard();
-            //converting values into numerical and suit array
             playerNumber.push(playerCards[i].value);
             playerSuits.push(playerCards[i].suit);
         }

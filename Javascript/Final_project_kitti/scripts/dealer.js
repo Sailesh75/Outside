@@ -120,7 +120,7 @@ export default class Dealer {
           dealerNumber.splice(i, 1);
           dealerSuits.splice(i, 1);
           dealerCards.splice(i, 1);
-          straight.splice(0, 1); //only runs the loop for a set(3 cardNumbers)
+          straight.splice(0, 1); 
           i--;
         }
       }
@@ -131,7 +131,7 @@ export default class Dealer {
       let suitCounts = {};
       let flushCards = [];
 
-      // Count the number of cards for each suit
+      // Counting the number of cards for each suit
       for (let i = 0; i < cards.length; i++) {
         let suit = cards[i].suit;
         if (!suitCounts[suit]) {
@@ -141,7 +141,7 @@ export default class Dealer {
         }
       }
 
-      // Find the suit with the most cards
+      // Finding the suit with the most cards
       let maxSuit = null;
       let maxCount = 0;
       for (let suit in suitCounts) {
@@ -151,17 +151,16 @@ export default class Dealer {
         }
       }
 
-      // If there is a suit with at least 3 cards, add those cards to flushCards
+      // If there is a suit with at least 3 cards, adding those cards to flushCards
       if (maxCount >= 3) {
         for (let i = 0; i < cards.length; i++) {
           if (cards[i].suit === maxSuit) {
             flushCards.push(cards[i]);
           }
         }
-        // Sort the flushCards in descending order by number
+        // Sorting the flushCards in descending order by number
         flushCards.sort((a, b) => b.number - a.number);
 
-        // Return the first 3 cards in flushCards
         return flushCards.slice(0, 3);
       }
 
@@ -224,7 +223,6 @@ export default class Dealer {
     }
 
     //remove pair cards
-
     function removeHighestPair(pair) {
       pair = pair.sort((a, b) => b - a);
       for (let i = 0; i < dealerNumber.length; i++) {
@@ -249,7 +247,7 @@ export default class Dealer {
           dealerSuits.splice(i, 1);
           dealerCards.splice(i, 1);
 
-          pair.splice(0, 1); //only runs the loop for a set(3 cardNumbers)
+          pair.splice(0, 1); 
           i--;
         }
       }
@@ -270,7 +268,6 @@ export default class Dealer {
       }
 
       // detect straight
-
       for (let i = 0; i < 3; i++) {
         let straight = detectStraight(dealerNumber);
         console.log("Dealers run:", straight);
@@ -281,7 +278,6 @@ export default class Dealer {
       }
 
       //detect flush
-
       for (let i = 0; i < 3; i++) {
         let flush = detectFlush(dealerCards);
         console.log("Dealers flush:", flush);
@@ -296,7 +292,6 @@ export default class Dealer {
       );
 
       //detect pair
-
       for (let i = 0; i < 3; i++) {
         let pair = detectHighestPair(dealerCards);
         console.log("Dealers pair:", pair);
@@ -318,7 +313,6 @@ export default class Dealer {
       }
 
       //higher card
-
       if (dealerNumber.length == 6) {
         for (let i = 0; i < dealerNumber.length; i++) {
           if (i % 2 === 0) {
@@ -402,8 +396,6 @@ export default class Dealer {
             button.innerHTML = `Show result`;
 
           default:
-            // function click 1 here
-            // compareRank.showResult();
             console.log("All clicks are done.");
             break;
         }
