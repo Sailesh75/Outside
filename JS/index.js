@@ -31,7 +31,7 @@ domFunction('h3','header-title','Javascript','.header2');
 for(i=1;i<7;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards1`)
 }
-for(i=7;i<15;i++){
+for(i=7;i<16;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards2`)
 }
 
@@ -111,3 +111,9 @@ domFunction('h3','assignmentTitle','Flappy Bird','.gridItem14');
 domFunction('div','links assignment8-link','','.gridItem14');
 domFunction('a','assignmentCodeLink','Code','.assignment8-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Javascript/assignment_7_flappybird','_blank');
 domFunction('a','assignmentCodeLink','Demo','.assignment8-link','Javascript/assignment_7_flappybird/index.html','_blank');
+
+domFunction('h1','assignmentNumber','07','.gridItem15');
+domFunction('h3','assignmentTitle','Final Project - Kitti','.gridItem15');
+domFunction('div','links assignment9-link','','.gridItem15');
+domFunction('a','assignmentCodeLink','Code','.assignment9-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Javascript/Final_project_kitti','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment9-link','Javascript/Final_project_kitti/index.html','_blank');

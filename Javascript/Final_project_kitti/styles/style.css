@@ -1,0 +1,141 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.leadspace {
+  height: 100%;
+  width: 100%;
+}
+
+.buttons {
+  position: absolute;
+  padding-inline: 30px;
+  padding-block: 15px;
+  font-size: 25px;
+  border-radius: 10px;
+  color: white;
+  background-color: green;
+  cursor: pointer;
+  border-style: none;
+}
+
+.play-button {
+  top: 80%;
+  left: 20%;
+}
+
+.rule-button {
+  top: 80%;
+  left: 80%;
+}
+
+.gameplay-UI {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(#a1c4fd, #c2e9fb);
+}
+
+.gameplay-container {
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.dealer {
+  display: flex;
+  flex-direction: column;
+}
+
+.dealer-cards {
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  margin-left: 40px;
+}
+
+.dealer-card {
+  height: 160px;
+  width: 110px;
+  border: 1px solid black;
+  background-color: white;
+  margin: 5px;
+}
+
+.player-cards {
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  margin-right: 40px;
+}
+
+.box {
+  height: 160px;
+  width: 110px;
+  border: 1px solid black;
+  background-color: white;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.dealer-info {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.player-info {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: grab;
+}
+
+.img.dragged {
+  cursor: grabbing;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.showbutton {
+  top: 80%;
+  left: 40%;
+  background-color: gray;
+}
+
+.savebutton {
+  top: 80%;
+  left: 60%;
+}
+
+.dealer-result{
+  display: flex;
+  justify-content: center;
+}
+
+.player-result{
+  display: flex;
+  justify-content: center;
+}
+
+.result-indicator{
+  height: 50px;
+  width: 30px;
+  background-color: gray;
+  border-radius: 10px;
+  margin: 10px;
+}
