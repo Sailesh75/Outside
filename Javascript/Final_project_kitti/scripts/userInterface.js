@@ -72,10 +72,11 @@ export class Gameplay {
 export class LandingPage {
   constructor() {
     this.landingPageUI = () => {
-      const domFunction = (elementName, className, text, targetId, src) => {
+      const domFunction = (elementName, className, text, targetId, src, href) => {
         let element = document.createElement(elementName);
         element.className = className;
         element.src = src;
+        element.href = href;
         element.appendChild(document.createTextNode(text));
         document.querySelector(targetId).appendChild(element);
       };
@@ -85,7 +86,7 @@ export class LandingPage {
       domFunction("img","leadspace","",".img-container","assets/images/kitti_hero.png"
       );
       domFunction("button", "buttons play-button", "Play", ".container");
-      domFunction("button", "buttons rule-button", "Rules", ".container");
+      domFunction("a", "buttons rule-button", "Rules", ".container", "" ,"https://github.com/Sailesh75/Outside-Internship/blob/master/Javascript/Final_project_kitti/readme.md");
     };
   }
 }

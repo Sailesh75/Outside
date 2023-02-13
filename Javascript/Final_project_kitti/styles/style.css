@@ -1,6 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -138,4 +139,9 @@
   background-color: gray;
   border-radius: 10px;
   margin: 10px;
+}
+
+a{
+  text-decoration: none;
+  font-size: 25px;
 }

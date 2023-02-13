@@ -32,3 +32,5 @@ element.addEventListener("click", () => {
   landingUI.style.display = "none";
   gameplayUI.style.display = "block";
 });
+
+
