@@ -17,7 +17,6 @@ export default class Dealer {
   }
 
   getdealerCard() {
-    // console.log(this.deck.getNextCard);
     for (let i = 0; i < 9; i++) {
       dealerCards[i] = this.deck.getNextCard();
       //converting values into numerical and suit array
@@ -83,11 +82,9 @@ export default class Dealer {
     };
 
     //check straight cards
-
     const detectStraight = (numbers) => {
       let sortedNumbers = numbers;
       for (let i = 0; i < sortedNumbers.length; i++) {
-        //sortedNumbers.length - 4
         let straight = [sortedNumbers[i]];
         for (let j = i + 1; j < sortedNumbers.length; j++) {
           if (straight[straight.length - 1] - sortedNumbers[j] === 1) {
@@ -103,7 +100,6 @@ export default class Dealer {
 
     const removeStraightCards = (straight) => {
       for (let i = 0; i < dealerNumber.length; i++) {
-        // console.log(dealerNumber);
         if (straight.includes(dealerNumber[i])) {
           if (dealerfirstSet.length < 3) {
             dealerfirstSet.push({
@@ -127,12 +123,10 @@ export default class Dealer {
           straight.splice(0, 1); //only runs the loop for a set(3 cardNumbers)
           i--;
         }
-        // }
       }
     };
 
     //detect flush
-
     function detectFlush(cards) {
       let suitCounts = {};
       let flushCards = [];
@@ -258,7 +252,6 @@ export default class Dealer {
           pair.splice(0, 1); //only runs the loop for a set(3 cardNumbers)
           i--;
         }
-        // }
       }
     }
 
@@ -275,10 +268,6 @@ export default class Dealer {
           removeTripleCards(triple);
         }
       }
-      console.log("Dealers card after triple check", dealerCards);
-      console.log("dealerfirstSet:", dealerfirstSet);
-      console.log("dealersecondSet", dealersecondSet);
-      console.log("Third set", dealerthirdSet);
 
       // detect straight
 
@@ -290,10 +279,6 @@ export default class Dealer {
           removeStraightCards(straight);
         }
       }
-      console.log("Dealers card after triple and straight check", dealerCards);
-      console.log("dealerfirstSet:", dealerfirstSet);
-      console.log("dealersecondSet", dealersecondSet);
-      console.log("Third set", dealerthirdSet);
 
       //detect flush
 
@@ -309,9 +294,6 @@ export default class Dealer {
         "Dealers card after triple , straight and flush check",
         dealerCards
       );
-      console.log("dealerfirstSet:", dealerfirstSet);
-      console.log("dealersecondSet", dealersecondSet);
-      console.log("Third set", dealerthirdSet);
 
       //detect pair
 
@@ -352,13 +334,6 @@ export default class Dealer {
           }
         }
       }
-      console.log(
-        "Dealers card after triple , straight and flush check",
-        dealerCards
-      );
-      console.log("dealerfirstSet:", dealerfirstSet);
-      console.log("dealersecondSet", dealersecondSet);
-      console.log("Third set", dealerthirdSet);
     };
 
     game();
@@ -428,7 +403,7 @@ export default class Dealer {
 
           default:
             // function click 1 here
-            compareRank.showResult();
+            // compareRank.showResult();
             console.log("All clicks are done.");
             break;
         }

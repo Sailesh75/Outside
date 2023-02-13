@@ -33,14 +33,11 @@ export default class CompareRank {
             
         } else {
             wrongSound.play();
-            window.alert('Ranked it well first!!');
-            console.log(`Not in ranked!!`);
+            window.alert('Rank it in order first!!');
         }
     }
 
     compareFirstset(dealerscore) {
-        console.log('ds:',dealerscore);
-        console.log('ps:',playerfirstsetscore);
         let dealer = document.querySelector('.result-indicator--dealerfirstset');
         let player = document.querySelector('.result-indicator--playerfirstset');
 
