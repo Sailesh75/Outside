@@ -36,5 +36,3 @@ export default class Deck {
     return deck.shift();
   };
 }
-
-

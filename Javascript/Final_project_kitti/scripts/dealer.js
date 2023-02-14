@@ -1,5 +1,5 @@
 import Rank from "./rank.js";
-import CompareRank  from "./compare.js";
+import CompareRank from "./compare.js";
 const compareRank = new CompareRank();
 const rank = new Rank();
 
@@ -12,7 +12,7 @@ let dealersecondSet = [];
 let dealerthirdSet = [];
 
 export default class Dealer {
-  constructor( deck ) {
+  constructor(deck) {
     this.deck = deck;
   }
 
@@ -23,17 +23,12 @@ export default class Dealer {
       dealerNumber.push(dealerCards[i].value);
       dealerSuits.push(dealerCards[i].suit);
     }
-    console.log("Dealer Cards", dealerCards);
-    console.log("Dealer Number", dealerNumber);
-    console.log("Dealer Suits", dealerSuits);
   }
 
   dealerPlay() {
     const sortCards = () => {
       dealerCards.sort((a, b) => b.value - a.value);
-      console.log("Sorted dealer cards", dealerCards);
       dealerNumber.sort((a, b) => b - a);
-      console.log("Sorted dealer number", dealerNumber);
     };
 
     // check triple card
@@ -120,7 +115,7 @@ export default class Dealer {
           dealerNumber.splice(i, 1);
           dealerSuits.splice(i, 1);
           dealerCards.splice(i, 1);
-          straight.splice(0, 1); 
+          straight.splice(0, 1);
           i--;
         }
       }
@@ -247,7 +242,7 @@ export default class Dealer {
           dealerSuits.splice(i, 1);
           dealerCards.splice(i, 1);
 
-          pair.splice(0, 1); 
+          pair.splice(0, 1);
           i--;
         }
       }
@@ -260,7 +255,6 @@ export default class Dealer {
       for (let i = 0; i < 3; i++) {
         // check tripleCard
         const triple = detectTriple(dealerNumber);
-        console.log(" triple:", triple);
 
         if (triple) {
           removeTripleCards(triple);
@@ -270,7 +264,6 @@ export default class Dealer {
       // detect straight
       for (let i = 0; i < 3; i++) {
         let straight = detectStraight(dealerNumber);
-        console.log("Dealers run:", straight);
 
         if (straight) {
           removeStraightCards(straight);
@@ -280,21 +273,15 @@ export default class Dealer {
       //detect flush
       for (let i = 0; i < 3; i++) {
         let flush = detectFlush(dealerCards);
-        console.log("Dealers flush:", flush);
 
         if (flush) {
           removeFlushCards(flush, dealerCards);
         }
       }
-      console.log(
-        "Dealers card after triple , straight and flush check",
-        dealerCards
-      );
 
       //detect pair
       for (let i = 0; i < 3; i++) {
         let pair = detectHighestPair(dealerCards);
-        console.log("Dealers pair:", pair);
 
         if (pair) {
           removeHighestPair(pair);
@@ -331,6 +318,9 @@ export default class Dealer {
     };
 
     game();
+    console.log("Dealer firstSet:", dealerfirstSet);
+    console.log("Dealer secondset", dealersecondSet);
+    console.log("Dealer thirdSet", dealerthirdSet);
   }
 
   displayCards() {
@@ -346,7 +336,6 @@ export default class Dealer {
       var next = function () {
         switch (count) {
           case 0:
-            // function click 1 here
             for (let i = 0; i < dealerfirstSet.length; i++) {
               const card = dealerfirstSet[i];
               const number = card.value;
@@ -357,13 +346,12 @@ export default class Dealer {
               cardImage.src = `assets/cards/${number}_of_${symbol}.png`;
             }
             let dealerfirstsetscore = rank.getScore(dealerfirstSet);
-            console.log(dealerfirstsetscore);
+            console.log("Dealer firstset rank:", dealerfirstsetscore);
             compareRank.compareFirstset(dealerfirstsetscore);
             button.innerHTML = `Show 2nd set`;
 
             break;
           case 1:
-            // function click 2 here
             for (let i = 0; i < dealersecondSet.length; i++) {
               const card = dealersecondSet[i];
               const number = card.value;
@@ -374,13 +362,12 @@ export default class Dealer {
               cardImage.src = `assets/cards/${number}_of_${symbol}.png`;
             }
             let dealersecondsetscore = rank.getScore(dealersecondSet);
-            console.log(dealersecondsetscore);
+            console.log("Dealer secondset rank:", dealersecondsetscore);
             compareRank.compareSecondset(dealersecondsetscore);
             button.innerHTML = `Show 3rd set`;
 
             break;
           case 2:
-            // function click 3 here
             for (let i = 0; i < dealerthirdSet.length; i++) {
               const card = dealerthirdSet[i];
               const number = card.value;
@@ -391,11 +378,15 @@ export default class Dealer {
               cardImage.src = `assets/cards/${number}_of_${symbol}.png`;
             }
             let dealerthirdsetscore = rank.getScore(dealerthirdSet);
-            console.log(dealerthirdsetscore);
+            console.log("Dealer thirdset rank:", dealerthirdsetscore);
             compareRank.compareThirdset(dealerthirdsetscore);
             button.innerHTML = `Show result`;
+            break;
 
           default:
+            button.style.backgroundColor = "gray";
+            button.disabled = true;
+            compareRank.showResult();
             console.log("All clicks are done.");
             break;
         }

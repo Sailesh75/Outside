@@ -15,9 +15,18 @@ export class Gameplay {
       domFunction("div", "result-button", "", ".gameplay-UI");
 
       domFunction("div", "dealer", "", ".gameplay-container");
+      domFunction("h1", "text", "", ".gameplay-container");
       domFunction("div", "player", "", ".gameplay-container");
 
-      domFunction("div", "dealer-info", "Dealer:", ".dealer");
+      domFunction("div", "dealer-info", "", ".dealer");
+      domFunction(
+        "img",
+        "card dealer-img",
+        "",
+        ".dealer-info",
+        "assets/images/pc.png"
+      );
+
       domFunction("div", "dealer-cards", "", ".dealer");
       domFunction("img", "dealer-card dealer-card--1", "", ".dealer-cards");
       domFunction("img", "dealer-card dealer-card--2", "", ".dealer-cards");
@@ -30,12 +39,34 @@ export class Gameplay {
       domFunction("img", "dealer-card dealer-card--9", "", ".dealer-cards");
       domFunction("div", "dealer-result", "", ".dealer");
 
+      domFunction(
+        "div",
+        "result-indicator result-indicator--dealerfirstset",
+        "",
+        ".dealer-result"
+      );
+      domFunction(
+        "div",
+        "result-indicator result-indicator--dealersecondset",
+        "",
+        ".dealer-result"
+      );
+      domFunction(
+        "div",
+        "result-indicator result-indicator--dealerthirdset",
+        "",
+        ".dealer-result"
+      );
 
-      domFunction("div", "result-indicator result-indicator--dealerfirstset", "", ".dealer-result");
-      domFunction("div", "result-indicator result-indicator--dealersecondset", "", ".dealer-result");
-      domFunction("div", "result-indicator result-indicator--dealerthirdset", "", ".dealer-result");
+      domFunction("div", "player-info", "", ".player");
+      domFunction(
+        "img",
+        "card player-img",
+        "",
+        ".player-info",
+        "assets/images/player.png"
+      );
 
-      domFunction("div", "player-info", "Player:", ".player");
       domFunction("div", "player-cards", "", ".player");
       domFunction("div", "box box-1", "", ".player-cards");
       domFunction("div", "box box-2", "", ".player-cards");
@@ -48,10 +79,24 @@ export class Gameplay {
       domFunction("div", "box box-9", "", ".player-cards");
       domFunction("div", "player-result", "", ".player");
 
-
-      domFunction("div", "result-indicator result-indicator--playerfirstset", "", ".player-result");
-      domFunction("div", "result-indicator result-indicator--playersecondset", "", ".player-result");
-      domFunction("div", "result-indicator result-indicator--playerthirdset", "", ".player-result");
+      domFunction(
+        "div",
+        "result-indicator result-indicator--playerfirstset",
+        "",
+        ".player-result"
+      );
+      domFunction(
+        "div",
+        "result-indicator result-indicator--playersecondset",
+        "",
+        ".player-result"
+      );
+      domFunction(
+        "div",
+        "result-indicator result-indicator--playerthirdset",
+        "",
+        ".player-result"
+      );
 
       domFunction("img", "img img1", "", ".box-1");
       domFunction("img", "img img2", "", ".box-2");
@@ -63,8 +108,19 @@ export class Gameplay {
       domFunction("img", "img img8", "", ".box-8");
       domFunction("img", "img img9", "", ".box-9");
 
-      domFunction("button", "buttons showbutton", "Show 1st set", ".result-button");
+      domFunction(
+        "button",
+        "buttons showbutton",
+        "Show 1st set",
+        ".result-button"
+      );
       domFunction("button", "buttons savebutton", "Save", ".result-button");
+      domFunction(
+        "button",
+        "buttons restartbutton",
+        "Play again",
+        ".result-button"
+      );
     };
   }
 }
@@ -72,7 +128,14 @@ export class Gameplay {
 export class LandingPage {
   constructor() {
     this.landingPageUI = () => {
-      const domFunction = (elementName, className, text, targetId, src, href) => {
+      const domFunction = (
+        elementName,
+        className,
+        text,
+        targetId,
+        src,
+        href
+      ) => {
         let element = document.createElement(elementName);
         element.className = className;
         element.src = src;
@@ -83,10 +146,22 @@ export class LandingPage {
 
       domFunction("div", "container", "", ".body");
       domFunction("figure", "img-container", "", ".container");
-      domFunction("img","leadspace","",".img-container","assets/images/kitti_hero.png"
+      domFunction(
+        "img",
+        "leadspace",
+        "",
+        ".img-container",
+        "assets/images/kitti_hero.png"
       );
       domFunction("button", "buttons play-button", "Play", ".container");
-      domFunction("a", "buttons rule-button", "Rules", ".container", "" ,"https://github.com/Sailesh75/Outside-Internship/blob/master/Javascript/Final_project_kitti/readme.md");
+      domFunction(
+        "a",
+        "buttons rule-button",
+        "Rules",
+        ".container",
+        "",
+        "https://github.com/Sailesh75/Outside-Internship/blob/master/Javascript/Final_project_kitti/readme.md"
+      );
     };
   }
 }

@@ -5,7 +5,7 @@ import Player from "./player.js";
 
 const landingPage = new LandingPage();
 const gameplay = new Gameplay();
-const deck = new Deck;
+const deck = new Deck();
 const player = new Player(deck);
 const dealer = new Dealer(deck);
 
@@ -26,6 +26,8 @@ gameplayUI.style.display = "none";
 
 const element = document.querySelector(".play-button");
 const button = document.querySelector(".showbutton");
+const restartbutton = document.querySelector(".restartbutton");
+restartbutton.style.display = "none";
 button.disabled = true;
 
 element.addEventListener("click", () => {
@@ -33,4 +35,6 @@ element.addEventListener("click", () => {
   gameplayUI.style.display = "block";
 });
 
-
+restartbutton.addEventListener("click", () => {
+  window.location.reload();
+});

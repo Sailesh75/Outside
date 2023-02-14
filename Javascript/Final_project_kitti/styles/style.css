@@ -1,7 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
@@ -22,8 +22,8 @@
 
 .buttons {
   position: absolute;
-  padding-inline: 30px;
-  padding-block: 15px;
+  padding-inline: 25px;
+  padding-block: 10px;
   font-size: 25px;
   border-radius: 10px;
   color: white;
@@ -50,7 +50,11 @@
 
 .gameplay-container {
   display: flex !important;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.text {
+  margin-top: 50px;
 }
 
 .dealer {
@@ -90,11 +94,17 @@
 .dealer-info {
   font-size: 30px;
   margin: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 
 .player-info {
   font-size: 30px;
   margin: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 
 .img {
@@ -113,27 +123,32 @@
 }
 
 .showbutton {
-  top: 80%;
+  top: 70%;
   left: 40%;
   background-color: gray;
 }
 
 .savebutton {
-  top: 80%;
-  left: 60%;
+  top: 70%;
+  left: 55%;
 }
 
-.dealer-result{
+.restartbutton {
+  top: 85%;
+  left: 45%;
+}
+
+.dealer-result {
   display: flex;
   justify-content: center;
 }
 
-.player-result{
+.player-result {
   display: flex;
   justify-content: center;
 }
 
-.result-indicator{
+.result-indicator {
   height: 50px;
   width: 30px;
   background-color: gray;
@@ -141,7 +156,13 @@
   margin: 10px;
 }
 
-a{
+a {
   text-decoration: none;
   font-size: 25px;
+}
+
+.card {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }
