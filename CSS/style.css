@@ -72,8 +72,6 @@ body{
     }
 }
 
-
-
 .header-title{
     font-size: 30px;
     color: #3370ff;
@@ -217,4 +215,25 @@ a{
     grid-template-columns: 1fr 1fr 1fr; 
     background-image: linear-gradient(#fad0c4 ,#ffd1ff);
     padding-block: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .header3{
+        grid-row: 5;
+        grid-column:1 ; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cards3{
+        grid-row: 6;
+        grid-column: 1;
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .cards3{
+        grid-template-columns: 1fr; 
+    }
 }
