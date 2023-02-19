@@ -22,10 +22,13 @@ domFunction('div','header1','','.mainContainer');
 domFunction('div','cards1','','.mainContainer');
 domFunction('div','header2','','.mainContainer');
 domFunction('div','cards2','','.mainContainer');
+domFunction('div','header3','','.mainContainer');
+domFunction('div','cards3','','.mainContainer');
 
 //inside header
 domFunction('h3','header-title','Frontend','.header1');
 domFunction('h3','header-title','Javascript','.header2');
+domFunction('h3','header-title','React','.header3');
 
 //inside cards
 for(i=1;i<7;i++){
@@ -33,6 +36,9 @@ for(i=1;i<7;i++){
 }
 for(i=7;i<16;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards2`)
+}
+for(i=16;i<19;i++){
+    domFunction(`div`,`gridItem gridItem${i}`,``,`.cards3`)
 }
 
 domFunction('h1','assignmentNumber','01','.gridItem1');
@@ -117,3 +123,21 @@ domFunction('h3','assignmentTitle','Final Project - Kitti','.gridItem15');
 domFunction('div','links assignment9-link','','.gridItem15');
 domFunction('a','assignmentCodeLink','Code','.assignment9-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Javascript/Final_project_kitti','_blank');
 domFunction('a','assignmentCodeLink','Demo','.assignment9-link','Javascript/Final_project_kitti/index.html','_blank');
+
+domFunction('h1','assignmentNumber','01','.gridItem16');
+domFunction('h3','assignmentTitle','Components, Props','.gridItem16');
+domFunction('div','links assignment10-link','','.gridItem16');
+domFunction('a','assignmentCodeLink','Code','.assignment10-link','','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment10-link','https://fanciful-meerkat-a26a3f.netlify.app/','_blank');
+
+domFunction('h1','assignmentNumber','02','.gridItem17');
+domFunction('h3','assignmentTitle','useState','.gridItem17');
+domFunction('div','links assignment11-link','','.gridItem17');
+domFunction('a','assignmentCodeLink','Code','.assignment11-link','','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment11-link','https://fanciful-meerkat-a26a3f.netlify.app/','_blank');
+
+domFunction('h1','assignmentNumber','03','.gridItem18');
+domFunction('h3','assignmentTitle','signup/login page','.gridItem18');
+domFunction('div','links assignment12-link','','.gridItem18');
+domFunction('a','assignmentCodeLink','Code','.assignment12-link','','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment12-link','https://fanciful-meerkat-a26a3f.netlify.app/','_blank');

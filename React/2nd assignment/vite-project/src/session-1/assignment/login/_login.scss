@@ -1,0 +1,94 @@
+.login{
+    background-color: #363740;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    &_container{
+            width: 38rem;
+            height: 58.6rem;
+            background-color: #fff;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            figure{
+                width: 4.4rem;
+                height: 4.4rem;
+                margin-top: 4rem;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+    }
+
+    &_title{
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.4px;
+        color: #A4A6B3;
+        opacity: 0.7;
+
+    }
+
+    &_text{
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.3px;
+        color: #252733;
+        margin-top: 2.4rem;
+    }
+
+    &_value{
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.3px;
+        color: #9FA2B4;
+        margin-top: 1.2rem;
+    }
+}
+
+form{
+    label{
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        color: #9FA2B4;
+    }
+    input[type=submit]{
+        background: #3751FF;
+        box-shadow: 0px 4px 12px rgba(55, 81, 255, 0.24);
+        border-radius: 8px;
+        font-family: 'Mulish';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #FFFFFF;
+    }
+}
+
+
