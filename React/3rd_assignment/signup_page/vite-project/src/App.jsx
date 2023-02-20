@@ -1,4 +1,4 @@
-import Login from "./session-3/login/Login";
+import Login from "./session-3/signup/Signup";
 
 function App() {
   return <Login />;

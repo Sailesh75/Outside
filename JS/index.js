@@ -144,19 +144,19 @@ domFunction('a','assignmentCodeLink','Code','.assignment11-link','https://github
 domFunction('a','assignmentCodeLink','Demo','.assignment11-link','https://jolly-beijinho-4bb479.netlify.app/','_blank');
 
 domFunction('h1','assignmentNumber','3.1','.gridItem18');
-domFunction('h3','assignmentTitle','Signup page','.gridItem18');
+domFunction('h3','assignmentTitle','Login page','.gridItem18');
 domFunction('div','links assignment12-link','','.gridItem18');
-domFunction('a','assignmentCodeLink','Code','.assignment12-link','https://github.com/Sailesh75/Outside-Internship/tree/master/React/3rd_assignment/vite-project','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment12-link','https://clever-dasik-9decb2.netlify.app/?email=cdscdsc&password=csdcsdc#','_blank');
+domFunction('a','assignmentCodeLink','Code','.assignment12-link','https://github.com/Sailesh75/Outside-Internship/tree/master/React/3rd_assignment/login_page/vite-project','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment12-link','https://chimerical-seahorse-963dbc.netlify.app/','_blank');
 
 domFunction('h1','assignmentNumber','3.2','.gridItem19');
-domFunction('h3','assignmentTitle','Login page','.gridItem19');
+domFunction('h3','assignmentTitle','Signup page','.gridItem19');
 domFunction('div','links assignment13-link','','.gridItem19');
-domFunction('a','assignmentCodeLink','Code','.assignment13-link','https://github.com/Sailesh75/Outside-Internship/tree/master/React/3rd_assignment/vite-project','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment13-link','https://fanciful-meerkat-a26a3f.netlify.app/','_blank');
+domFunction('a','assignmentCodeLink','Code','.assignment13-link','https://github.com/Sailesh75/Outside-Internship/tree/master/React/3rd_assignment/signup_page/vite-project','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment13-link','https://zesty-cat-56a2ea.netlify.app/','_blank');
 
 domFunction('h1','assignmentNumber','04','.gridItem20');
 domFunction('h3','assignmentTitle','useContext','.gridItem20');
 domFunction('div','links assignment14-link','','.gridItem20');
-domFunction('a','assignmentCodeLink','Code','.assignment14-link','','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment14-link','https://fanciful-meerkat-a26a3f.netlify.app/','_blank');
+domFunction('a','assignmentCodeLink','Code','.assignment14-link','#','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment14-link','#','_blank');

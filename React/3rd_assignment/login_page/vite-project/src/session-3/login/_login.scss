@@ -73,16 +73,6 @@
         text-transform: uppercase;
         color: #9FA2B4;
         margin-top: 2.4rem;
-
-        ::placeholder{
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 20px;
-            letter-spacing: 0.3px;
-            color: #4B506D;
-            opacity: 0.4;
-            padding-left: 1.6rem;
-        }
     }
     
     input[type=text]{
@@ -155,5 +145,16 @@
         color: #9FA2B4;
     }
 }
+
+::-webkit-input-placeholder{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    color: #4B506D;
+    opacity: 0.4;
+    padding-left: 1.6rem;
+}
+
 
 
