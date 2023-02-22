@@ -135,7 +135,7 @@ domFunction('h1','assignmentNumber','01','.gridItem16');
 domFunction('h3','assignmentTitle','Components, Props','.gridItem16');
 domFunction('div','links assignment10-link','','.gridItem16');
 domFunction('a','assignmentCodeLink','Code','.assignment10-link','https://github.com/Sailesh75/Outside-Internship/tree/master/React/1st_assignment/vite-project','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment10-link','https://fanciful-meerkat-a26a3f.netlify.app/','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment10-link','https://melodious-churros-609af6.netlify.app/','_blank');
 
 domFunction('h1','assignmentNumber','02','.gridItem17');
 domFunction('h3','assignmentTitle','useState','.gridItem17');
