@@ -88,7 +88,7 @@ const ticketList = [
   },
 
   {
-    customerAvatar: "customer-7.png",
+    customerAvatar: "customer-8.png",
     customerName: "Steve Rogers ",
     customerDate: "on 24.05.2019",
     ticketName: "How do I change my password?",

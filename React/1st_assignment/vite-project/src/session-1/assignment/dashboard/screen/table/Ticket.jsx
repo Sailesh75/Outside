@@ -1,18 +1,9 @@
 import React from "react";
-import { MdDelete } from "react-icons/md";
 
-const Ticket = ({ ticketDetails, index, setTickets, tickets }) => {
-  const deleteCurrentTicket = () => {
-    let newArray = tickets.filter((ticket, ticketIndex) => {
-      if (ticketIndex == index) return;
-      else return ticket;
-    });
-    setTickets(newArray);
-    console.log(tickets);
-  };
+const Ticket = ({ ticketDetails}) => {
 
   return (
-    <tr>
+    <tr className="ticket-items">
       <td>
         <div className="ticket">
           <figure>
@@ -43,10 +34,9 @@ const Ticket = ({ ticketDetails, index, setTickets, tickets }) => {
         </div>
       </td>
       <td>
-        <MdDelete
-          className="ticket_deleteButton"
-          onClick={deleteCurrentTicket}
-        />
+        <div className="icon_more">
+          <i className="icon-more"></i>
+        </div>
       </td>
     </tr>
   );
