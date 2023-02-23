@@ -1,8 +1,21 @@
-import React from "react";
+import { React } from "react";
 import PasswordToggle from "./PasswordToggle";
+import { useState } from "react";
 
 const Login = () => {
   const [PasswordInputType, ToggleIcon] = PasswordToggle();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("Email: ", email);
+    console.log("Password: ", password);
+    setEmail("");
+    setPassword("");
+  };
+
   return (
     <>
       <div className="login">
@@ -14,15 +27,16 @@ const Login = () => {
           <p className="login_text">Log In to Dashboard Kit</p>
           <p className="login_value">Enter your email and password</p>
           <div className="form">
-            <form action="#">
+            <form onSubmit={handleSubmit}>
               <label htmlFor="email">Email</label>
               <br />
               <input
                 type="text"
-                id="email"
                 name="email"
                 placeholder="Email address"
                 required
+                value={email}
+                onChange={(event) => setEmail(event.target.value)}
               />
               <br />
               <div style={{ marginTop: "2.4rem" }}>
@@ -30,17 +44,20 @@ const Login = () => {
                 <br />
                 <input
                   type={PasswordInputType}
-                  id="password"
                   name="password"
                   placeholder="Password"
                   required
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
                 />
               </div>
               <span className="forgot-password">Forgot Password?</span>
               <span className="password-toggle-icon">{ToggleIcon}</span>
               <div style={{ marginBottom: "2.4rem" }}>
                 <input type="checkbox" id="remember" name="remember" />
-                <span style={{ marginLeft: "1.2rem", marginBottom: "0.3rem" }}><label htmlFor="remember">Remember Me</label></span>
+                <span style={{ marginLeft: "1.2rem", marginBottom: "0.3rem" }}>
+                  <label htmlFor="remember">Remember Me</label>
+                </span>
               </div>
               <input type="submit" value="Log in" />
             </form>
