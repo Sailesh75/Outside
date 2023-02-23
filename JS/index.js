@@ -141,7 +141,7 @@ domFunction('h1','assignmentNumber','02','.gridItem17');
 domFunction('h3','assignmentTitle','useState','.gridItem17');
 domFunction('div','links assignment11-link','','.gridItem17');
 domFunction('a','assignmentCodeLink','Code','.assignment11-link','https://github.com/Sailesh75/Outside-Internship/tree/master/React/2nd_assignment/vite-project','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment11-link','https://jolly-beijinho-4bb479.netlify.app/','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment11-link','https://react-session2.netlify.app/','_blank');
 
 domFunction('h1','assignmentNumber','3.1','.gridItem18');
 domFunction('h3','assignmentTitle','Login page','.gridItem18');

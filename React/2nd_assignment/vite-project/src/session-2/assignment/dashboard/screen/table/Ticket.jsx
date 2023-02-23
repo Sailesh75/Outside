@@ -9,10 +9,11 @@ const Ticket = ({ ticketDetails, index, setTickets, tickets }) => {
     });
     setTickets(newArray);
     console.log(tickets);
+    console.log(newArray);
   };
 
   return (
-    <tr>
+    <tr className="ticket-items">
       <td>
         <div className="ticket">
           <figure>

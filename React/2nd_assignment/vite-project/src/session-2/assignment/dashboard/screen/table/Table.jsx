@@ -88,7 +88,7 @@ const ticketList = [
   },
 
   {
-    customerAvatar: "customer-7.png",
+    customerAvatar: "customer-8.png",
     customerName: "Steve Rogers ",
     customerDate: "on 24.05.2019",
     ticketName: "How do I change my password?",
@@ -110,8 +110,18 @@ const Table = ({ searchKey, filterKey, setFilterKey }) => {
 
   const handleFilter = (e) => {
     setFilterKey(e.target.value);
-    // console.log(setTickets);
   };
+
+  let newTicketsArray = tickets
+    .filter((item) =>
+      item.ticketName
+        .toLocaleLowerCase()
+        .includes(searchKey.toLocaleLowerCase())
+    )
+    .filter((item) => {
+      if (!filterKey) return item;
+      return item.ticketPriority === filterKey;
+    });
 
   return (
     <div className="table">
@@ -164,28 +174,17 @@ const Table = ({ searchKey, filterKey, setFilterKey }) => {
           </tr>
         </thead>
         <tbody>
-          {console.log(filterKey)}
-          {tickets
-            .filter((item) =>
-              item.ticketName
-                .toLocaleLowerCase()
-                .includes(searchKey.toLocaleLowerCase())
-            )
-            .filter((item) => {
-              if (!filterKey) return item;
-              return item.ticketPriority === filterKey;
-            })
-            .map((item, index) => {
-              return (
-                <Ticket
-                  ticketDetails={item}
-                  key={index}
-                  index={index}
-                  tickets={tickets}
-                  setTickets={setTickets}
-                />
-              );
-            })}
+          {newTicketsArray.map((item, index) => {
+            return (
+              <Ticket
+                ticketDetails={item}
+                key={index}
+                index={index}
+                tickets={newTicketsArray}
+                setTickets={setTickets}
+              />
+            );
+          })}
         </tbody>
       </table>
     </div>
