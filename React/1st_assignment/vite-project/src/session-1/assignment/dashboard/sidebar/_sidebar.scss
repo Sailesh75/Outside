@@ -41,17 +41,8 @@
   }
 }
 
-.sidebar_list {
+.sidebar_list1 {
   cursor: pointer;
-
-  li:nth-child(6) {
-    border-bottom: 1px solid #dfe0eb16;
-    padding-bottom: 34px;
-  }
-
-  li:nth-child(7) {
-    margin-top: 16px;
-  }
 
   li:nth-child(2) {
     background-color: #9fa2b408;
@@ -63,4 +54,13 @@
       color: #dde2ff;
     }
   }
+}
+
+.sidebar_list2 {
+  cursor: pointer;
+}
+
+.divider {
+  margin-block: 1.6rem;
+  border-color: #dfe0eb0e;
 }
