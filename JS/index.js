@@ -158,8 +158,8 @@ domFunction('a','assignmentCodeLink','Demo','.assignment13-link','https://react-
 domFunction('h1','assignmentNumber','04','.gridItem20');
 domFunction('h3','assignmentTitle','customHooks','.gridItem20');
 domFunction('div','links assignment14-link','','.gridItem20');
-domFunction('a','assignmentCodeLink','Code','.assignment14-link','#','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment14-link','#','_blank');
+domFunction('a','assignmentCodeLink','Code','.assignment14-link','https://github.com/Sailesh75/Outside-Internship/tree/master/React/4th_assignment/vite-project','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment14-link','https://react-asssignment-customhooks.netlify.app/','_blank');
 
 domFunction('h1','assignmentNumber','05','.gridItem21');
 domFunction('h3','assignmentTitle','routing,api','.gridItem21');
