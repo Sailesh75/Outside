@@ -22,7 +22,7 @@ const Ticket = ({ ticketDetails, index, setTickets, tickets, currentId }) => {
       <td>
         <div className="ticket">
           <figure>
-            <img src={ticketDetails.customerAvatar} />
+            <img src={`/${ticketDetails.customerAvatar}`} />
           </figure>
           <div className="ticket_details">
             <div className="ticket_items_bold">{ticketDetails.ticketName}</div>

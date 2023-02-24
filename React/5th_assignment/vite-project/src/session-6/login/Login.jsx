@@ -1,24 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import PasswordToggle from "./PasswordToggle";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const Login = () => {
   const [PasswordInputType, ToggleIcon] = PasswordToggle();
+  const [email, emailChange] = useState("");
+  const [password, passwordChange] = useState("");
   const navigate = useNavigate();
+
+  const isValidate = () => {
+    let isProceed = true;
+    let errormessage = "Please enter the value in";
+    if (email == null || email == "") {
+      isProceed = false;
+      errormessage += " Email";
+    }
+    if (password == null || password == "") {
+      isProceed = false;
+      errormessage += " Password";
+    }
+    if (!isProceed) {
+      toast.warning(errormessage);
+    }
+
+    return isProceed;
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    let response = await fetch("http://localhost:8000/users");
-    let users = await response.json();
-    let enteredEmail = document.getElementById("email").value;
-    let enteredPassword = document.getElementById("password").value;
-    let candidateUser = users.find((user) => {
-      return user.email == enteredEmail;
-    });
-    candidateUser && candidateUser.password == enteredPassword
-      ? navigate("/dashboard")
-      : toast.warning("Wrong Email or password.");
+    if (isValidate()) {
+      let response = await fetch("http://localhost:8000/users");
+      let users = await response.json();
+      let enteredEmail = document.getElementById("email").value;
+      let enteredPassword = document.getElementById("password").value;
+      let candidateUser = users.find((user) => {
+        return user.email == enteredEmail;
+      });
+      candidateUser && candidateUser.password == enteredPassword
+        ? navigate("/dashboard")
+        : toast.warning("Wrong Email or password.");
+    }
   };
   return (
     <>
@@ -39,7 +61,8 @@ const Login = () => {
                 id="email"
                 name="email"
                 placeholder="Email address"
-                required
+                value={email}
+                onChange={(e) => emailChange(e.target.value)}
               />
               <br />
               <div style={{ marginTop: "2.4rem" }}>
@@ -50,7 +73,8 @@ const Login = () => {
                   id="password"
                   name="password"
                   placeholder="Password"
-                  required
+                  value={password}
+                  onChange={(e) => passwordChange(e.target.value)}
                 />
               </div>
               <span className="forgot-password">Forgot Password?</span>

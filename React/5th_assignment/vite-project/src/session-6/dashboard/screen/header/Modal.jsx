@@ -1,12 +1,19 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router";
 
 const Modal = ({ handleModal }) => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.body.style.overflowY = "hidden";
     return () => {
       document.body.style.overflowY = "scroll";
     };
   }, []);
+
+  const handleClick = () => {
+    navigate("/");
+  };
 
   return (
     <>
@@ -16,9 +23,14 @@ const Modal = ({ handleModal }) => {
         <p>Name : Jonas Ferdinand</p>
         <p>Age : 28</p>
         <p>Address : Johanusberg</p>
-        <button className="modal-container_button" onClick={handleModal}>
-          Done
-        </button>
+        <div className="modal-container_buttons">
+          <button className="modal-container_button" onClick={handleModal}>
+            Go Back
+          </button>
+          <button onClick={handleClick} className="modal-container_button">
+            Logout
+          </button>
+        </div>
       </div>
     </>
   );

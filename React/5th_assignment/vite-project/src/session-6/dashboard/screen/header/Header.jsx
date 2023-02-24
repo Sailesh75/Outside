@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Modal from "./Modal";
 
-const Header = ({ searchKey, setSearchKey }) => {
+const Header = ({ searchKey, setSearchKey, headerTitle }) => {
   const [showSearch, setShowSearch] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -26,7 +26,7 @@ const Header = ({ searchKey, setSearchKey }) => {
   return (
     <div className="header">
       <div>
-        <p className="header_title">Tickets</p>
+        <p className="header_title">{headerTitle}</p>
       </div>
 
       {showModal && <Modal handleModal={handleModal} />}
@@ -55,7 +55,7 @@ const Header = ({ searchKey, setSearchKey }) => {
           <img
             onClick={handleModal}
             className="avatar-image"
-            src="avatar.png"
+            src="/avatar.png"
           />
         </div>
       </div>

@@ -1,0 +1,37 @@
+.data_cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5.4rem;
+  gap: 3rem;
+  margin-inline: 3rem;
+}
+
+.data_items {
+  width: 258px;
+  height: 134px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #dfe0eb;
+  border-radius: 1rem;
+
+  &_text {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #9fa2b4;
+  }
+
+  &_value {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #252733;
+  }
+}

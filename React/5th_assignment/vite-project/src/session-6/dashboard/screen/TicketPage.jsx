@@ -8,7 +8,7 @@ const Screen = () => {
 
   return (
     <div className="dashboard-screen">
-      <Header searchKey={searchKey} setSearchKey={setSearchKey} />
+      <Header searchKey={searchKey} setSearchKey={setSearchKey} headerTitle={`Tickets`}/>
       <Table
         searchKey={searchKey}
         filterKey={filterKey}

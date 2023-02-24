@@ -1,12 +1,12 @@
 import React from "react";
 import Sidebar from "./sidebar/Sidebar";
-import Header from "./screen/header/header";
+import { Outlet } from "react-router";
 
 const Dashboard = () => {
   return (
     <>
       <Sidebar />
-      <Header />
+      <Outlet />
     </>
   );
 };
