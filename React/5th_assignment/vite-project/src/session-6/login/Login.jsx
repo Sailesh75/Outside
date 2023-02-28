@@ -2,21 +2,33 @@ import React, { useState } from "react";
 import PasswordToggle from "./PasswordToggle";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Login = () => {
   const [PasswordInputType, ToggleIcon] = PasswordToggle();
-  const [email, emailChange] = useState("");
-  const [password, passwordChange] = useState("");
   const navigate = useNavigate();
+  const [logInDetail, setLogInDetail] = useState({
+    email: "",
+    password: "",
+    rememberMe: false,
+  });
+
+  const handleInputChange = (e) => {
+    setLogInDetail((prev) => ({
+      ...prev,
+      [e.target.name]:
+        e.target.name === "rememberMe" ? !prev.rememberMe : e.target.value,
+    }));
+  };
 
   const isValidate = () => {
     let isProceed = true;
     let errormessage = "Please enter the value in";
-    if (email == null || email == "") {
+    if (logInDetail.email == null || logInDetail.email == "") {
       isProceed = false;
       errormessage += " Email";
     }
-    if (password == null || password == "") {
+    if (logInDetail.password == null || logInDetail.password == "") {
       isProceed = false;
       errormessage += " Password";
     }
@@ -30,16 +42,17 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     if (isValidate()) {
-      let response = await fetch("http://localhost:8000/users");
-      let users = await response.json();
-      let enteredEmail = document.getElementById("email").value;
-      let enteredPassword = document.getElementById("password").value;
-      let candidateUser = users.find((user) => {
-        return user.email == enteredEmail;
-      });
-      candidateUser && candidateUser.password == enteredPassword
-        ? navigate("/dashboard")
-        : toast.warning("Wrong Email or password.");
+      console.log("hello", logInDetail);
+      const userDataResponse = await axios.get(
+        `https://react-project-7da67-default-rtdb.asia-southeast1.firebasedatabase.app/users.json?orderBy="email"&equalTo="${logInDetail.email}"&orderBy="password"&equalTo="${logInDetail.password}"`
+      );
+      const userData = userDataResponse.data;
+      if (Object.keys(userData).length === 0) {
+        toast.error("LogIn error");
+      } else {
+        toast.success("Log in successful");
+        navigate("/dashboard");
+      }
     }
   };
   return (
@@ -61,8 +74,8 @@ const Login = () => {
                 id="email"
                 name="email"
                 placeholder="Email address"
-                value={email}
-                onChange={(e) => emailChange(e.target.value)}
+                value={logInDetail.email}
+                onChange={handleInputChange}
               />
               <br />
               <div style={{ marginTop: "2.4rem" }}>
@@ -73,8 +86,8 @@ const Login = () => {
                   id="password"
                   name="password"
                   placeholder="Password"
-                  value={password}
-                  onChange={(e) => passwordChange(e.target.value)}
+                  value={logInDetail.password}
+                  onChange={handleInputChange}
                 />
               </div>
               <span className="forgot-password">Forgot Password?</span>

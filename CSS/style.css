@@ -245,7 +245,7 @@ a{
     align-items: center;
     grid-row: 4;
     grid-column: 1;
-    background-image: linear-gradient(#a1c4fd  ,#c2e9fb);
+    background-image: linear-gradient(#fad0c4 ,#ffd1ff);
 }
 
 .cards4{
@@ -253,7 +253,7 @@ a{
     grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    background-image: linear-gradient(#a1c4fd  ,#c2e9fb);
+    background-image: linear-gradient(#fad0c4 ,#ffd1ff);
     padding-block: 30px;
 }
 
@@ -274,6 +274,47 @@ a{
 
 @media only screen and (max-width: 420px) {
     .cards4{
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+
+.header5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 5;
+    grid-column: 1;
+    background-image: linear-gradient(#a1c4fd  ,#c2e9fb);
+}
+
+.cards5{
+    grid-row: 5;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    background-image: linear-gradient(#a1c4fd  ,#c2e9fb);
+    padding-block: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .header5{
+        grid-row: 9;
+        grid-column:1 ; 
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cards5{
+        grid-row: 10;
+        grid-column: 1;
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .cards5{
         grid-template-columns: 1fr; 
     }
 }

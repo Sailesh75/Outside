@@ -12,6 +12,7 @@ const Header = ({ searchKey, setSearchKey, headerTitle }) => {
   };
 
   const handleSearch = (e) => {
+    
     setSearchKey(e.target.value);
   };
 

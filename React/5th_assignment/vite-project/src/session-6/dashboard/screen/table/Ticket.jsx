@@ -1,6 +1,7 @@
 import React from "react";
 import { MdDelete } from "react-icons/md";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const Ticket = ({ ticketDetails, index, setTickets, tickets, currentId }) => {
   const deleteCurrentTicket = () => {
@@ -11,9 +12,9 @@ const Ticket = ({ ticketDetails, index, setTickets, tickets, currentId }) => {
     setTickets(newArray);
     console.log(currentId);
     axios
-      .delete(`http://localhost:8000/ticketList/${currentId}`)
+      .delete(`http://localhost:8000/ticketList/${currentId}/.json`)
       .then((res) => {
-        alert("Record Deleted");
+        toast.error("Record Deleted");
       });
   };
 
@@ -22,7 +23,7 @@ const Ticket = ({ ticketDetails, index, setTickets, tickets, currentId }) => {
       <td>
         <div className="ticket">
           <figure>
-            <img src={`/${ticketDetails.customerAvatar}`} />
+            <img src={`${ticketDetails.customerAvatar}`} />
           </figure>
           <div className="ticket_details">
             <div className="ticket_items_bold">{ticketDetails.ticketName}</div>

@@ -23,7 +23,7 @@ function App() {
             <Route
               path="*"
               element={
-                <h1 style={{ marginLeft: "25.5rem" }}>Page in progress</h1>
+                <h1 style={{ marginLeft: "27.5rem" }}>Page in progress</h1>
               }
             />
           </Route>

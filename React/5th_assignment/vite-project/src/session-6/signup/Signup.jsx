@@ -5,18 +5,18 @@ import { toast } from "react-toastify";
 
 const Login = () => {
   const [PasswordInputType, ToggleIcon] = PasswordToggle();
-  const [fullname, fullnameChange] = useState("");
+  const [fullName, fullNameChange] = useState("");
   const [email, emailChange] = useState("");
   const [password, passwordChange] = useState("");
-  const [confirmpassword, confirmpasswordChange] = useState("");
+  const [confirmPassword, confirmPasswordChange] = useState("");
   const navigate = useNavigate();
 
   const isValidate = () => {
     let isProceed = true;
     let errormessage = "Please enter the value in";
-    if (fullname == null || fullname == "") {
+    if (fullName == null || fullName == "") {
       isProceed = false;
-      errormessage += " Fullname";
+      errormessage += " fullName";
     }
     if (email == null || email == "") {
       isProceed = false;
@@ -26,9 +26,9 @@ const Login = () => {
       isProceed = false;
       errormessage += " Password";
     }
-    if (confirmpassword == null || confirmpassword == "") {
+    if (confirmPassword == null || confirmPassword == "") {
       isProceed = false;
-      errormessage += " ConfirmPassword";
+      errormessage += " confirmPassword";
     }
 
     if (!isProceed) {
@@ -36,10 +36,9 @@ const Login = () => {
     } else {
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         isProceed = true;
-        if (password != confirmpassword) {
+        if (password != confirmPassword) {
           isProceed = false;
-        toast.warning("Passwords doesn't match");
-
+          toast.warning("Passwords doesn't match");
         }
       } else {
         isProceed = false;
@@ -52,16 +51,19 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    let regObj = { fullname, email, password, confirmpassword };
+    let regObj = { fullName, email, password, confirmPassword };
     if (isValidate()) {
-      fetch("http://localhost:8000/Users", {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(regObj),
-      })
+      fetch(
+        "https://react-project-7da67-default-rtdb.asia-southeast1.firebasedatabase.app/users.json",
+        {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(regObj),
+        }
+      )
         .then((res) => {
-          toast.success("Registered Succcessfully!!");
-          navigate("/");
+          toast.success("Registered Successfully!!");
+          navigate("/dashboard");
         })
         .catch((err) => {
           toast.error("Registration failed");
@@ -81,14 +83,14 @@ const Login = () => {
           <div className="form">
             <form onSubmit={handleSubmit}>
               <div>
-                <label htmlFor="email">Fullname</label>
+                <label htmlFor="email">fullName</label>
                 <br />
                 <input
                   type="text"
-                  name="fullname"
-                  placeholder="Fullname"
-                  value={fullname}
-                  onChange={(e) => fullnameChange(e.target.value)}
+                  name="fullName"
+                  placeholder="fullName"
+                  value={fullName}
+                  onChange={(e) => fullNameChange(e.target.value)}
                 />
               </div>
               <div style={{ marginTop: "1.2rem" }}>
@@ -121,8 +123,8 @@ const Login = () => {
                   type={PasswordInputType}
                   name="confirm password"
                   placeholder="Confirm Password"
-                  value={confirmpassword}
-                  onChange={(e) => confirmpasswordChange(e.target.value)}
+                  value={confirmPassword}
+                  onChange={(e) => confirmPasswordChange(e.target.value)}
                 />
                 <span className="password-toggle-icon2">{ToggleIcon}</span>
               </div>

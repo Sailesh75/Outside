@@ -16,6 +16,7 @@
   justify-content: space-around;
   border: 1px solid #dfe0eb;
   border-radius: 1rem;
+  cursor: pointer;
 
   &_text {
     font-weight: 700;
@@ -34,4 +35,15 @@
     letter-spacing: 1px;
     color: #252733;
   }
+}
+
+.data_items:hover {
+  border: 1px solid #3751ff;
+}
+.data_items:hover .data_items_text {
+  color: #3751ff;
+}
+
+.data_items:hover .data_items_value {
+  color: #3751ff;
 }

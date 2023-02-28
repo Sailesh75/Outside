@@ -11,7 +11,7 @@ const ticketList = [
     ticketInformation: "Updated 1 day ago",
     dateLabel: "May 26, 2019",
     timeLabel: "6:30 PM",
-    ticketPriority: "high",
+    ticketPriority: "HIGH",
     ticketColor: "#F12B2C",
   },
 
@@ -23,7 +23,7 @@ const ticketList = [
     ticketInformation: "Updated 1 day ago",
     dateLabel: "May 26, 2019",
     timeLabel: "8:00 PM",
-    ticketPriority: "low",
+    ticketPriority: "LOW",
     ticketColor: "#FEC400",
   },
 
@@ -35,7 +35,7 @@ const ticketList = [
     ticketInformation: "Updated 1 day ago",
     dateLabel: "May 26, 2019",
     timeLabel: "7:30 PM",
-    ticketPriority: "high",
+    ticketPriority: "HIGH",
     ticketColor: "#F12B2C",
   },
 
@@ -47,7 +47,7 @@ const ticketList = [
     ticketInformation: "Updated 1 day ago",
     dateLabel: "May 25, 2019",
     timeLabel: "5:00 PM",
-    ticketPriority: "normal",
+    ticketPriority: "NORMAL",
     ticketColor: "#29CC97",
   },
 
@@ -59,7 +59,7 @@ const ticketList = [
     ticketInformation: "Updated 1 day ago",
     dateLabel: "May 25, 2019",
     timeLabel: "4:00 PM",
-    ticketPriority: "high",
+    ticketPriority: "HIGH",
     ticketColor: "#F12B2C",
   },
 
@@ -71,7 +71,7 @@ const ticketList = [
     ticketInformation: "Updated 1 day ago",
     dateLabel: "May 25, 2019",
     timeLabel: "2:00 PM",
-    ticketPriority: "normal",
+    ticketPriority: "NORMAL",
     ticketColor: "#29CC97",
   },
 
@@ -83,7 +83,7 @@ const ticketList = [
     ticketInformation: "Updated 1 day ago",
     dateLabel: "May 25, 2019",
     timeLabel: "11:30 PM",
-    ticketPriority: "low ",
+    ticketPriority: "LOW",
     ticketColor: "#FEC400",
   },
 
@@ -95,7 +95,7 @@ const ticketList = [
     ticketInformation: "Updated 1 day ago",
     dateLabel: "May 24, 2019",
     timeLabel: "1:00 PM",
-    ticketPriority: "normal",
+    ticketPriority: "NORMAL",
     ticketColor: "#29CC97",
   },
 ];
@@ -131,25 +131,22 @@ const Table = ({ searchKey, filterKey, setFilterKey }) => {
           <div className="filter-bar">
             <input
               type="radio"
-              id="high"
               name="filter"
-              value="high"
+              value="HIGH"
               onChange={handleFilter}
             />
             <label htmlFor="high">HIGH</label>
             <input
               type="radio"
-              id="low"
               name="filter"
-              value="low"
+              value="LOW"
               onChange={handleFilter}
             />
             <label htmlFor="low">LOW</label>
             <input
               type="radio"
-              id="normal"
               name="filter"
-              value="normal"
+              value="NORMAL"
               onChange={handleFilter}
             />
             <label htmlFor="normal">NORMAL</label>

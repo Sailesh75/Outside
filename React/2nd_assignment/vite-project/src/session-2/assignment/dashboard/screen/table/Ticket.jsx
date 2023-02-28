@@ -54,3 +54,6 @@ const Ticket = ({ ticketDetails, index, setTickets, tickets }) => {
 };
 
 export default Ticket;
+
+
+

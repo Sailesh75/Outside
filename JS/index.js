@@ -26,12 +26,15 @@ domFunction('div','header3','','.mainContainer');
 domFunction('div','cards3','','.mainContainer');
 domFunction('div','header4','','.mainContainer');
 domFunction('div','cards4','','.mainContainer');
+domFunction('div','header5','','.mainContainer');
+domFunction('div','cards5','','.mainContainer');
 
 //inside header
 domFunction('h3','header-title','Frontend','.header1');
 domFunction('h3','header-title','Javascript','.header2');
 domFunction('h3','header-title','React','.header3');
 domFunction('h3','header-title','Database','.header4');
+domFunction('h3','header-title','PHP','.header5');
 
 
 //inside cards
@@ -47,6 +50,10 @@ for(i=16;i<22;i++){
 for(i=22;i<24;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards4`)
 }
+for(i=24;i<26;i++){
+    domFunction(`div`,`gridItem gridItem${i}`,``,`.cards5`)
+}
+
 
 //figma
 domFunction('h1','assignmentNumber','01','.gridItem1');
@@ -189,5 +196,21 @@ domFunction('h3','assignmentTitle','Twitter database','.gridItem23');
 domFunction('div','links assignment17-link','','.gridItem23');
 domFunction('a','assignmentCodeLink','Code','.assignment17-link','https://github.com/Sailesh75/Outside-Internship/blob/master/Database/Assignment2_twitter/twitter.sql','_blank');
 domFunction('a','assignmentCodeLink','Demo','.assignment17-link','https://github.com/Sailesh75/Outside-Internship/blob/master/Database/Assignment2_twitter/twitterSchema.png','_blank');
+
+
+//php
+
+domFunction('h1','assignmentNumber','01','.gridItem24');
+domFunction('h3','assignmentTitle','Session 1','.gridItem24');
+domFunction('div','links assignment18-link','','.gridItem24');
+domFunction('a','assignmentCodeLink','Code','.assignment18-link','#','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment18-link','#','_blank');
+
+
+domFunction('h1','assignmentNumber','02','.gridItem25');
+domFunction('h3','assignmentTitle','Session 2','.gridItem25');
+domFunction('div','links assignment19-link','','.gridItem25');
+domFunction('a','assignmentCodeLink','Code','.assignment19-link','#','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment19-link','#','_blank');
 
 

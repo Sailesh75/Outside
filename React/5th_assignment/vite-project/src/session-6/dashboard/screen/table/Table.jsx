@@ -7,15 +7,24 @@ import axios from "axios";
 
 const Table = ({ searchKey, filterKey, setFilterKey }) => {
   const [tickets, setTickets] = useState([]);
+
   useEffect(() => {
-    axios
-      .get("http://localhost:8000/ticketList")
-      .then((res) => {
-        console.log(res.data);
-        setTickets(res.data);
-      })
-      .catch((err) => console.log(err));
+    getTickets();
   }, []);
+
+  const getTickets = async () => {
+    await axios
+      .get(
+        `https://react-project-7da67-default-rtdb.asia-southeast1.firebasedatabase.app/tickets.json`
+      )
+      .then((response) => {
+        const ticketsArray = Object.keys(response.data).map((key) => ({
+          ...response.data[key],
+          nodeName: key,
+        }));
+        setTickets(ticketsArray);
+      });
+  };
 
   const [showFilter, setShowFilter] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -31,6 +40,17 @@ const Table = ({ searchKey, filterKey, setFilterKey }) => {
   const handleModal = () => {
     setShowModal(!showModal);
   };
+
+  let newTicketsArray = tickets
+    .filter((item) =>
+      item.ticketName
+        .toLocaleLowerCase()
+        .includes(searchKey.toLocaleLowerCase())
+    )
+    .filter((item) => {
+      if (!filterKey) return item;
+      return item.ticketPriority === filterKey;
+    });
 
   return (
     <div className="table">
@@ -87,28 +107,18 @@ const Table = ({ searchKey, filterKey, setFilterKey }) => {
           </tr>
         </thead>
         <tbody>
-          {tickets
-            .filter((item) =>
-              item.ticketName
-                .toLocaleLowerCase()
-                .includes(searchKey.toLocaleLowerCase())
-            )
-            .filter((item) => {
-              if (!filterKey) return item;
-              return item.ticketPriority === filterKey;
-            })
-            .map((item, index) => {
-              return (
-                <Ticket
-                  ticketDetails={item}
-                  key={index}
-                  index={index}
-                  tickets={tickets}
-                  setTickets={setTickets}
-                  currentId={item.id}
-                />
-              );
-            })}
+          {newTicketsArray.map((item, index) => {
+            return (
+              <Ticket
+                ticketDetails={item}
+                key={index}
+                index={index}
+                tickets={tickets}
+                setTickets={setTickets}
+                currentId={item.id}
+              />
+            );
+          })}
         </tbody>
       </table>
     </div>
