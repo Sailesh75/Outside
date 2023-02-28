@@ -24,11 +24,15 @@ domFunction('div','header2','','.mainContainer');
 domFunction('div','cards2','','.mainContainer');
 domFunction('div','header3','','.mainContainer');
 domFunction('div','cards3','','.mainContainer');
+domFunction('div','header4','','.mainContainer');
+domFunction('div','cards4','','.mainContainer');
 
 //inside header
 domFunction('h3','header-title','Frontend','.header1');
 domFunction('h3','header-title','Javascript','.header2');
 domFunction('h3','header-title','React','.header3');
+domFunction('h3','header-title','Database','.header4');
+
 
 //inside cards
 for(i=1;i<7;i++){
@@ -39,6 +43,9 @@ for(i=7;i<16;i++){
 }
 for(i=16;i<22;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards3`)
+}
+for(i=22;i<24;i++){
+    domFunction(`div`,`gridItem gridItem${i}`,``,`.cards4`)
 }
 
 //figma
@@ -166,3 +173,21 @@ domFunction('h3','assignmentTitle','routing,api','.gridItem21');
 domFunction('div','links assignment15-link','','.gridItem21');
 domFunction('a','assignmentCodeLink','Code','.assignment15-link','#','_blank');
 domFunction('a','assignmentCodeLink','Demo','.assignment15-link','#','_blank');
+
+
+//Database
+
+domFunction('h1','assignmentNumber','01','.gridItem22');
+domFunction('h3','assignmentTitle','Blog database','.gridItem22');
+domFunction('div','links assignment16-link','','.gridItem22');
+domFunction('a','assignmentCodeLink','Code','.assignment16-link','https://github.com/Sailesh75/Outside-Internship/blob/master/Database/Assignment1_blog/blog.sql','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment16-link','https://github.com/Sailesh75/Outside-Internship/blob/master/Database/Assignment1_blog/blogSchema.png','_blank');
+
+
+domFunction('h1','assignmentNumber','02','.gridItem23');
+domFunction('h3','assignmentTitle','Twitter database','.gridItem23');
+domFunction('div','links assignment17-link','','.gridItem23');
+domFunction('a','assignmentCodeLink','Code','.assignment17-link','https://github.com/Sailesh75/Outside-Internship/blob/master/Database/Assignment2_twitter/twitter.sql','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment17-link','https://github.com/Sailesh75/Outside-Internship/blob/master/Database/Assignment2_twitter/twitterSchema.png','_blank');
+
+
