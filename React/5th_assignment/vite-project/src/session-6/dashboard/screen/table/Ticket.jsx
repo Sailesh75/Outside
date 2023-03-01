@@ -3,23 +3,33 @@ import { MdDelete } from "react-icons/md";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Ticket = ({ ticketDetails, index, setTickets, tickets, currentId }) => {
-  const deleteCurrentTicket = () => {
+const Ticket = ({
+  ticketDetails,
+  index,
+  setTickets,
+  tickets,
+  currentId,
+  nodeName,
+}) => {
+  const deleteCurrentTicket = async () => {
     let newArray = tickets.filter((ticket, ticketIndex) => {
       if (ticketIndex == index) return;
       else return ticket;
     });
     setTickets(newArray);
-    console.log(currentId);
-    axios
-      .delete(`http://localhost:8000/ticketList/${currentId}/.json`)
-      .then((res) => {
-        toast.error("Record Deleted");
-      });
+    try {
+      console.log(currentId);
+      await axios.delete(
+        `https://react-project-7da67-default-rtdb.asia-southeast1.firebasedatabase.app/tickets/${nodeName}/.json`
+      );
+    } catch (error) {
+      console.log(error.message);
+    }
+    toast.error("Ticket deleted!!");
   };
 
   return (
-    <tr>
+    <tr className="ticket-items">
       <td>
         <div className="ticket">
           <figure>
@@ -52,7 +62,7 @@ const Ticket = ({ ticketDetails, index, setTickets, tickets, currentId }) => {
       <td>
         <MdDelete
           className="ticket_deleteButton"
-          onClick={deleteCurrentTicket}
+          onClick={() => deleteCurrentTicket()}
         />
       </td>
     </tr>

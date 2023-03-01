@@ -56,7 +56,9 @@ const Table = ({ searchKey, filterKey, setFilterKey }) => {
     <div className="table">
       <div className="table_header">
         <div className="table_header_title">All Tickets</div>
-        {showModal && <AddTicketModal handleModal={handleModal} />}
+        {showModal && (
+          <AddTicketModal handleModal={handleModal} getTickets={getTickets} />
+        )}
         {showFilter && (
           <div className="filter-bar">
             <input
@@ -116,6 +118,7 @@ const Table = ({ searchKey, filterKey, setFilterKey }) => {
                 tickets={tickets}
                 setTickets={setTickets}
                 currentId={item.id}
+                nodeName={item.nodeName}
               />
             );
           })}

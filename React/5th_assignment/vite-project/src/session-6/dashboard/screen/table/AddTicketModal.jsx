@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const AddTicketModal = ({ handleModal }) => {
+const AddTicketModal = ({ handleModal, getTickets }) => {
   const getCustomerDate = () => {
     const today = new Date();
     const day = String(today.getDate()).padStart(2, "0");
@@ -70,8 +70,8 @@ const AddTicketModal = ({ handleModal }) => {
           ticketColor: ticketColor,
         }
       );
-      console.log(response.data);
       handleModal();
+      getTickets();
     } catch (error) {
       console.error(error);
     }
@@ -96,14 +96,6 @@ const AddTicketModal = ({ handleModal }) => {
         />
         <br />
         <br />
-        <label>Ticket Information: </label>
-        <input
-          type="text"
-          value={ticketInfo}
-          onChange={(e) => setTicketInfo(e.target.value)}
-        />
-        <br />
-        <br />
         <label>Customer Name: </label>
         <input
           type="text"
@@ -112,6 +104,7 @@ const AddTicketModal = ({ handleModal }) => {
         />
         <br />
         <br />
+        <label>Ticket Priority: </label>
         <select value={selectedValue} onChange={handleSelectChange}>
           <option value="high">High</option>
           <option value="normal" selected>
