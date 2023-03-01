@@ -211,6 +211,6 @@ domFunction('h1','assignmentNumber','02','.gridItem25');
 domFunction('h3','assignmentTitle','Session 2','.gridItem25');
 domFunction('div','links assignment19-link','','.gridItem25');
 domFunction('a','assignmentCodeLink','Code','.assignment19-link','#','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment19-link','#','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment19-link','https://github.com/Sailesh75/Outside-Internship/blob/master/Database/Assignment2_twitter/twitterSchema.png','_blank');
 
 
