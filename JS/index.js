@@ -203,14 +203,14 @@ domFunction('a','assignmentCodeLink','Demo','.assignment17-link','https://github
 domFunction('h1','assignmentNumber','01','.gridItem24');
 domFunction('h3','assignmentTitle','Session 1','.gridItem24');
 domFunction('div','links assignment18-link','','.gridItem24');
-domFunction('a','assignmentCodeLink','Code','.assignment18-link','#','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment18-link','#','_blank');
+domFunction('a','assignmentCodeLink','Code','.assignment18-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-2','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment18-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-2','_blank');
 
 
 domFunction('h1','assignmentNumber','02','.gridItem25');
 domFunction('h3','assignmentTitle','Session 2','.gridItem25');
 domFunction('div','links assignment19-link','','.gridItem25');
-domFunction('a','assignmentCodeLink','Code','.assignment19-link','#','_blank');
-domFunction('a','assignmentCodeLink','Demo','.assignment19-link','https://github.com/Sailesh75/Outside-Internship/blob/master/Database/Assignment2_twitter/twitterSchema.png','_blank');
+domFunction('a','assignmentCodeLink','Code','.assignment19-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-2','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment19-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-2','_blank');
 
 
