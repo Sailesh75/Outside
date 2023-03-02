@@ -1,17 +1,20 @@
  <?php
     $myFile = fopen('input.txt', 'r');
     $text = fread($myFile, filesize("input.txt"));
-    $calorie_carried = explode("\n\n", $text);
-    foreach ($calorie_carried as $calorie) {
-        $sum_calorie[] = array_sum(explode("\n", $calorie));
+    // Splitting the string into an array of sets of calorie values, with each set separated by newline characters ("\n")
+    $calorieSet = explode("\n", $text);
+    // Looping through each set of calorie values to calculate the total calorie count for that set
+    foreach ($calorieSet as $calorie) {
+        $totalCalorie[] = array_sum(explode("\n", $calorie));
     }
-    $max = max($sum_calorie);
-    echo ("Maximum calorie is: $max ");
-    rsort($sum_calorie);
+    $maxCalorie = max($totalCalorie);
+    // using  max function
+    echo ("Maximum calorie is: $maxCalorie ");
+    // Sorting the array of calorie counts in descending order using the rsort function
+    rsort($totalCalorie);
     echo nl2br("\nTop 3 calories are: ");
     for ($i = 0; $i < 3; $i++) {
-        echo "zero $i";
-        echo ($sum_calorie[$i] . "\r\n");
+        echo ($totalCalorie[$i] . "\r\n");
     }
 ?> 
 
