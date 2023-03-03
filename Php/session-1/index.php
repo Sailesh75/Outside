@@ -1,4 +1,4 @@
- <?php
+<?php
     $myFile = fopen('input.txt', 'r');
     $text = fread($myFile, filesize("input.txt"));
     // Splitting the string into an array of sets of calorie values, with each set separated by newline characters ("\n")

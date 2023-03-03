@@ -27,7 +27,6 @@ class Person {
     }
 }
 
-// Instantiate a new Person object
 $person = new Person("John", 30, "Male");
 
 // Access public properties directly

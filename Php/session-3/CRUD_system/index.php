@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Contact application</title>
+    <title>Contact form</title>
 </head>
 <body>
     <h1>
-        Contact application
+        Contact form
     </h1>
     <form action="addData.php" method="post">
         <label for="fname">Name:</label><br>
@@ -20,11 +20,10 @@
         <input type="text" id="lname" name="contact" required><br><br>
         <input type="submit" value="Save">
     </form> 
-
-    <hr>
-    <h3>Contact lists</h3>
+    <h2>Contact lists:</h2>
     <table>
         <tr>
+            <th>Id</th>
             <th>Name</th>
             <th>Email</th>
             <th>Contact Number</th>
@@ -34,7 +33,7 @@
     <?php
     include_once 'connect.php';
 
-    $sql = "SELECT * FROM contact_form";
+    $sql = "SELECT * FROM contact_form ORDER BY id DESC";
     $result = mysqli_query($conn,$sql);
     if($result){
         while($row= mysqli_fetch_assoc($result)){
@@ -42,9 +41,11 @@
             $name = $row['name'];
             $email = $row['email'];
             $contact = $row['phone'];
-            ?>
+
+    ?>
 
             <tr>
+                <td><?php echo $id ?> </td>
                 <td><?php echo $name ?> </td>
                 <td><?php echo $email ?> </td>
                 <td><?php echo $contact ?> </td>

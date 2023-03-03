@@ -1,14 +1,21 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "rest_api_demo";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+class Database
+{
+   private $host = "localhost";
+   private $database_name = "crudoperation";
+   private $username = "root";
+   private $password = "";
+   public $conn;
+   public function createConnection()
+   {
+      $this->conn = null;
+      try {
+         $this->conn = mysqli_connect($this->host, $this->username, $this->password, $this->database_name);
+      } catch (void) {
+         echo "Database not connected: ";
+      }
+      return $this->conn;
+   }
 }
-else
-    echo("Connection Successful!!");
-?>
+$db = new Database();
+$conn = $db->createConnection();
