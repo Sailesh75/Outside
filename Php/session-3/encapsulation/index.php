@@ -40,6 +40,6 @@ echo "Age: " . $person->getAge() . "\n";
 $person->setAge(40);
 echo "New age: " . $person->getAge() . "\n";
 
-// Attempt to access private method - this will result in a fatal error
+// accessing  private method will give error
 // $person->secretFunction();
 ?>
