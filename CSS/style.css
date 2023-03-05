@@ -245,7 +245,7 @@ a{
     align-items: center;
     grid-row: 4;
     grid-column: 1;
-    background-image: linear-gradient(#fad0c4 ,#ffd1ff);
+    background-image: linear-gradient(#a1c4fd  ,#c2e9fb);
 }
 
 .cards4{
@@ -253,7 +253,7 @@ a{
     grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    background-image: linear-gradient(#fad0c4 ,#ffd1ff);
+    background-image: linear-gradient(#a1c4fd  ,#c2e9fb);
     padding-block: 30px;
 }
 
@@ -286,7 +286,7 @@ a{
     align-items: center;
     grid-row: 5;
     grid-column: 1;
-    background-image: linear-gradient(#a1c4fd  ,#c2e9fb);
+    background-image: linear-gradient(#fad0c4 ,#ffd1ff);
 }
 
 .cards5{
@@ -294,7 +294,7 @@ a{
     grid-column: 2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
-    background-image: linear-gradient(#a1c4fd  ,#c2e9fb);
+    background-image: linear-gradient(#fad0c4 ,#ffd1ff);
     padding-block: 30px;
 }
 

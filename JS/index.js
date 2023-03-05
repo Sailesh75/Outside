@@ -50,7 +50,7 @@ for(i=16;i<22;i++){
 for(i=22;i<24;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards4`)
 }
-for(i=24;i<26;i++){
+for(i=24;i<28;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards5`)
 }
 
