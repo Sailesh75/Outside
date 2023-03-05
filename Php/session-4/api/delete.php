@@ -1,21 +1,33 @@
 <?php
-    include_once '../Model/Database.php';
-    header('Content-Type: application/json');
- 
-    if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
+include_once '../Model/Database.php';
+
+class Delete {
+    private $conn;
+
+    public function __construct($db) {
+        $this->conn = $db;
+    }
+
+    public function deleteContact() {
         $id = $_GET['id'];
         
-        $result = mysqli_query($conn, "SELECT * FROM contact_form WHERE id=$id");
-        if (mysqli_num_rows($result) == 0) {
+        $result = $this->conn->query("SELECT * FROM contact_form WHERE id=$id");
+        if ($result->num_rows == 0) {
             echo "Error: No record found with ID $id";
             exit;
         }
         
         $sql = "DELETE FROM contact_form WHERE id=$id";
-        if (mysqli_query($conn, $sql)) {
-            echo json_encode(array('message' => 'Contact form submitted successfully'));
+        if ($this->conn->query($sql)) {
+            echo json_encode(array('message' => 'Contact form deleted successfully'));
         } else {
-            echo json_encode(array('message' => 'Error: ' . mysqli_error($conn)));
+            echo json_encode(array('message' => 'Error: ' . $this->conn->error));
         }
     }
+}
+
+$delete = new Delete($conn);
+if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
+    $delete->deleteContact();
+}
 ?>

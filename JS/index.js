@@ -213,4 +213,16 @@ domFunction('div','links assignment19-link','','.gridItem25');
 domFunction('a','assignmentCodeLink','Code','.assignment19-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-2','_blank');
 domFunction('a','assignmentCodeLink','Demo','.assignment19-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-2','_blank');
 
+domFunction('h1','assignmentNumber','03','.gridItem26');
+domFunction('h3','assignmentTitle','Session 3','.gridItem26');
+domFunction('div','links assignment20-link','','.gridItem26');
+domFunction('a','assignmentCodeLink','Code','.assignment20-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-3','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment20-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-3','_blank');
+
+domFunction('h1','assignmentNumber','04','.gridItem27');
+domFunction('h3','assignmentTitle','Session 4','.gridItem27');
+domFunction('div','links assignment21-link','','.gridItem27');
+domFunction('a','assignmentCodeLink','Code','.assignment21-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-4','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment21-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-4','_blank');
+
 
