@@ -28,6 +28,8 @@ domFunction('div','header4','','.mainContainer');
 domFunction('div','cards4','','.mainContainer');
 domFunction('div','header5','','.mainContainer');
 domFunction('div','cards5','','.mainContainer');
+domFunction('div','header6','','.mainContainer');
+domFunction('div','cards6','','.mainContainer');
 
 //inside header
 domFunction('h3','header-title','Frontend','.header1');
@@ -35,7 +37,7 @@ domFunction('h3','header-title','Javascript','.header2');
 domFunction('h3','header-title','React','.header3');
 domFunction('h3','header-title','Database','.header4');
 domFunction('h3','header-title','PHP','.header5');
-
+domFunction('h3','header-title','WordPress','.header6');
 
 //inside cards
 for(i=1;i<7;i++){
@@ -52,6 +54,10 @@ for(i=22;i<24;i++){
 }
 for(i=24;i<28;i++){
     domFunction(`div`,`gridItem gridItem${i}`,``,`.cards5`)
+}
+
+for(i=28;i<29;i++){
+    domFunction(`div`,`gridItem gridItem${i}`,``,`.cards6`)
 }
 
 
@@ -225,4 +231,12 @@ domFunction('div','links assignment21-link','','.gridItem27');
 domFunction('a','assignmentCodeLink','Code','.assignment21-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-4','_blank');
 domFunction('a','assignmentCodeLink','Demo','.assignment21-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Php/session-4','_blank');
 
+
+//wordpress
+
+domFunction('h1','assignmentNumber','01','.gridItem28');
+domFunction('h3','assignmentTitle','Session 1','.gridItem28');
+domFunction('div','links assignment22-link','','.gridItem28');
+domFunction('a','assignmentCodeLink','Code','.assignment22-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Wordpress/hellotheme','_blank');
+domFunction('a','assignmentCodeLink','Demo','.assignment22-link','https://github.com/Sailesh75/Outside-Internship/tree/master/Wordpress/hellotheme','_blank');
 
