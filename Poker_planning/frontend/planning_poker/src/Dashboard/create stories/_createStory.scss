@@ -1,0 +1,90 @@
+.create-story-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  
+    .main-content {
+      flex: 1;
+      padding: 1rem;
+    }
+  
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  
+    input[type="text"],
+    textarea {
+      // width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  
+    .buttons {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 0.25rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+  
+      &--startGame {
+        background-color: #28a745;
+      }
+  
+      &--deleteStory {
+        margin-left: 0.5rem;
+        background-color: #dc3545;
+        width: 100px;
+      }
+    }
+  
+    .stories {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .story {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      // width: 100%;
+    }
+  
+    @media (min-width: 768px) {
+      .wrapper {
+        display: flex;
+      }
+  
+      .sidebar {
+        // flex: 0 0 25%;
+        background-color: #f7f7f7;
+        // border-right: 1px solid #ddd;
+        padding: 1rem;
+      }
+  
+      .main-content {
+        flex: 1;
+        padding: 1rem;
+      }
+  
+      .stories {
+        flex-wrap: nowrap;
+      }
+  
+      .story {
+        margin-right: 1rem;
+        width: calc(50% - 0.5rem);
+      }
+    }
+  }
+  

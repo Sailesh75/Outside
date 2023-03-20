@@ -1,0 +1,38 @@
+.modal-wrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(189, 189, 189, 0.9);
+  }
+  
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 1rem;
+  
+    p {
+      font-size: 1.2rem;
+      margin: 1rem;
+    }
+  
+    &_buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    &_button {
+      padding: 0.8rem;
+      margin: 1rem;
+      font-size: 2rem;
+      border-radius: 1rem;
+      color: white;
+      background-color: black;
+    }
+  }
+  
